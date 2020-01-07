@@ -1,0 +1,3 @@
+cable DigilentHS1
+detect
+pld load phoenix_top.merged.bit

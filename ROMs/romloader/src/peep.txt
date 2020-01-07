@@ -1,0 +1,5 @@
+replace restart {
+  pop %1
+  push %1 } by {
+  ; nop
+}

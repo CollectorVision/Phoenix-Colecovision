@@ -1,0 +1,67 @@
+// Input BMM file for Phoenix ROM Loader.
+//
+// The "instance names" can be obtained after an initial bit stream
+// generation by running the FPGA Editor or PlanAhead tools from ISE:
+//
+// Tools->FPGA Editor->Post Place & Route
+//
+// An updated *_bd.bmm file will be created in the source directory with
+// the placement keywords added by ISE based after bit stream generation.
+//
+// Example of a complete BUS_BLOCK:
+//
+// coleco/loader/Mram_ram_q1 RAMB16 [7:0] [0:2047] PLACED = X0Y30;
+//
+// This file is read during the Translate process, and the *_bd.bmm file
+// is created during the Place & Route process.
+//
+// The *_bd.bmm can be used with data2mem to update the block RAM without
+// having to recreate the bit stream, which makes firmware development
+// much more tolerable!
+
+
+// The ADDRESS_MAP is using default values defined by Xilinx.  It us unclear
+// what "PPC405" means.  The documentation also suggests that the ADDRESS_MAP
+// block is optional and is really only used when there are multiple devices
+// or CPU-cores to load.  Apparently IMPACT uses the ADDRESS_MAP...
+
+ADDRESS_MAP phoenix PPC405 0
+	ADDRESS_SPACE loader RAMB16 [0x00000000:0x00005FFF]
+		BUS_BLOCK
+			coleco/loader/Mram_ram_1 [7:0];
+		END_BUS_BLOCK;
+		BUS_BLOCK
+			coleco/loader/Mram_ram_2 [7:0];
+		END_BUS_BLOCK;
+		BUS_BLOCK
+			coleco/loader/Mram_ram_3 [7:0];
+		END_BUS_BLOCK;
+		BUS_BLOCK
+			coleco/loader/Mram_ram_4 [7:0];
+		END_BUS_BLOCK;
+		BUS_BLOCK
+			coleco/loader/Mram_ram_5 [7:0];
+		END_BUS_BLOCK;
+		BUS_BLOCK
+			coleco/loader/Mram_ram_6 [7:0];
+		END_BUS_BLOCK;
+		BUS_BLOCK
+			coleco/loader/Mram_ram_7 [7:0];
+		END_BUS_BLOCK;
+		BUS_BLOCK
+			coleco/loader/Mram_ram_8 [7:0];
+		END_BUS_BLOCK;
+		BUS_BLOCK
+			coleco/loader/Mram_ram_9 [7:0];
+		END_BUS_BLOCK;
+		BUS_BLOCK
+			coleco/loader/Mram_ram_A [7:0];
+		END_BUS_BLOCK;
+		BUS_BLOCK
+			coleco/loader/Mram_ram_B [7:0];
+		END_BUS_BLOCK;
+		BUS_BLOCK
+			coleco/loader/Mram_ram_C [7:0];
+		END_BUS_BLOCK;
+	END_ADDRESS_SPACE;
+END_ADDRESS_MAP;

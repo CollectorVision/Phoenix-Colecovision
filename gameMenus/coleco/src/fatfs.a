@@ -1,0 +1,5696 @@
+<SDCCLIB>
+
+<INDEX>
+      4704
+<MODULE>
+diskio_diskinit 11
+.__.ABS.
+_disk_initialize
+_csLow
+_csHigh
+_CardType
+_Stat
+</MODULE>
+
+<MODULE>
+diskio_diskioctl 3742
+.__.ABS.
+_disk_ioctl
+</MODULE>
+
+<MODULE>
+diskio_diskread 7078
+.__.ABS.
+_disk_read
+</MODULE>
+
+<MODULE>
+diskio_diskstatus 9164
+.__.ABS.
+_disk_status
+</MODULE>
+
+<MODULE>
+diskio_diskwrite 9811
+.__.ABS.
+</MODULE>
+
+<MODULE>
+diskio_dselect 10258
+.__.ABS.
+_deselect
+</MODULE>
+
+<MODULE>
+diskio_rcvrdatablock 10925
+.__.ABS.
+_rcvr_datablock
+</MODULE>
+
+<MODULE>
+diskio_rcvrmmc 12204
+.__.ABS.
+_rcvr_mmc_dummy
+_rcvr_mmc
+</MODULE>
+
+<MODULE>
+diskio_select 13035
+.__.ABS.
+_select
+</MODULE>
+
+<MODULE>
+diskio_sendcmd 13939
+.__.ABS.
+_send_cmd
+</MODULE>
+
+<MODULE>
+diskio_waitready 16660
+.__.ABS.
+_wait_ready
+</MODULE>
+
+<MODULE>
+diskio_xmitdatablock 17705
+.__.ABS.
+_xmit_datablock
+</MODULE>
+
+<MODULE>
+diskio_xmitmmc 19043
+.__.ABS.
+_xmit_mmc
+</MODULE>
+
+<MODULE>
+ff_checkfs 19667
+.__.ABS.
+_check_fs
+</MODULE>
+
+<MODULE>
+ff_chkchr 21603
+.__.ABS.
+_chk_chr
+</MODULE>
+
+<MODULE>
+ff_closedir 22387
+.__.ABS.
+_f_closedir
+</MODULE>
+
+<MODULE>
+ff_clst2sect 23142
+.__.ABS.
+_clst2sect
+</MODULE>
+
+<MODULE>
+ff_cmplfn 24667
+.__.ABS.
+_cmp_lfn
+</MODULE>
+
+<MODULE>
+ff_createchain 27182
+.__.ABS.
+</MODULE>
+
+<MODULE>
+ff_createname 27625
+.__.ABS.
+_create_name
+</MODULE>
+
+<MODULE>
+ff_diralloc 34939
+.__.ABS.
+</MODULE>
+
+<MODULE>
+ff_dirclear 35376
+.__.ABS.
+</MODULE>
+
+<MODULE>
+ff_dirfind 35813
+.__.ABS.
+_dir_find
+</MODULE>
+
+<MODULE>
+ff_dirnext 40000
+.__.ABS.
+_dir_next
+</MODULE>
+
+<MODULE>
+ff_dirread 44686
+.__.ABS.
+_dir_read
+</MODULE>
+
+<MODULE>
+ff_dirregister 48321
+.__.ABS.
+</MODULE>
+
+<MODULE>
+ff_dirsdi 48764
+.__.ABS.
+_dir_sdi
+</MODULE>
+
+<MODULE>
+ff_fchdir 53885
+.__.ABS.
+</MODULE>
+
+<MODULE>
+ff_fchdrive 54318
+.__.ABS.
+</MODULE>
+
+<MODULE>
+ff_fclose 54755
+.__.ABS.
+_f_close
+</MODULE>
+
+<MODULE>
+ff_findvolume 55503
+.__.ABS.
+_find_volume
+</MODULE>
+
+<MODULE>
+ff_fgetfree 67046
+.__.ABS.
+</MODULE>
+
+<MODULE>
+ff_fmkdir 67483
+.__.ABS.
+</MODULE>
+
+<MODULE>
+ff_fmount 67916
+.__.ABS.
+_f_mount
+</MODULE>
+
+<MODULE>
+ff_followpath 68980
+.__.ABS.
+_follow_path
+</MODULE>
+
+<MODULE>
+ff_fopen 71337
+.__.ABS.
+_f_open
+</MODULE>
+
+<MODULE>
+ff_fread 73941
+.__.ABS.
+_f_read
+</MODULE>
+
+<MODULE>
+ff_frename 80843
+.__.ABS.
+</MODULE>
+
+<MODULE>
+ff_fsync 81278
+.__.ABS.
+</MODULE>
+
+<MODULE>
+ff_ftruncate 81709
+.__.ABS.
+</MODULE>
+
+<MODULE>
+ff_funlink 82148
+.__.ABS.
+</MODULE>
+
+<MODULE>
+ff_fwrite 82583
+.__.ABS.
+</MODULE>
+
+<MODULE>
+ff_gennumname 83016
+.__.ABS.
+</MODULE>
+
+<MODULE>
+ff_getfat 83457
+.__.ABS.
+_get_fat
+</MODULE>
+
+<MODULE>
+ff_getfileinfo 86505
+.__.ABS.
+_get_fileinfo
+</MODULE>
+
+<MODULE>
+ff_getldnumber 90090
+.__.ABS.
+_get_ldnumber_unused
+</MODULE>
+
+<MODULE>
+ff_loadobjxdir 92049
+.__.ABS.
+</MODULE>
+
+<MODULE>
+ff_ldclust 92492
+.__.ABS.
+_ld_clust
+</MODULE>
+
+<MODULE>
+ff_lddword 93784
+.__.ABS.
+_ld_dword
+</MODULE>
+
+<MODULE>
+ff_ldword 95340
+.__.ABS.
+_ld_word_old
+</MODULE>
+
+<MODULE>
+ff_lseek 96027
+.__.ABS.
+_f_lseek
+</MODULE>
+
+<MODULE>
+ff_memcmp 103410
+.__.ABS.
+_mem_cmp
+</MODULE>
+
+<MODULE>
+ff_movewindow 104429
+.__.ABS.
+_move_window
+</MODULE>
+
+<MODULE>
+ff_opendir 105779
+.__.ABS.
+_f_opendir
+</MODULE>
+
+<MODULE>
+ff_picklfn 107875
+.__.ABS.
+_pick_lfn
+</MODULE>
+
+<MODULE>
+ff_putfat 110243
+.__.ABS.
+</MODULE>
+
+<MODULE>
+ff_putlfn 110676
+.__.ABS.
+</MODULE>
+
+<MODULE>
+ff_pututf 111109
+.__.ABS.
+_put_utf
+</MODULE>
+
+<MODULE>
+ff_readdir 112233
+.__.ABS.
+_f_readdir
+</MODULE>
+
+<MODULE>
+ff_removechain 113543
+.__.ABS.
+</MODULE>
+
+<MODULE>
+ff_stclust 113986
+.__.ABS.
+</MODULE>
+
+<MODULE>
+ff_storexdir 114421
+.__.ABS.
+</MODULE>
+
+<MODULE>
+ff_stdword 114860
+.__.ABS.
+</MODULE>
+
+<MODULE>
+ff_stword 115295
+.__.ABS.
+</MODULE>
+
+<MODULE>
+ff_syncfs 115728
+.__.ABS.
+</MODULE>
+
+<MODULE>
+ff_syncwindow 116161
+.__.ABS.
+</MODULE>
+
+<MODULE>
+ff_sumsfn 116602
+.__.ABS.
+_sum_sfn
+</MODULE>
+
+<MODULE>
+ff_tchar2uni 117372
+.__.ABS.
+_tchar2uni
+</MODULE>
+
+<MODULE>
+ff_validate 118330
+.__.ABS.
+_validate
+</MODULE>
+
+<MODULE>
+ff_vars 119552
+.__.ABS.
+_ExCvt
+_LfnOfs
+_LfnBuf
+_Fsid
+_FatFs
+</MODULE>
+
+<MODULE>
+ff_xsum32 120954
+.__.ABS.
+</MODULE>
+
+<MODULE>
+ffunicode_cp 121387
+.__.ABS.
+</MODULE>
+
+<MODULE>
+ffunicode_ffoem2uni 121826
+.__.ABS.
+_ff_oem2uni_unused
+</MODULE>
+
+<MODULE>
+ffunicode_ffuni2oem 122809
+.__.ABS.
+_ff_uni2oem_unused
+</MODULE>
+
+<MODULE>
+ffunicode_ffwtoupper 124260
+.__.ABS.
+_ff_wtoupper_unused
+</MODULE>
+
+</INDEX>
+
+<FILES>
+
+<FILE>
+diskio_diskinit
+<REL>
+XL2
+H 9 areas B global symbols
+M diskio_diskinit
+O -mz80
+S _dly_50us Ref0000
+S _send_cmd Ref0000
+S .__.ABS. Def0000
+S _deselect Ref0000
+S ___sdcc_enter_ix Ref0000
+S _rcvr_mmc Ref0000
+A _CODE size 196 flags 0 addr 0
+S _disk_initialize Def0000
+A _DATA size 3 flags 0 addr 0
+S _csLow Def0001
+S _csHigh Def0000
+S _CardType Def0002
+A _INITIALIZED size 1 flags 0 addr 0
+S _Stat Def0000
+A _DABS size 0 flags 8 addr 0
+A _HOME size 0 flags 0 addr 0
+A _GSINIT size 0 flags 0 addr 0
+A _GSFINAL size 0 flags 0 addr 0
+A _INITIALIZER size 1 flags 0 addr 0
+A _CABS size 0 flags 8 addr 0
+T 00 00
+R 00 00 01 00
+T 00 00
+R 00 00 01 00
+T 01 00
+R 00 00 01 00
+T 01 00
+R 00 00 01 00
+T 02 00
+R 00 00 01 00
+T 02 00
+R 00 00 01 00
+T 00 00
+R 00 00 02 00
+T 00 00
+R 00 00 02 00
+T 00 00
+R 00 00 00 00
+T 00 00 CD 00 00 F5 F5 3B 21 00 00 36 03 21 01 00
+R 00 00 00 00 02 03 04 00 00 09 01 00 00 0E 01 00
+T 0E 00 36 02 3E C8 F5 33 CD 00 00 33 3A 00 00 D3
+R 00 00 00 00 02 09 00 00 00 0D 01 00
+T 1C 00 56 06 0A 21 01 00 39 EB
+R 00 00 00 00
+T 24 00
+R 00 00 00 00
+T 24 00 D5 FD E1 C5 D5 21 01 00 E5 FD E5 CD 00 00
+R 00 00 00 00 02 0E 05 00
+T 32 00 F1 F1 D1 C1 78 C6 FF 47 B7 20 E7 DD 36 FB
+R 00 00 00 00
+T 40 00 00 D5 21 00 00 E5 21 00 00 E5 AF F5 33 CD
+R 00 00 00 00
+T 4E 00 00 00 F1 F1 33 D1 2D C2 75 01 21 00 00 36
+R 00 00 00 00 02 02 01 00 00 0A 00 00 00 0D 01 00
+T 5C 00 01 21 01 00 36 00 D5 21 00 00 E5 21 AA 01
+R 00 00 00 00 00 04 01 00
+T 6A 00 E5 3E 08 F5 33 CD 00 00 F1 F1 33 D1 2D C2
+R 00 00 00 00 02 08 01 00
+T 78 00 06 01 6B 62 D5 01 04 00 C5 E5 CD 00 00 F1
+R 00 00 00 00 00 02 00 00 02 0D 05 00
+T 86 00 F1 D1 6B 62 23 23 7E 3D C2 75 01 D5 FD E1
+R 00 00 00 00 00 0B 00 00
+T 94 00 FD 7E 03 D6 AA C2 75 01 01 E8 03
+R 00 00 00 00 00 08 00 00
+T 9F 00
+R 00 00 00 00
+T 9F 00 C5 D5 21 00 40 E5 21 00 00 E5 3E A9 F5 33
+R 00 00 00 00
+T AD 00 CD 00 00 F1 F1 33 7D D1 C1 B7 28 11 C5 D5
+R 00 00 00 00 02 03 01 00
+T BB 00 3E 14 F5 33 CD 00 00 33 D1 C1 0B 78 B1 20
+R 00 00 00 00 02 07 00 00
+T C9 00 D5
+R 00 00 00 00
+T CA 00
+R 00 00 00 00
+T CA 00 78 B1 CA 75 01 D5 21 00 00 E5 21 00 00 E5
+R 00 00 00 00 00 05 00 00
+T D8 00 3E 3A F5 33 CD 00 00 F1 F1 33 7D D1 B7 C2
+R 00 00 00 00 02 07 01 00
+T E6 00 75 01 6B 62 D5 01 04 00 C5 E5 CD 00 00 F1
+R 00 00 00 00 00 02 00 00 02 0D 05 00
+T F4 00 F1 D1 1A CB 77 28 04 3E 0C 18 02
+R 00 00 00 00
+T FF 00
+R 00 00 00 00
+T FF 00 3E 04
+R 00 00 00 00
+T 01 01
+R 00 00 00 00
+T 01 01 DD 77 FB 18 6F
+R 00 00 00 00
+T 06 01
+R 00 00 00 00
+T 06 01 21 00 00 E5 21 00 00 E5 3E A9 F5 33 CD
+R 00 00 00 00
+T 13 01 00 00 F1 F1 33 3E 01 95 38 08 DD 36 FB 02
+R 00 00 00 00 02 02 01 00
+T 21 01 06 A9 18 06
+R 00 00 00 00
+T 25 01
+R 00 00 00 00
+T 25 01 DD 36 FB 01 06 01
+R 00 00 00 00
+T 2B 01
+R 00 00 00 00
+T 2B 01 11 E8 03
+R 00 00 00 00
+T 2E 01
+R 00 00 00 00
+T 2E 01 C5 D5 21 00 00 E5 21 00 00 E5 C5 33 CD
+R 00 00 00 00
+T 3B 01 00 00 F1 F1 33 7D D1 C1 B7 28 11 C5 D5 3E
+R 00 00 00 00 02 02 01 00
+T 49 01 14 F5 33 CD 00 00 33 D1 C1 1B 7A B3 20 D7
+R 00 00 00 00 02 06 00 00
+T 57 01
+R 00 00 00 00
+T 57 01 7A B3 28 16 21 00 00 E5 21 00 02 E5 3E 10
+R 00 00 00 00
+T 65 01 F5 33 CD 00 00 F1 F1 33 7D B7 28 04
+R 00 00 00 00 02 05 01 00
+T 71 01
+R 00 00 00 00
+T 71 01 DD 36 FB 00
+R 00 00 00 00
+T 75 01
+R 00 00 00 00
+T 75 01 DD 7E FB 32 02 00 DD 7E FB B7 28 04 16 00
+R 00 00 00 00 00 06 01 00
+T 83 01 18 02
+R 00 00 00 00
+T 85 01
+R 00 00 00 00
+T 85 01 16 01
+R 00 00 00 00
+T 87 01
+R 00 00 00 00
+T 87 01 21 00 00 72 D5 CD 00 00 D1 6A DD F9 DD E1
+R 00 00 00 00 00 03 02 00 02 08 03 00
+T 95 01 C9
+R 00 00 00 00
+T 00 00
+R 00 00 07 00
+T 00 00 01
+R 00 00 07 00
+</REL>
+<ADB>
+</ADB>
+</FILE>
+
+<FILE>
+diskio_diskioctl
+<REL>
+XL2
+H 9 areas 8 global symbols
+M diskio_diskioctl
+O -mz80
+S _disk_status Ref0000
+S _send_cmd Ref0000
+S .__.ABS. Def0000
+S _select Ref0000
+S _rcvr_datablock Ref0000
+S _deselect Ref0000
+S ___sdcc_enter_ix Ref0000
+A _CODE size 1A8 flags 0 addr 0
+S _disk_ioctl Def0000
+A _DATA size 0 flags 0 addr 0
+A _INITIALIZED size 0 flags 0 addr 0
+A _DABS size 0 flags 8 addr 0
+A _HOME size 0 flags 0 addr 0
+A _GSINIT size 0 flags 0 addr 0
+A _GSFINAL size 0 flags 0 addr 0
+A _INITIALIZER size 0 flags 0 addr 0
+A _CABS size 0 flags 8 addr 0
+T 00 00
+R 00 00 00 00
+T 00 00 CD 00 00 21 E7 FF 39 F9 CD 00 00 7D 0F 30
+R 00 00 00 00 02 03 06 00 02 0B 00 00
+T 0E 00 05 2E 03 C3 A3 01
+R 00 00 00 00 00 06 00 00
+T 14 00
+R 00 00 00 00
+T 14 00 16 01 DD 7E 04 B7 28 1D DD 7E 05 DD 77 FA
+R 00 00 00 00
+T 22 00 DD 7E 06 DD 77 FB DD 7E 04 3D 28 1A DD 7E
+R 00 00 00 00
+T 30 00 04 D6 03 CA 87 01 C3 9B 01
+R 00 00 00 00 00 06 00 00 00 09 00 00
+T 39 00
+R 00 00 00 00
+T 39 00 D5 CD 00 00 D1 7C B5 CA 9D 01 16 00 C3
+R 00 00 00 00 02 04 03 00 00 0A 00 00
+T 46 00 9D 01
+R 00 00 00 00 00 02 00 00
+T 48 00
+R 00 00 00 00
+T 48 00 D5 21 00 00 E5 21 00 00 E5 3E 09 F5 33 CD
+R 00 00 00 00
+T 56 00 00 00 F1 F1 33 7D D1 B7 C2 9D 01 21 00 00
+R 00 00 00 00 02 02 01 00 00 0B 00 00
+T 64 00 39 4D 44 C5 FD E1 C5 D5 21 10 00 E5 FD E5
+R 00 00 00 00
+T 72 00 CD 00 00 F1 F1 D1 C1 7C B5 CA 9D 01 0A 07
+R 00 00 00 00 02 03 04 00 00 0C 00 00
+T 80 00 07 E6 03 DD 77 F9 69 60 59 50 C5 FD E1 C5
+R 00 00 00 00
+T 8E 00 01 09 00 09 C1 7E DD 77 F8 EB 11 08 00 19
+R 00 00 00 00
+T 9C 00 5E FD 56 07 DD 7E F9 3D 20 67 DD 4E F8 06
+R 00 00 00 00
+T AA 00 00 63 2E 00 09 4D 44 7A E6 3F 5F 16 00 21
+R 00 00 00 00
+T B8 00 00 00 3E 10
+R 00 00 00 00
+T BC 00
+R 00 00 00 00
+T BC 00 CB 23 CB 12 ED 6A 3D 20 F7 DD 71 FC DD 70
+R 00 00 00 00
+T CA 00 FD DD 36 FE 00 DD 36 FF 00 DD 7E FC 83 5F
+R 00 00 00 00
+T D8 00 DD 7E FD 8A 57 DD 7E FE 8D 4F DD 7E FF 8C
+R 00 00 00 00
+T E6 00 47 1C 20 07 14 20 04 0C 20 01 04
+R 00 00 00 00
+T F1 00
+R 00 00 00 00
+T F1 00 3E 0A
+R 00 00 00 00
+T F3 00
+R 00 00 00 00
+T F3 00 CB 23 CB 12 CB 11 CB 10 3D 20 F5 DD 6E FA
+R 00 00 00 00
+T 01 01 DD 66 FB 73 23 72 23 71 23 70 18 76
+R 00 00 00 00
+T 0D 01
+R 00 00 00 00
+T 0D 01 C5 FD E1 FD 7E 05 E6 0F DD 77 FC C5 FD E1
+R 00 00 00 00
+T 1B 01 FD 7E 0A E6 80 07 E6 01 67 DD 7E FC 84 67
+R 00 00 00 00
+T 29 01 DD 7E F8 E6 03 87 84 C6 02 DD 77 F7 7B 07
+R 00 00 00 00
+T 37 01 07 E6 03 6F 26 00 5A 16 00 CB 23 CB 12 CB
+R 00 00 00 00
+T 45 01 23 CB 12 19 EB C5 FD E1 FD 7E 06 E6 03 87
+R 00 00 00 00
+T 53 01 87 67 2E 00 19 23 EB 01 00 00 DD 7E F7 2E
+R 00 00 00 00
+T 61 01 00 C6 F7 67 7D CE FF 24 18 08
+R 00 00 00 00
+T 6B 01
+R 00 00 00 00
+T 6B 01 CB 23 CB 12 CB 11 CB 10
+R 00 00 00 00
+T 73 01
+R 00 00 00 00
+T 73 01 25 20 F5 DD 6E FA DD 66 FB 73 23 72 23 71
+R 00 00 00 00
+T 81 01 23 70
+R 00 00 00 00
+T 83 01
+R 00 00 00 00
+T 83 01 16 00 18 16
+R 00 00 00 00
+T 87 01
+R 00 00 00 00
+T 87 01 DD 6E FA DD 66 FB 36 80 23 AF 77 23 77 23
+R 00 00 00 00
+T 95 01 36 00 16 00 18 02
+R 00 00 00 00
+T 9B 01
+R 00 00 00 00
+T 9B 01 16 04
+R 00 00 00 00
+T 9D 01
+R 00 00 00 00
+T 9D 01 D5 CD 00 00 D1 6A
+R 00 00 00 00 02 04 05 00
+T A3 01
+R 00 00 00 00
+T A3 01 DD F9 DD E1 C9
+R 00 00 00 00
+</REL>
+<ADB>
+</ADB>
+</FILE>
+
+<FILE>
+diskio_diskread
+<REL>
+XL2
+H 9 areas 8 global symbols
+M diskio_diskread
+O -mz80
+S _disk_status Ref0000
+S _send_cmd Ref0000
+S .__.ABS. Def0000
+S _rcvr_datablock Ref0000
+S _deselect Ref0000
+S ___sdcc_enter_ix Ref0000
+S _CardType Ref0000
+A _CODE size BC flags 0 addr 0
+S _disk_read Def0000
+A _DATA size 0 flags 0 addr 0
+A _INITIALIZED size 0 flags 0 addr 0
+A _DABS size 0 flags 8 addr 0
+A _HOME size 0 flags 0 addr 0
+A _GSINIT size 0 flags 0 addr 0
+A _GSFINAL size 0 flags 0 addr 0
+A _INITIALIZER size 0 flags 0 addr 0
+A _CABS size 0 flags 8 addr 0
+T 00 00
+R 00 00 00 00
+T 00 00 CD 00 00 3B CD 00 00 7D 0F 30 05 2E 03 C3
+R 00 00 00 00 02 03 05 00 02 07 00 00
+T 0E 00 B8 00
+R 00 00 00 00 00 02 00 00
+T 10 00
+R 00 00 00 00
+T 10 00 21 00 00 CB 5E 20 16 F5 F1 06 09
+R 00 00 00 00 02 03 06 00
+T 1B 00
+R 00 00 00 00
+T 1B 00 DD CB 06 26 DD CB 07 16 DD CB 08 16 DD CB
+R 00 00 00 00
+T 29 00 09 16 10 EE
+R 00 00 00 00
+T 2D 00
+R 00 00 00 00
+T 2D 00 3E 01 DD BE 0A 3E 00 DD 9E 0B 30 04 3E 12
+R 00 00 00 00
+T 3B 00 18 02
+R 00 00 00 00
+T 3D 00
+R 00 00 00 00
+T 3D 00 3E 11
+R 00 00 00 00
+T 3F 00
+R 00 00 00 00
+T 3F 00 DD 77 FF DD 6E 08 DD 66 09 E5 DD 6E 06 DD
+R 00 00 00 00
+T 4D 00 66 07 E5 DD 7E FF F5 33 CD 00 00 F1 F1 33
+R 00 00 00 00 02 0B 01 00
+T 5B 00 7D B7 20 48 DD 6E 04 DD 66 05 DD 5E 0A DD
+R 00 00 00 00
+T 69 00 56 0B
+R 00 00 00 00
+T 6B 00
+R 00 00 00 00
+T 6B 00 E5 D5 01 00 02 C5 E5 CD 00 00 F1 F1 45 4C
+R 00 00 00 00 02 0A 03 00
+T 79 00 D1 E1 79 B0 28 09 01 00 02 09 1B 7A B3 20
+R 00 00 00 00
+T 87 00 E3
+R 00 00 00 00
+T 88 00
+R 00 00 00 00
+T 88 00 DD 73 0A DD 72 0B DD 7E FF D6 12 20 12 21
+R 00 00 00 00
+T 96 00 00 00 E5 21 00 00 E5 3E 0C F5 33 CD 00 00
+R 00 00 00 00 02 0E 01 00
+T A4 00 F1 F1 33
+R 00 00 00 00
+T A7 00
+R 00 00 00 00
+T A7 00 CD 00 00 DD 7E 0B DD B6 0A 28 04 2E 01 18
+R 00 00 00 00 02 03 04 00
+T B5 00 02
+R 00 00 00 00
+T B6 00
+R 00 00 00 00
+T B6 00 2E 00
+R 00 00 00 00
+T B8 00
+R 00 00 00 00
+T B8 00
+R 00 00 00 00
+T B8 00 33 DD E1 C9
+R 00 00 00 00
+</REL>
+<ADB>
+</ADB>
+</FILE>
+
+<FILE>
+diskio_diskstatus
+<REL>
+XL2
+H 9 areas 3 global symbols
+M diskio_diskstatus
+O -mz80
+S .__.ABS. Def0000
+S _Stat Ref0000
+A _CODE size 10 flags 0 addr 0
+S _disk_status Def0000
+A _DATA size 0 flags 0 addr 0
+A _INITIALIZED size 0 flags 0 addr 0
+A _DABS size 0 flags 8 addr 0
+A _HOME size 0 flags 0 addr 0
+A _GSINIT size 0 flags 0 addr 0
+A _GSFINAL size 0 flags 0 addr 0
+A _INITIALIZER size 0 flags 0 addr 0
+A _CABS size 0 flags 8 addr 0
+T 00 00
+R 00 00 00 00
+T 00 00 DB 56 07 30 08 FD 21 00 00 FD 6E 00 C9
+R 00 00 00 00 02 09 01 00
+T 0D 00
+R 00 00 00 00
+T 0D 00 2E 02 C9
+R 00 00 00 00
+</REL>
+<ADB>
+</ADB>
+</FILE>
+
+<FILE>
+diskio_diskwrite
+<REL>
+XL2
+H 9 areas 1 global symbols
+M diskio_diskwrite
+O -mz80
+S .__.ABS. Def0000
+A _CODE size 0 flags 0 addr 0
+A _DATA size 0 flags 0 addr 0
+A _INITIALIZED size 0 flags 0 addr 0
+A _DABS size 0 flags 8 addr 0
+A _HOME size 0 flags 0 addr 0
+A _GSINIT size 0 flags 0 addr 0
+A _GSFINAL size 0 flags 0 addr 0
+A _INITIALIZER size 0 flags 0 addr 0
+A _CABS size 0 flags 8 addr 0
+</REL>
+<ADB>
+</ADB>
+</FILE>
+
+<FILE>
+diskio_dselect
+<REL>
+XL2
+H 9 areas 4 global symbols
+M diskio_dselect
+O -mz80
+S .__.ABS. Def0000
+S _csHigh Ref0000
+S _rcvr_mmc Ref0000
+A _CODE size 16 flags 0 addr 0
+S _deselect Def0000
+A _DATA size 0 flags 0 addr 0
+A _INITIALIZED size 0 flags 0 addr 0
+A _DABS size 0 flags 8 addr 0
+A _HOME size 0 flags 0 addr 0
+A _GSINIT size 0 flags 0 addr 0
+A _GSFINAL size 0 flags 0 addr 0
+A _INITIALIZER size 0 flags 0 addr 0
+A _CABS size 0 flags 8 addr 0
+T 00 00
+R 00 00 00 00
+T 00 00 3B 3A 00 00 D3 56 21 00 00 39 01 01 00 C5
+R 00 00 00 00 02 04 01 00
+T 0E 00 E5 CD 00 00 F1 F1 33 C9
+R 00 00 00 00 02 04 02 00
+</REL>
+<ADB>
+</ADB>
+</FILE>
+
+<FILE>
+diskio_rcvrdatablock
+<REL>
+XL2
+H 9 areas 5 global symbols
+M diskio_rcvrdatablock
+O -mz80
+S _dly_50us Ref0000
+S .__.ABS. Def0000
+S ___sdcc_enter_ix Ref0000
+S _rcvr_mmc Ref0000
+A _CODE size 66 flags 0 addr 0
+S _rcvr_datablock Def0000
+A _DATA size 0 flags 0 addr 0
+A _INITIALIZED size 0 flags 0 addr 0
+A _DABS size 0 flags 8 addr 0
+A _HOME size 0 flags 0 addr 0
+A _GSINIT size 0 flags 0 addr 0
+A _GSFINAL size 0 flags 0 addr 0
+A _INITIALIZER size 0 flags 0 addr 0
+A _CABS size 0 flags 8 addr 0
+T 00 00
+R 00 00 00 00
+T 00 00 CD 00 00 F5 11 E8 03 21 00 00 39
+R 00 00 00 00 02 03 02 00
+T 0B 00
+R 00 00 00 00
+T 0B 00 E5 FD E1 E5 D5 01 01 00 C5 FD E5 CD 00 00
+R 00 00 00 00 02 0E 03 00
+T 19 00 F1 F1 D1 E1 7E 3C 20 15 E5 D5 3E 02 F5 33
+R 00 00 00 00
+T 27 00 CD 00 00 33 D1 E1 4B 42 0B 59 78 57 B1 20
+R 00 00 00 00 02 03 00 00
+T 35 00 D5
+R 00 00 00 00
+T 36 00
+R 00 00 00 00
+T 36 00 7E D6 FE 28 05 21 00 00 18 22
+R 00 00 00 00
+T 40 00
+R 00 00 00 00
+T 40 00 E5 DD 4E 06 DD 46 07 C5 DD 4E 04 DD 46 05
+R 00 00 00 00
+T 4E 00 C5 CD 00 00 F1 F1 E1 01 02 00 C5 E5 CD
+R 00 00 00 00 02 04 03 00
+T 5B 00 00 00 F1 F1 21 01 00
+R 00 00 00 00 02 02 03 00
+T 62 00
+R 00 00 00 00
+T 62 00 F1 DD E1 C9
+R 00 00 00 00
+</REL>
+<ADB>
+</ADB>
+</FILE>
+
+<FILE>
+diskio_rcvrmmc
+<REL>
+XL2
+H 9 areas 3 global symbols
+M diskio_rcvrmmc
+O -mz80
+S .__.ABS. Def0000
+A _CODE size 29 flags 0 addr 0
+S _rcvr_mmc_dummy Def0000
+S _rcvr_mmc Def0000
+A _DATA size 0 flags 0 addr 0
+A _INITIALIZED size 0 flags 0 addr 0
+A _DABS size 0 flags 8 addr 0
+A _HOME size 0 flags 0 addr 0
+A _GSINIT size 0 flags 0 addr 0
+A _GSFINAL size 0 flags 0 addr 0
+A _INITIALIZER size 0 flags 0 addr 0
+A _CABS size 0 flags 8 addr 0
+T 00 00
+R 00 00 00 00
+T 00 00
+R 00 00 00 00
+T 00 00 E5 C5 D5 F5 21 0A 00 39 F9 E1 D1 0E 57
+R 00 00 00 00
+T 0D 00
+R 00 00 00 00
+T 0D 00 14 15 28 07 AF 47 ED B2 15 18 F5
+R 00 00 00 00
+T 18 00
+R 00 00 00 00
+T 18 00 1C 1D 28 03 43 ED B2
+R 00 00 00 00
+T 1F 00
+R 00 00 00 00
+T 1F 00 21 F2 FF 39 F9 F1 D1 C1 E1 C9
+R 00 00 00 00
+</REL>
+<ADB>
+</ADB>
+</FILE>
+
+<FILE>
+diskio_select
+<REL>
+XL2
+H 9 areas 6 global symbols
+M diskio_select
+O -mz80
+S _wait_ready Ref0000
+S .__.ABS. Def0000
+S _csLow Ref0000
+S _deselect Ref0000
+S _rcvr_mmc Ref0000
+A _CODE size 28 flags 0 addr 0
+S _select Def0000
+A _DATA size 0 flags 0 addr 0
+A _INITIALIZED size 0 flags 0 addr 0
+A _DABS size 0 flags 8 addr 0
+A _HOME size 0 flags 0 addr 0
+A _GSINIT size 0 flags 0 addr 0
+A _GSFINAL size 0 flags 0 addr 0
+A _INITIALIZER size 0 flags 0 addr 0
+A _CABS size 0 flags 8 addr 0
+T 00 00
+R 00 00 00 00
+T 00 00 3B 3A 00 00 D3 56 21 00 00 39 01 01 00 C5
+R 00 00 00 00 02 04 02 00
+T 0E 00 E5 CD 00 00 F1 F1 CD 00 00 7C B5 28 05 21
+R 00 00 00 00 02 04 04 00 02 09 00 00
+T 1C 00 01 00 18 06
+R 00 00 00 00
+T 20 00
+R 00 00 00 00
+T 20 00 CD 00 00 21 00 00
+R 00 00 00 00 02 03 03 00
+T 26 00
+R 00 00 00 00
+T 26 00 33 C9
+R 00 00 00 00
+</REL>
+<ADB>
+</ADB>
+</FILE>
+
+<FILE>
+diskio_sendcmd
+<REL>
+XL2
+H 9 areas 7 global symbols
+M diskio_sendcmd
+O -mz80
+S .__.ABS. Def0000
+S _select Ref0000
+S _deselect Ref0000
+S ___sdcc_enter_ix Ref0000
+S _rcvr_mmc Ref0000
+S _xmit_mmc Ref0000
+A _CODE size 147 flags 0 addr 0
+S _send_cmd Def0000
+A _DATA size 0 flags 0 addr 0
+A _INITIALIZED size 0 flags 0 addr 0
+A _DABS size 0 flags 8 addr 0
+A _HOME size 0 flags 0 addr 0
+A _GSINIT size 0 flags 0 addr 0
+A _GSFINAL size 0 flags 0 addr 0
+A _INITIALIZER size 0 flags 0 addr 0
+A _CABS size 0 flags 8 addr 0
+T 00 00
+R 00 00 00 00
+T 00 00 CD 00 00 21 F6 FF 39 F9 DD CB 04 7E 28 1C
+R 00 00 00 00 02 03 03 00
+T 0E 00 DD CB 04 BE 21 00 00 E5 21 00 00 E5 3E 37
+R 00 00 00 00
+T 1C 00 F5 33 CD 00 00 F1 F1 33 3E 01 95 DA 42 01
+R 00 00 00 00 00 05 00 00 00 0E 00 00
+T 2A 00
+R 00 00 00 00
+T 2A 00 DD 7E 04 D6 0C 20 04 3E 01 18 01
+R 00 00 00 00
+T 35 00
+R 00 00 00 00
+T 35 00 AF
+R 00 00 00 00
+T 36 00
+R 00 00 00 00
+T 36 00 DD 77 FF B7 20 0F CD 00 00 CD 00 00 7C B5
+R 00 00 00 00 02 09 02 00 02 0C 01 00
+T 44 00 20 05 2E FF C3 42 01
+R 00 00 00 00 00 07 00 00
+T 4B 00
+R 00 00 00 00
+T 4B 00 21 01 00 39 4D 5C DD 7E 04 CB F7 69 63 77
+R 00 00 00 00
+T 59 00 79 C6 01 DD 77 FD 7B CE 00 DD 77 FE F5 DD
+R 00 00 00 00
+T 67 00 56 05 DD 66 06 DD 6E 07 DD 46 08 F1 3E 18
+R 00 00 00 00
+T 75 00
+R 00 00 00 00
+T 75 00 CB 38 CB 1D CB 1C CB 1A 3D 20 F5 DD 6E FD
+R 00 00 00 00
+T 83 00 DD 66 FE 72 79 C6 02 DD 77 FD 7B CE 00 DD
+R 00 00 00 00
+T 91 00 77 FE F5 DD 56 05 DD 66 06 DD 6E 07 DD 46
+R 00 00 00 00
+T 9F 00 08 F1 3E 10
+R 00 00 00 00
+T A3 00
+R 00 00 00 00
+T A3 00 CB 38 CB 1D CB 1C CB 1A 3D 20 F5 DD 6E FD
+R 00 00 00 00
+T B1 00 DD 66 FE 72 79 C6 03 DD 77 FD 7B CE 00 DD
+R 00 00 00 00
+T BF 00 77 FE F5 DD 56 05 DD 66 06 DD 6E 07 DD 46
+R 00 00 00 00
+T CD 00 08 F1 3E 08
+R 00 00 00 00
+T D1 00
+R 00 00 00 00
+T D1 00 CB 38 CB 1D CB 1C CB 1A 3D 20 F5 DD 6E FD
+R 00 00 00 00
+T DF 00 DD 66 FE 72 21 04 00 43 09 DD 7E 05 77 16
+R 00 00 00 00
+T ED 00 01 DD 7E 04 B7 20 02 16 95
+R 00 00 00 00
+T F6 00
+R 00 00 00 00
+T F6 00 DD 7E 04 D6 08 20 02 16 87
+R 00 00 00 00
+T FF 00
+R 00 00 00 00
+T FF 00 21 05 00 43 09 72 43 21 06 00 E5 C5 CD
+R 00 00 00 00
+T 0C 01 00 00 F1 F1 DD 7E FF B7 28 0E 21 00 00 39
+R 00 00 00 00 02 02 05 00
+T 1A 01 01 01 00 C5 E5 CD 00 00 F1 F1
+R 00 00 00 00 02 08 04 00
+T 24 01
+R 00 00 00 00
+T 24 01 16 0A
+R 00 00 00 00
+T 26 01
+R 00 00 00 00
+T 26 01 21 00 00 39 D5 01 01 00 C5 E5 CD 00 00 F1
+R 00 00 00 00 02 0D 04 00
+T 34 01 F1 D1 DD CB F6 7E 28 03 15 20 E7
+R 00 00 00 00
+T 3F 01
+R 00 00 00 00
+T 3F 01 DD 6E F6
+R 00 00 00 00
+T 42 01
+R 00 00 00 00
+T 42 01 DD F9 DD E1 C9
+R 00 00 00 00
+</REL>
+<ADB>
+</ADB>
+</FILE>
+
+<FILE>
+diskio_waitready
+<REL>
+XL2
+H 9 areas 5 global symbols
+M diskio_waitready
+O -mz80
+S _dly_50us Ref0000
+S .__.ABS. Def0000
+S ___sdcc_enter_ix Ref0000
+S _rcvr_mmc Ref0000
+A _CODE size 3C flags 0 addr 0
+S _wait_ready Def0000
+A _DATA size 0 flags 0 addr 0
+A _INITIALIZED size 0 flags 0 addr 0
+A _DABS size 0 flags 8 addr 0
+A _HOME size 0 flags 0 addr 0
+A _GSINIT size 0 flags 0 addr 0
+A _GSFINAL size 0 flags 0 addr 0
+A _INITIALIZER size 0 flags 0 addr 0
+A _CABS size 0 flags 8 addr 0
+T 00 00
+R 00 00 00 00
+T 00 00 CD 00 00 3B 11 88 13
+R 00 00 00 00 02 03 02 00
+T 07 00
+R 00 00 00 00
+T 07 00 21 00 00 39 D5 01 01 00 C5 E5 CD 00 00 F1
+R 00 00 00 00 02 0D 03 00
+T 15 00 F1 D1 DD 7E FF 3C 28 0F D5 3E 02 F5 33 CD
+R 00 00 00 00
+T 23 00 00 00 33 D1 1B 7A B3 20 DB
+R 00 00 00 00 02 02 00 00
+T 2C 00
+R 00 00 00 00
+T 2C 00 7A B3 28 04 2E 01 18 02
+R 00 00 00 00
+T 34 00
+R 00 00 00 00
+T 34 00 2E 00
+R 00 00 00 00
+T 36 00
+R 00 00 00 00
+T 36 00 26 00 33 DD E1 C9
+R 00 00 00 00
+</REL>
+<ADB>
+</ADB>
+</FILE>
+
+<FILE>
+diskio_xmitdatablock
+<REL>
+XL2
+H 9 areas 6 global symbols
+M diskio_xmitdatablock
+O -mz80
+S _wait_ready Ref0000
+S .__.ABS. Def0000
+S ___sdcc_enter_ix Ref0000
+S _rcvr_mmc Ref0000
+S _xmit_mmc Ref0000
+A _CODE size 6E flags 0 addr 0
+S _xmit_datablock Def0000
+A _DATA size 0 flags 0 addr 0
+A _INITIALIZED size 0 flags 0 addr 0
+A _DABS size 0 flags 8 addr 0
+A _HOME size 0 flags 0 addr 0
+A _GSINIT size 0 flags 0 addr 0
+A _GSFINAL size 0 flags 0 addr 0
+A _INITIALIZER size 0 flags 0 addr 0
+A _CABS size 0 flags 8 addr 0
+T 00 00
+R 00 00 00 00
+T 00 00 CD 00 00 F5 CD 00 00 7C B5 20 05 21 00 00
+R 00 00 00 00 02 03 02 00 02 07 00 00
+T 0E 00 18 5A
+R 00 00 00 00
+T 10 00
+R 00 00 00 00
+T 10 00 21 00 00 39 DD 7E 06 77 5D 54 E5 01 01 00
+R 00 00 00 00
+T 1E 00 C5 D5 CD 00 00 F1 F1 E1 DD 7E 06 D6 FD 28
+R 00 00 00 00 02 05 04 00
+T 2C 00 3A E5 01 00 02 C5 DD 4E 04 DD 46 05 C5 CD
+R 00 00 00 00
+T 3A 00 00 00 F1 F1 E1 5D 54 E5 01 02 00 C5 D5 CD
+R 00 00 00 00 02 02 04 00
+T 48 00 00 00 F1 F1 E1 5D 54 E5 01 01 00 C5 D5 CD
+R 00 00 00 00 02 02 03 00
+T 56 00 00 00 F1 F1 E1 7E E6 1F D6 05 28 05 21
+R 00 00 00 00 02 02 03 00
+T 63 00 00 00 18 03
+R 00 00 00 00
+T 67 00
+R 00 00 00 00
+T 67 00 21 01 00
+R 00 00 00 00
+T 6A 00
+R 00 00 00 00
+T 6A 00 F1 DD E1 C9
+R 00 00 00 00
+</REL>
+<ADB>
+</ADB>
+</FILE>
+
+<FILE>
+diskio_xmitmmc
+<REL>
+XL2
+H 9 areas 2 global symbols
+M diskio_xmitmmc
+O -mz80
+S .__.ABS. Def0000
+A _CODE size 15 flags 0 addr 0
+S _xmit_mmc Def0000
+A _DATA size 0 flags 0 addr 0
+A _INITIALIZED size 0 flags 0 addr 0
+A _DABS size 0 flags 8 addr 0
+A _HOME size 0 flags 0 addr 0
+A _GSINIT size 0 flags 0 addr 0
+A _GSFINAL size 0 flags 0 addr 0
+A _INITIALIZER size 0 flags 0 addr 0
+A _CABS size 0 flags 8 addr 0
+T 00 00
+R 00 00 00 00
+T 00 00 C1 D1 D5 C5 21 04 00 39 4E 23 46
+R 00 00 00 00
+T 0B 00
+R 00 00 00 00
+T 0B 00 1A D3 57 13 0B 78 B1 20 F7 C9
+R 00 00 00 00
+</REL>
+<ADB>
+</ADB>
+</FILE>
+
+<FILE>
+ff_checkfs
+<REL>
+XL2
+H 9 areas 5 global symbols
+M ff_checkfs
+O -mz80
+S _move_window Ref0000
+S .__.ABS. Def0000
+S ___sdcc_enter_ix Ref0000
+S _mem_cmp Ref0000
+A _CODE size C9 flags 0 addr 0
+S _check_fs Def0000
+A _DATA size 0 flags 0 addr 0
+A _INITIALIZED size 0 flags 0 addr 0
+A _DABS size 0 flags 8 addr 0
+A _HOME size 0 flags 0 addr 0
+A _GSINIT size 0 flags 0 addr 0
+A _GSFINAL size 0 flags 0 addr 0
+A _INITIALIZER size 0 flags 0 addr 0
+A _CABS size 0 flags 8 addr 0
+T 00 00
+R 00 00 00 00
+T 00 00 CD 00 00 F5 DD 4E 04 DD 46 05 69 60 23 23
+R 00 00 00 00 02 03 02 00
+T 0E 00 36 00 21 24 00 09 36 FF 23 36 FF 23 36 FF
+R 00 00 00 00
+T 1C 00 23 36 FF C5 DD 6E 08 DD 66 09 E5 DD 6E 06
+R 00 00 00 00
+T 2A 00 DD 66 07 E5 C5 CD 00 00 F1 F1 F1 7D C1 B7
+R 00 00 00 00 02 08 00 00
+T 38 00 28 05 2E 04 C3 BB 00
+R 00 00 00 00 00 07 00 00
+T 3F 00
+R 00 00 00 00
+T 3F 00 C5 FD E1 59 50 69 60 C5 01 27 02 09 C1 6E
+R 00 00 00 00
+T 4D 00 DD 75 FF DD 36 FE 00 EB 11 26 02 19 6E 26
+R 00 00 00 00
+T 5B 00 00 7D DD B6 FE 6F 7C DD B6 FF 67 7D D6 55
+R 00 00 00 00
+T 69 00 20 05 7C D6 AA 28 04
+R 00 00 00 00
+T 70 00
+R 00 00 00 00
+T 70 00 2E 03 18 47
+R 00 00 00 00
+T 74 00
+R 00 00 00 00
+T 74 00 FD 7E 28 FE E9 28 08 FE EB 28 04 D6 E8 20
+R 00 00 00 00
+T 82 00 36
+R 00 00 00 00
+T 83 00
+R 00 00 00 00
+T 83 00 21 5E 00 09 C5 11 03 00 D5 11 BF 00 D5 E5
+R 00 00 00 00 00 0C 00 00
+T 91 00 CD 00 00 F1 F1 F1 C1 7C B5 20 03 6F 18 1C
+R 00 00 00 00 02 03 03 00
+T 9F 00
+R 00 00 00 00
+T 9F 00 11 C3 00 21 7A 00 09 01 05 00 C5 D5 E5 CD
+R 00 00 00 00 00 03 00 00
+T AD 00 00 00 F1 F1 F1 7C B5 20 03 6F 18 02
+R 00 00 00 00 02 02 03 00
+T B9 00
+R 00 00 00 00
+T B9 00 2E 02
+R 00 00 00 00
+T BB 00
+R 00 00 00 00
+T BB 00 F1 DD E1 C9
+R 00 00 00 00
+T BF 00
+R 00 00 00 00
+T BF 00 46 41 54 00
+R 00 00 00 00
+T C3 00
+R 00 00 00 00
+T C3 00 46 41 54 33 32 00
+R 00 00 00 00
+</REL>
+<ADB>
+</ADB>
+</FILE>
+
+<FILE>
+ff_chkchr
+<REL>
+XL2
+H 9 areas 2 global symbols
+M ff_chkchr
+O -mz80
+S .__.ABS. Def0000
+A _CODE size 26 flags 0 addr 0
+S _chk_chr Def0000
+A _DATA size 0 flags 0 addr 0
+A _INITIALIZED size 0 flags 0 addr 0
+A _DABS size 0 flags 8 addr 0
+A _HOME size 0 flags 0 addr 0
+A _GSINIT size 0 flags 0 addr 0
+A _GSFINAL size 0 flags 0 addr 0
+A _INITIALIZER size 0 flags 0 addr 0
+A _CABS size 0 flags 8 addr 0
+T 00 00
+R 00 00 00 00
+T 00 00 C1 D1 D5 C5
+R 00 00 00 00
+T 04 00
+R 00 00 00 00
+T 04 00 1A 47 F5 17 9F 4F F1 B7 28 15 FD 21 04 00
+R 00 00 00 00
+T 12 00 FD 39 FD 7E 00 90 20 06 FD 7E 01 91 28 03
+R 00 00 00 00
+T 20 00
+R 00 00 00 00
+T 20 00 13 18 E1
+R 00 00 00 00
+T 23 00
+R 00 00 00 00
+T 23 00 68 61 C9
+R 00 00 00 00
+</REL>
+<ADB>
+</ADB>
+</FILE>
+
+<FILE>
+ff_closedir
+<REL>
+XL2
+H 9 areas 3 global symbols
+M ff_closedir
+O -mz80
+S .__.ABS. Def0000
+S _validate Ref0000
+A _CODE size 27 flags 0 addr 0
+S _f_closedir Def0000
+A _DATA size 0 flags 0 addr 0
+A _INITIALIZED size 0 flags 0 addr 0
+A _DABS size 0 flags 8 addr 0
+A _HOME size 0 flags 0 addr 0
+A _GSINIT size 0 flags 0 addr 0
+A _GSFINAL size 0 flags 0 addr 0
+A _INITIALIZER size 0 flags 0 addr 0
+A _CABS size 0 flags 8 addr 0
+T 00 00
+R 00 00 00 00
+T 00 00 F5 21 00 00 39 FD 21 04 00 FD 39 FD 5E 00
+R 00 00 00 00
+T 0E 00 FD 56 01 D5 E5 D5 CD 00 00 F1 F1 7D D1 47
+R 00 00 00 00 02 09 01 00
+T 1C 00 B7 20 05 12 13 3E 00 12
+R 00 00 00 00
+T 24 00
+R 00 00 00 00
+T 24 00 68 F1 C9
+R 00 00 00 00
+</REL>
+<ADB>
+</ADB>
+</FILE>
+
+<FILE>
+ff_clst2sect
+<REL>
+XL2
+H 9 areas 4 global symbols
+M ff_clst2sect
+O -mz80
+S .__.ABS. Def0000
+S ___sdcc_enter_ix Ref0000
+S __mullong Ref0000
+A _CODE size BA flags 0 addr 0
+S _clst2sect Def0000
+A _DATA size 0 flags 0 addr 0
+A _INITIALIZED size 0 flags 0 addr 0
+A _DABS size 0 flags 8 addr 0
+A _HOME size 0 flags 0 addr 0
+A _GSINIT size 0 flags 0 addr 0
+A _GSFINAL size 0 flags 0 addr 0
+A _INITIALIZER size 0 flags 0 addr 0
+A _CABS size 0 flags 8 addr 0
+T 00 00
+R 00 00 00 00
+T 00 00 CD 00 00 F5 F5 DD 7E 06 C6 FE DD 77 06 DD
+R 00 00 00 00 02 03 01 00
+T 0E 00 7E 07 CE FF DD 77 07 DD 7E 08 CE FF DD 77
+R 00 00 00 00
+T 1C 00 08 DD 7E 09 CE FF DD 77 09 DD 5E 04 DD 56
+R 00 00 00 00
+T 2A 00 05 D5 FD E1 FD 6E 0C FD 66 0D FD 4E 0E FD
+R 00 00 00 00
+T 38 00 46 0F 7D C6 FE 6F 7C CE FF 67 79 CE FF 4F
+R 00 00 00 00
+T 46 00 78 CE FF 47 DD 7E 06 95 DD 7E 07 9C DD 7E
+R 00 00 00 00
+T 54 00 08 99 DD 7E 09 98 38 07 21 00 00 5D 54 18
+R 00 00 00 00
+T 62 00 52
+R 00 00 00 00
+T 63 00
+R 00 00 00 00
+T 63 00 D5 FD E1 FD 7E 20 DD 77 FC FD 7E 21 DD 77
+R 00 00 00 00
+T 71 00 FD FD 7E 22 DD 77 FE FD 7E 23 DD 77 FF D5
+R 00 00 00 00
+T 7F 00 FD E1 FD 5E 08 FD 56 09 01 00 00 DD 6E 08
+R 00 00 00 00
+T 8D 00 DD 66 09 E5 DD 6E 06 DD 66 07 E5 C5 D5 CD
+R 00 00 00 00
+T 9B 00 00 00 F1 F1 F1 F1 DD 7E FC 85 6F DD 7E FD
+R 00 00 00 00 02 02 02 00
+T A9 00 8C 67 DD 7E FE 8B 5F DD 7E FF 8A 57
+R 00 00 00 00
+T B5 00
+R 00 00 00 00
+T B5 00 DD F9 DD E1 C9
+R 00 00 00 00
+</REL>
+<ADB>
+</ADB>
+</FILE>
+
+<FILE>
+ff_cmplfn
+<REL>
+XL2
+H 9 areas 4 global symbols
+M ff_cmplfn
+O -mz80
+S .__.ABS. Def0000
+S _LfnOfs Ref0000
+S ___sdcc_enter_ix Ref0000
+A _CODE size 141 flags 0 addr 0
+S _cmp_lfn Def0000
+A _DATA size 0 flags 0 addr 0
+A _INITIALIZED size 0 flags 0 addr 0
+A _DABS size 0 flags 8 addr 0
+A _HOME size 0 flags 0 addr 0
+A _GSINIT size 0 flags 0 addr 0
+A _GSFINAL size 0 flags 0 addr 0
+A _INITIALIZER size 0 flags 0 addr 0
+A _CABS size 0 flags 8 addr 0
+T 00 00
+R 00 00 00 00
+T 00 00 CD 00 00 21 F5 FF 39 F9 DD 7E 06 C6 1A 4F
+R 00 00 00 00 02 03 02 00
+T 0E 00 DD 7E 07 CE 00 47 69 60 23 5E 16 00 0A 6F
+R 00 00 00 00
+T 1C 00 26 00 7D B2 6F 7C B3 B5 28 06 21 00 00 C3
+R 00 00 00 00
+T 2A 00 3C 01
+R 00 00 00 00 00 02 00 00
+T 2C 00
+R 00 00 00 00
+T 2C 00 DD 4E 06 DD 46 07 0A DD 77 FD E6 3F 6F 26
+R 00 00 00 00
+T 3A 00 00 2B 5D 54 29 19 29 29 19 DD 75 F9 DD 74
+R 00 00 00 00
+T 48 00 FA 21 01 00 E3 DD 5E F9 DD 56 FA DD 36 F7
+R 00 00 00 00
+T 56 00 00 DD 36 F8 00
+R 00 00 00 00
+T 5B 00
+R 00 00 00 00
+T 5B 00 DD 7E F7 D6 0D DD 7E F8 DE 00 D2 0F 01 3E
+R 00 00 00 00 00 0D 00 00
+T 69 00 00 00 DD 86 F7 6F 3E 00 00 DD 8E F8 67 6E
+R 00 00 00 00 0B 02 01 00 8B 09 01 00
+T 75 00 E5 26 00 E5 FD E1 E1 FD 09 FD E5 E1 23 6E
+R 00 00 00 00
+T 83 00 DD 75 FF DD 36 FE 00 FD 7E 00 26 00 DD B6
+R 00 00 00 00
+T 91 00 FE 6F 7C DD B6 FF DD 75 FB DD 77 FC DD 7E
+R 00 00 00 00
+T 9F 00 F6 DD B6 F5 28 4D 7B D6 7F 7A DE 00 30 32
+R 00 00 00 00
+T AD 00 D5 FD E1 13 DD 73 F9 DD 72 FA FD 29 C5 DD
+R 00 00 00 00
+T BB 00 4E 04 DD 46 05 FD 09 C1 FD 7E 00 DD 77 FE
+R 00 00 00 00
+T C9 00 FD 7E 01 DD 77 FF DD 7E FB DD 96 FE 20 08
+R 00 00 00 00
+T D7 00 DD 7E FC DD 96 FF 28 05
+R 00 00 00 00
+T DF 00
+R 00 00 00 00
+T DF 00
+R 00 00 00 00
+T DF 00 21 00 00 18 58
+R 00 00 00 00
+T E4 00
+R 00 00 00 00
+T E4 00 DD 7E FB DD 77 F5 DD 7E FC DD 77 F6 18 11
+R 00 00 00 00
+T F2 00
+R 00 00 00 00
+T F2 00 DD 7E FB 3C 20 06 DD 7E FC 3C 28 05
+R 00 00 00 00
+T FE 00
+R 00 00 00 00
+T FE 00 21 00 00 18 39
+R 00 00 00 00
+T 03 01
+R 00 00 00 00
+T 03 01 DD 34 F7 C2 5B 00 DD 34 F8 C3 5B 00
+R 00 00 00 00 00 06 00 00 00 0C 00 00
+T 0F 01
+R 00 00 00 00
+T 0F 01 DD CB FD 76 28 24 DD 7E F6 DD B6 F5 28 1C
+R 00 00 00 00
+T 1D 01 DD 5E F9 DD 56 FA CB 23 CB 12 DD 6E 04 DD
+R 00 00 00 00
+T 2B 01 66 05 19 56 23 7E B2 28 05 21 00 00 18 03
+R 00 00 00 00
+T 39 01
+R 00 00 00 00
+T 39 01 21 01 00
+R 00 00 00 00
+T 3C 01
+R 00 00 00 00
+T 3C 01 DD F9 DD E1 C9
+R 00 00 00 00
+</REL>
+<ADB>
+</ADB>
+</FILE>
+
+<FILE>
+ff_createchain
+<REL>
+XL2
+H 9 areas 1 global symbols
+M ff_createchain
+O -mz80
+S .__.ABS. Def0000
+A _CODE size 0 flags 0 addr 0
+A _DATA size 0 flags 0 addr 0
+A _INITIALIZED size 0 flags 0 addr 0
+A _DABS size 0 flags 8 addr 0
+A _HOME size 0 flags 0 addr 0
+A _GSINIT size 0 flags 0 addr 0
+A _GSFINAL size 0 flags 0 addr 0
+A _INITIALIZER size 0 flags 0 addr 0
+A _CABS size 0 flags 8 addr 0
+</REL>
+<ADB>
+</ADB>
+</FILE>
+
+<FILE>
+ff_createname
+<REL>
+XL2
+H 9 areas 6 global symbols
+M ff_createname
+O -mz80
+S _ExCvt Ref0000
+S .__.ABS. Def0000
+S _memset Ref0000
+S _chk_chr Ref0000
+S ___sdcc_enter_ix Ref0000
+A _CODE size 40E flags 0 addr 0
+S _create_name Def0000
+A _DATA size 0 flags 0 addr 0
+A _INITIALIZED size 0 flags 0 addr 0
+A _DABS size 0 flags 8 addr 0
+A _HOME size 0 flags 0 addr 0
+A _GSINIT size 0 flags 0 addr 0
+A _GSFINAL size 0 flags 0 addr 0
+A _INITIALIZER size 0 flags 0 addr 0
+A _CABS size 0 flags 8 addr 0
+T 00 00
+R 00 00 00 00
+T 00 00 CD 00 00 21 E9 FF 39 F9 DD 7E 06 DD 77 FC
+R 00 00 00 00 02 03 04 00
+T 0E 00 DD 7E 07 DD 77 FD DD 6E FC DD 66 FD 7E DD
+R 00 00 00 00
+T 1C 00 77 F5 23 7E DD 77 F6 DD 7E 04 DD 77 F3 DD
+R 00 00 00 00
+T 2A 00 7E 05 DD 77 F4 DD 6E F3 DD 66 F4 7E 23 66
+R 00 00 00 00
+T 38 00 6F 11 0A 00 19 7E DD 77 EF 23 7E DD 77 F0
+R 00 00 00 00
+T 46 00 DD 36 FE 00 DD 36 FF 00 DD 36 FA 00 DD 36
+R 00 00 00 00
+T 54 00 FB 00
+R 00 00 00 00
+T 56 00
+R 00 00 00 00
+T 56 00 DD 6E F5 DD 66 F6 66 DD 34 F5 20 03 DD 34
+R 00 00 00 00
+T 64 00 F6
+R 00 00 00 00
+T 65 00
+R 00 00 00 00
+T 65 00 DD 7E F5 DD 77 EC DD 7E F6 DD 77 ED 7C 17
+R 00 00 00 00
+T 73 00 9F DD 74 F8 DD 77 F9 DD 7E F8 D6 20 DD 7E
+R 00 00 00 00
+T 81 00 F9 DE 00 3E 00 17 DD 77 F7 B7 20 4C DD 7E
+R 00 00 00 00
+T 8F 00 F8 D6 2F 20 06 DD 7E F9 B7 28 3F
+R 00 00 00 00
+T 9A 00
+R 00 00 00 00
+T 9A 00 DD 7E FA D6 7F DD 7E FB DE 00 38 05 2E 06
+R 00 00 00 00
+T A8 00 C3 02 04
+R 00 00 00 00 00 03 00 00
+T AB 00
+R 00 00 00 00
+T AB 00 DD 6E FA DD 66 FB DD 34 FA 20 03 DD 34 FB
+R 00 00 00 00
+T B9 00
+R 00 00 00 00
+T B9 00 DD 7E FA DD 77 FE DD 7E FB DD 77 FF 29 DD
+R 00 00 00 00
+T C7 00 5E EF DD 56 F0 19 DD 7E F8 77 23 DD 7E F9
+R 00 00 00 00
+T D5 00 77 C3 56 00
+R 00 00 00 00 00 04 00 00
+T D9 00
+R 00 00 00 00
+T D9 00 DD 6E FC DD 66 FD DD 7E EC 77 23 DD 7E ED
+R 00 00 00 00
+T E7 00 77 DD 7E F7 B7 28 06 DD 36 EE 04 18 04
+R 00 00 00 00
+T F4 00
+R 00 00 00 00
+T F4 00 DD 36 EE 00
+R 00 00 00 00
+T F8 00
+R 00 00 00 00
+T F8 00 DD 46 FE DD 5E FF
+R 00 00 00 00
+T FE 00
+R 00 00 00 00
+T FE 00 7B B0 28 2C 78 C6 FF 57 7B CE FF 4F 6A 61
+R 00 00 00 00
+T 0C 01 29 DD 7E EF 85 6F DD 7E F0 8C 67 7E 23 6E
+R 00 00 00 00
+T 1A 01 67 D6 20 20 03 B5 28 08
+R 00 00 00 00
+T 22 01
+R 00 00 00 00
+T 22 01 7C D6 2E 20 07 B5 20 04
+R 00 00 00 00
+T 2A 01
+R 00 00 00 00
+T 2A 01 42 59 18 D0
+R 00 00 00 00
+T 2E 01
+R 00 00 00 00
+T 2E 01 DD 70 F8 DD 73 F9 68 63 29 DD 7E EF 85 6F
+R 00 00 00 00
+T 3C 01 DD 7E F0 8C 67 AF 77 23 77 7B B0 20 05 2E
+R 00 00 00 00
+T 4A 01 06 C3 02 04
+R 00 00 00 00 00 04 00 00
+T 4E 01
+R 00 00 00 00
+T 4E 01 11 00 00
+R 00 00 00 00
+T 51 01
+R 00 00 00 00
+T 51 01 6B 62 29 DD 4E EF DD 46 F0 09 7E DD 77 FA
+R 00 00 00 00
+T 5F 01 23 7E DD 77 FB DD 7E FA D6 20 20 09 DD 7E
+R 00 00 00 00
+T 6D 01 FB B7 20 03 13 18 DD
+R 00 00 00 00
+T 74 01
+R 00 00 00 00
+T 74 01 4B 7A 47 B3 20 0D DD 7E FA D6 2E 20 0E DD
+R 00 00 00 00
+T 82 01 7E FB B7 20 08
+R 00 00 00 00
+T 87 01
+R 00 00 00 00
+T 87 01 DD 7E EE F6 03 DD 77 EE
+R 00 00 00 00
+T 8F 01
+R 00 00 00 00
+T 8F 01 DD 7E F9 DD B6 F8 28 26 DD 5E F8 DD 56 F9
+R 00 00 00 00
+T 9D 01 1B 6B 62 29 DD 7E EF 85 6F DD 7E F0 8C 67
+R 00 00 00 00
+T AB 01 7E 23 6E D6 2E 20 03 B5 28 08
+R 00 00 00 00
+T B5 01
+R 00 00 00 00
+T B5 01 DD 73 F8 DD 72 F9 18 D2
+R 00 00 00 00
+T BD 01
+R 00 00 00 00
+T BD 01 DD 7E F3 C6 1C DD 77 FA DD 7E F4 CE 00 DD
+R 00 00 00 00
+T CB 01 77 FB DD 6E FA DD 66 FB C5 11 0B 00 D5 11
+R 00 00 00 00
+T D9 01 20 00 D5 E5 CD 00 00 F1 F1 F1 C1 DD 36 EB
+R 00 00 00 00 02 07 02 00
+T E7 01 00 DD 36 F1 00 DD 36 F2 00 21 08 00 E3
+R 00 00 00 00
+T F4 01
+R 00 00 00 00
+T F4 01 69 60 03 29 DD 5E EF DD 56 F0 19 7E DD 77
+R 00 00 00 00
+T 02 02 FE 23 7E DD 77 FF DD 7E EB 87 87 DD 77 F7
+R 00 00 00 00
+T 10 02 DD 7E FF DD B6 FE CA 9A 03 DD 7E EE F6 03
+R 00 00 00 00 00 09 00 00
+T 1E 02 57 DD 7E FE D6 20 20 06 DD 7E FF B7 28 22
+R 00 00 00 00
+T 2C 02
+R 00 00 00 00
+T 2C 02 DD 7E F8 91 20 0A DD 7E F9 90 20 04 3E 01
+R 00 00 00 00
+T 3A 02 18 01
+R 00 00 00 00
+T 3C 02
+R 00 00 00 00
+T 3C 02 AF
+R 00 00 00 00
+T 3D 02
+R 00 00 00 00
+T 3D 02 5F DD 7E FE D6 2E 20 0E DD 7E FF B7 20 08
+R 00 00 00 00
+T 4B 02 B3 20 05
+R 00 00 00 00
+T 4E 02
+R 00 00 00 00
+T 4E 02 DD 72 EE 18 A1
+R 00 00 00 00
+T 53 02
+R 00 00 00 00
+T 53 02 DD 7E F1 DD 96 E9 DD 7E F2 DD 9E EA 30 04
+R 00 00 00 00
+T 61 02 7B B7 28 40
+R 00 00 00 00
+T 65 02
+R 00 00 00 00
+T 65 02 DD 7E E9 D6 0B 20 0C DD 7E EA B7 20 06 DD
+R 00 00 00 00
+T 73 02 72 EE C3 9A 03
+R 00 00 00 00 00 05 00 00
+T 78 02
+R 00 00 00 00
+T 78 02 7B B7 20 03 DD 72 EE
+R 00 00 00 00
+T 7F 02
+R 00 00 00 00
+T 7F 02 DD 7E F8 91 DD 7E F9 98 DA 9A 03 DD 4E F8
+R 00 00 00 00 00 0B 00 00
+T 8D 02 DD 46 F9 DD 36 F1 08 DD 36 F2 00 21 0B 00
+R 00 00 00 00
+T 9B 02 E3 DD 7E F7 DD 77 EB C3 F4 01
+R 00 00 00 00 00 0A 00 00
+T A5 02
+R 00 00 00 00
+T A5 02 DD 7E FE D6 80 DD 7E FF DE 00 38 1D DD CB
+R 00 00 00 00
+T B3 02 EE CE DD CB FE 7E 28 13 DD 6E FE CB BD 26
+R 00 00 00 00
+T C1 02 00 11 00 00 19 7E DD 77 FE DD 36 FF 00
+R 00 00 00 00 02 04 00 00
+T CE 02
+R 00 00 00 00
+T CE 02 DD 7E EE F6 03 57 DD 7E FF D6 01 38 3E DD
+R 00 00 00 00
+T DC 02 6E E9 DD 66 EA 2B DD 7E F1 95 DD 7E F2 9C
+R 00 00 00 00
+T EA 02 38 12 DD 72 EE DD 7E E9 DD 77 F1 DD 7E EA
+R 00 00 00 00
+T F8 02 DD 77 F2 C3 F4 01
+R 00 00 00 00 00 06 00 00
+T FE 02
+R 00 00 00 00
+T FE 02 DD 6E F1 DD 66 F2 DD 34 F1 20 03 DD 34 F2
+R 00 00 00 00
+T 0C 03
+R 00 00 00 00
+T 0C 03 DD 5E FA DD 56 FB 19 DD 56 FF 72 18 65
+R 00 00 00 00
+T 19 03
+R 00 00 00 00
+T 19 03 DD 7E FF DD B6 FE 28 18 C5 D5 DD 6E FE DD
+R 00 00 00 00
+T 27 03 66 FF E5 21 07 04 E5 CD 00 00 F1 F1 D1 C1
+R 00 00 00 00 00 06 00 00 02 0A 03 00
+T 35 03 7C B5 28 0D
+R 00 00 00 00
+T 39 03
+R 00 00 00 00
+T 39 03 DD 36 FE 5F DD 36 FF 00 DD 72 EE 18 38
+R 00 00 00 00
+T 46 03
+R 00 00 00 00
+T 46 03 DD 7E FE D6 41 DD 7E FF DE 00 38 10 3E 5A
+R 00 00 00 00
+T 54 03 DD BE FE 3E 00 DD 9E FF 38 04 DD CB EB CE
+R 00 00 00 00
+T 62 03
+R 00 00 00 00
+T 62 03 DD 7E FE D6 61 DD 7E FF DE 00 38 10 3E 7A
+R 00 00 00 00
+T 70 03 DD BE FE 3E 00 DD 9E FF 38 04 DD CB EB C6
+R 00 00 00 00
+T 7E 03
+R 00 00 00 00
+T 7E 03 DD 6E F1 DD 66 F2 DD 34 F1 20 03 DD 34 F2
+R 00 00 00 00
+T 8C 03
+R 00 00 00 00
+T 8C 03 DD 5E FA DD 56 FB 19 DD 7E FE 77 C3 F4 01
+R 00 00 00 00 00 0E 00 00
+T 9A 03
+R 00 00 00 00
+T 9A 03 DD 6E FA DD 66 FB 7E D6 E5 20 08 DD 6E FA
+R 00 00 00 00
+T A8 03 DD 66 FB 36 05
+R 00 00 00 00
+T AD 03
+R 00 00 00 00
+T AD 03 DD 7E E9 D6 08 20 0C DD 7E EA B7 20 06 DD
+R 00 00 00 00
+T BB 03 7E F7 DD 77 EB
+R 00 00 00 00
+T C0 03
+R 00 00 00 00
+T C0 03 DD 7E EB E6 0C D6 0C 28 09 DD 7E EB E6 03
+R 00 00 00 00
+T CE 03 D6 03 20 04
+R 00 00 00 00
+T D2 03
+R 00 00 00 00
+T D2 03 DD CB EE CE
+R 00 00 00 00
+T D6 03
+R 00 00 00 00
+T D6 03 DD CB EE 4E 20 14 DD CB EB 46 28 04 DD CB
+R 00 00 00 00
+T E4 03 EE E6
+R 00 00 00 00
+T E6 03
+R 00 00 00 00
+T E6 03 DD CB EB 56 28 04 DD CB EE DE
+R 00 00 00 00
+T F0 03
+R 00 00 00 00
+T F0 03 DD 7E F3 C6 27 6F DD 7E F4 CE 00 67 DD 7E
+R 00 00 00 00
+T FE 03 EE 77 2E 00
+R 00 00 00 00
+T 02 04
+R 00 00 00 00
+T 02 04 DD F9 DD E1 C9
+R 00 00 00 00
+T 07 04
+R 00 00 00 00
+T 07 04 2B 2C 3B 3D 5B 5D 00
+R 00 00 00 00
+</REL>
+<ADB>
+</ADB>
+</FILE>
+
+<FILE>
+ff_diralloc
+<REL>
+XL2
+H 9 areas 1 global symbols
+M ff_diralloc
+O -mz80
+S .__.ABS. Def0000
+A _CODE size 0 flags 0 addr 0
+A _DATA size 0 flags 0 addr 0
+A _INITIALIZED size 0 flags 0 addr 0
+A _DABS size 0 flags 8 addr 0
+A _HOME size 0 flags 0 addr 0
+A _GSINIT size 0 flags 0 addr 0
+A _GSFINAL size 0 flags 0 addr 0
+A _INITIALIZER size 0 flags 0 addr 0
+A _CABS size 0 flags 8 addr 0
+</REL>
+<ADB>
+</ADB>
+</FILE>
+
+<FILE>
+ff_dirclear
+<REL>
+XL2
+H 9 areas 1 global symbols
+M ff_dirclear
+O -mz80
+S .__.ABS. Def0000
+A _CODE size 0 flags 0 addr 0
+A _DATA size 0 flags 0 addr 0
+A _INITIALIZED size 0 flags 0 addr 0
+A _DABS size 0 flags 8 addr 0
+A _HOME size 0 flags 0 addr 0
+A _GSINIT size 0 flags 0 addr 0
+A _GSFINAL size 0 flags 0 addr 0
+A _INITIALIZER size 0 flags 0 addr 0
+A _CABS size 0 flags 8 addr 0
+</REL>
+<ADB>
+</ADB>
+</FILE>
+
+<FILE>
+ff_dirfind
+<REL>
+XL2
+H 9 areas 9 global symbols
+M ff_dirfind
+O -mz80
+S _move_window Ref0000
+S _sum_sfn Ref0000
+S .__.ABS. Def0000
+S ___sdcc_enter_ix Ref0000
+S _dir_next Ref0000
+S _mem_cmp Ref0000
+S _dir_sdi Ref0000
+S _cmp_lfn Ref0000
+A _CODE size 250 flags 0 addr 0
+S _dir_find Def0000
+A _DATA size 0 flags 0 addr 0
+A _INITIALIZED size 0 flags 0 addr 0
+A _DABS size 0 flags 8 addr 0
+A _HOME size 0 flags 0 addr 0
+A _GSINIT size 0 flags 0 addr 0
+A _GSFINAL size 0 flags 0 addr 0
+A _INITIALIZER size 0 flags 0 addr 0
+A _CABS size 0 flags 8 addr 0
+T 00 00
+R 00 00 00 00
+T 00 00 CD 00 00 21 E6 FF 39 F9 DD 4E 04 DD 46 05
+R 00 00 00 00 02 03 03 00
+T 0E 00 0A DD 77 E8 03 0A DD 77 E9 0B C5 21 00 00
+R 00 00 00 00
+T 1C 00 E5 21 00 00 E5 C5 CD 00 00 F1 F1 F1 C1 7D
+R 00 00 00 00 02 09 06 00
+T 2A 00 B7 C2 4B 02 DD 36 E6 FF DD 36 E7 FF 21
+R 00 00 00 00 00 04 00 00
+T 37 00 28 00 09 DD 75 F2 DD 74 F3 DD 6E F2 DD 66
+R 00 00 00 00
+T 45 00 F3 36 FF 23 36 FF 23 36 FF 23 36 FF DD 71
+R 00 00 00 00
+T 53 00 F4 DD 70 F5 DD 7E E8 DD 77 FC DD 7E E9 DD
+R 00 00 00 00
+T 61 00 77 FD 21 1C 00 09 DD 75 F0 DD 74 F1 21
+R 00 00 00 00
+T 6E 00 27 00 09 DD 75 EE DD 74 EF DD 7E EE DD 77
+R 00 00 00 00
+T 7C 00 FE DD 7E EF DD 77 FF DD 71 F6 DD 70 F7
+R 00 00 00 00
+T 89 00
+R 00 00 00 00
+T 89 00 DD 6E F6 DD 66 F7 11 16 00 19 5E 23 56 23
+R 00 00 00 00
+T 97 00 23 7E 2B 6E 67 C5 E5 D5 DD 6E E8 DD 66 E9
+R 00 00 00 00
+T A5 00 E5 CD 00 00 F1 F1 F1 C1 5D 7B B7 C2 4A 02
+R 00 00 00 00 02 04 00 00 00 0E 00 00
+T B3 00 21 1A 00 09 DD 75 FA DD 74 FB DD 6E FA DD
+R 00 00 00 00
+T C1 00 66 FB 7E 23 66 6F 56 7A B7 20 05 1E 04 C3
+R 00 00 00 00
+T CF 00 4A 02
+R 00 00 00 00 00 02 00 00
+T D1 00
+R 00 00 00 00
+T D1 00 FD 21 04 00 FD 09 C5 01 0B 00 09 C1 7E E6
+R 00 00 00 00
+T DF 00 3F 67 FD 77 00 7A D6 E5 28 11 7C D6 0F 20
+R 00 00 00 00
+T ED 00 04 3E 01 18 01
+R 00 00 00 00
+T F2 00
+R 00 00 00 00
+T F2 00 AF
+R 00 00 00 00
+T F3 00
+R 00 00 00 00
+T F3 00 CB 5C 28 1B B7 20 18
+R 00 00 00 00
+T FA 00
+R 00 00 00 00
+T FA 00 DD 36 E7 FF DD 6E F2 DD 66 F3 36 FF 23 36
+R 00 00 00 00
+T 08 01 FF 23 36 FF 23 36 FF C3 38 02
+R 00 00 00 00 00 0A 00 00
+T 12 01
+R 00 00 00 00
+T 12 01 DD 6E FA DD 66 FB F5 7E DD 77 F8 23 7E DD
+R 00 00 00 00
+T 20 01 77 F9 F1 B7 CA C8 01 DD 6E FE DD 66 FF CB
+R 00 00 00 00 00 07 00 00
+T 2E 01 76 C2 38 02 CB 72 28 48 E5 DD 6E F8 DD 66
+R 00 00 00 00 00 04 00 00
+T 3C 01 F9 E5 FD E1 E1 FD 7E 0D DD 77 E6 CB B2 DD
+R 00 00 00 00
+T 4A 01 72 E7 DD 6E F4 DD 66 F5 C5 01 0E 00 09 C1
+R 00 00 00 00
+T 58 01 7E DD 77 EA 23 7E DD 77 EB 23 7E DD 77 EC
+R 00 00 00 00
+T 66 01 23 7E DD 77 ED D5 C5 DD 5E F2 DD 56 F3 21
+R 00 00 00 00
+T 74 01 08 00 39 01 04 00 ED B0 C1 D1
+R 00 00 00 00
+T 7E 01
+R 00 00 00 00
+T 7E 01 DD 7E E7 92 20 3D DD 6E FA DD 66 FB 5E 23
+R 00 00 00 00
+T 8C 01 56 D5 FD E1 FD 7E 0D DD 77 EA DD 7E E6 DD
+R 00 00 00 00
+T 9A 01 96 EA 20 23 DD 6E FC DD 66 FD C5 01 0A 00
+R 00 00 00 00
+T A8 01 09 C1 7E 23 66 6F C5 D5 E5 CD 00 00 F1 F1
+R 00 00 00 00 02 0C 07 00
+T B6 01 C1 7C B5 28 06 DD 66 E7 25 18 02
+R 00 00 00 00
+T C1 01
+R 00 00 00 00
+T C1 01 26 FF
+R 00 00 00 00
+T C3 01
+R 00 00 00 00
+T C3 01 DD 74 E7 18 70
+R 00 00 00 00
+T C8 01
+R 00 00 00 00
+T C8 01 DD 7E E7 B7 20 17 C5 D5 DD 6E F8 DD 66 F9
+R 00 00 00 00
+T D6 01 E5 CD 00 00 F1 7D D1 57 C1 DD 7E E6 92 28
+R 00 00 00 00 02 04 01 00
+T E4 01 65
+R 00 00 00 00
+T E5 01
+R 00 00 00 00
+T E5 01 DD 6E EE DD 66 EF 7E 0F 38 34 DD 7E F0 DD
+R 00 00 00 00
+T F3 01 77 EA DD 7E F1 DD 77 EB DD 6E FA DD 66 FB
+R 00 00 00 00
+T 01 02 7E 23 66 6F E5 FD E1 C5 D5 21 0B 00 E5 DD
+R 00 00 00 00
+T 0F 02 6E EA DD 66 EB E5 FD E5 CD 00 00 F1 F1 F1
+R 00 00 00 00 02 0B 05 00
+T 1D 02 D1 C1 7C B5 28 27
+R 00 00 00 00
+T 23 02
+R 00 00 00 00
+T 23 02 DD 36 E7 FF DD 6E F2 DD 66 F3 36 FF 23 36
+R 00 00 00 00
+T 31 02 FF 23 36 FF 23 36 FF
+R 00 00 00 00
+T 38 02
+R 00 00 00 00
+T 38 02 C5 21 00 00 E5 C5 CD 00 00 F1 F1 C1 5D 7B
+R 00 00 00 00 02 09 04 00
+T 46 02 B7 CA 89 00
+R 00 00 00 00 00 04 00 00
+T 4A 02
+R 00 00 00 00
+T 4A 02 6B
+R 00 00 00 00
+T 4B 02
+R 00 00 00 00
+T 4B 02 DD F9 DD E1 C9
+R 00 00 00 00
+</REL>
+<ADB>
+</ADB>
+</FILE>
+
+<FILE>
+ff_dirnext
+<REL>
+XL2
+H 9 areas 5 global symbols
+M ff_dirnext
+O -mz80
+S .__.ABS. Def0000
+S _clst2sect Ref0000
+S ___sdcc_enter_ix Ref0000
+S _get_fat Ref0000
+A _CODE size 2FA flags 0 addr 0
+S _dir_next Def0000
+A _DATA size 0 flags 0 addr 0
+A _INITIALIZED size 0 flags 0 addr 0
+A _DABS size 0 flags 8 addr 0
+A _HOME size 0 flags 0 addr 0
+A _GSINIT size 0 flags 0 addr 0
+A _GSFINAL size 0 flags 0 addr 0
+A _INITIALIZER size 0 flags 0 addr 0
+A _CABS size 0 flags 8 addr 0
+T 00 00
+R 00 00 00 00
+T 00 00 CD 00 00 21 E2 FF 39 F9 DD 7E 04 DD 77 F8
+R 00 00 00 00 02 03 02 00
+T 0E 00 DD 7E 05 DD 77 F9 DD 6E F8 DD 66 F9 7E DD
+R 00 00 00 00
+T 1C 00 77 EA 23 7E DD 77 EB DD 7E F8 C6 0E DD 77
+R 00 00 00 00
+T 2A 00 FE DD 7E F9 CE 00 DD 77 FF DD 6E FE DD 66
+R 00 00 00 00
+T 38 00 FF 56 23 5E 23 46 23 66 7A C6 20 DD 77 E2
+R 00 00 00 00
+T 46 00 7B CE 00 DD 77 E3 78 CE 00 DD 77 E4 7C CE
+R 00 00 00 00
+T 54 00 00 DD 77 E5 DD 7E F8 C6 16 4F DD 7E F9 CE
+R 00 00 00 00
+T 62 00 00 47 DD 7E E4 D6 20 DD 7E E5 DE 00 38 0D
+R 00 00 00 00
+T 70 00 69 60 36 00 23 36 00 23 36 00 23 36 00
+R 00 00 00 00
+T 7D 00
+R 00 00 00 00
+T 7D 00 C5 59 50 21 0C 00 39 EB 01 04 00 ED B0 C1
+R 00 00 00 00
+T 8B 00 DD 7E EF DD B6 EE DD B6 ED DD B6 EC 20 05
+R 00 00 00 00
+T 99 00 2E 04 C3 F5 02
+R 00 00 00 00 00 05 00 00
+T 9E 00
+R 00 00 00 00
+T 9E 00 DD 7E E2 DD 77 F4 DD 7E E3 E6 01 DD 77 F5
+R 00 00 00 00
+T AC 00 DD 36 F6 00 DD 36 F7 00 3E 00 DD B6 F6 DD
+R 00 00 00 00
+T BA 00 B6 F5 DD B6 F4 C2 BF 02 DD 34 EC 20 0D DD
+R 00 00 00 00 00 08 00 00
+T C8 00 34 ED 20 08 DD 34 EE 20 03 DD 34 EF
+R 00 00 00 00
+T D4 00
+R 00 00 00 00
+T D4 00 C5 59 50 21 0C 00 39 01 04 00 ED B0 C1 DD
+R 00 00 00 00
+T E2 00 7E F8 C6 12 DD 77 EC DD 7E F9 CE 00 DD 77
+R 00 00 00 00
+T F0 00 ED C5 DD 5E EC DD 56 ED 21 10 00 39 EB 01
+R 00 00 00 00
+T FE 00 04 00 ED B0 C1 DD 7E F3 DD B6 F2 DD B6 F1
+R 00 00 00 00
+T 0C 01 DD B6 F0 20 66 F5 DD 7E E2 DD 77 FA DD 7E
+R 00 00 00 00
+T 1A 01 E3 DD 77 FB DD 7E E4 DD 77 FC DD 7E E5 DD
+R 00 00 00 00
+T 28 01 77 FD F1 3E 05
+R 00 00 00 00
+T 2D 01
+R 00 00 00 00
+T 2D 01 DD CB FD 3E DD CB FC 1E DD CB FB 1E DD CB
+R 00 00 00 00
+T 3B 01 FA 1E 3D 20 ED DD 6E EA DD 66 EB 11 06 00
+R 00 00 00 00
+T 49 01 19 5E 23 56 21 00 00 DD 7E FA 93 DD 7E FB
+R 00 00 00 00
+T 57 01 9A DD 7E FC 9C DD 7E FD 9D DA BF 02 3E 00
+R 00 00 00 00 00 0C 00 00
+T 65 01 02 03 3E 00 02 03 3E 00 02 03 3E 00 02 2E
+R 00 00 00 00
+T 73 01 04 C3 F5 02
+R 00 00 00 00 00 04 00 00
+T 77 01
+R 00 00 00 00
+T 77 01 F5 DD 7E E2 DD 77 FA DD 7E E3 DD 77 FB DD
+R 00 00 00 00
+T 85 01 7E E4 DD 77 FC DD 7E E5 DD 77 FD F1 3E 09
+R 00 00 00 00
+T 93 01
+R 00 00 00 00
+T 93 01 DD CB FD 3E DD CB FC 1E DD CB FB 1E DD CB
+R 00 00 00 00
+T A1 01 FA 1E 3D 20 ED DD 6E EA DD 66 EB 11 08 00
+R 00 00 00 00
+T AF 01 19 5E 23 56 1B 21 00 00 7B DD A6 FA 5F 7A
+R 00 00 00 00
+T BD 01 DD A6 FB 57 7C DD A6 FC 67 7D DD A6 FD B4
+R 00 00 00 00
+T CB 01 B2 B3 C2 BF 02 C5 DD 6E F2 DD 66 F3 E5 DD
+R 00 00 00 00 00 05 00 00
+T D9 01 6E F0 DD 66 F1 E5 DD 6E F8 DD 66 F9 E5 CD
+R 00 00 00 00
+T E7 01 00 00 F1 F1 F1 C1 DD 75 E6 DD 74 E7 DD 73
+R 00 00 00 00 02 02 03 00
+T F5 01 E8 DD 72 E9 3E 01 DD BE E6 3E 00 DD 9E E7
+R 00 00 00 00
+T 03 02 3E 00 DD 9E E8 3E 00 DD 9E E9 38 05 2E 02
+R 00 00 00 00
+T 11 02 C3 F5 02
+R 00 00 00 00 00 03 00 00
+T 14 02
+R 00 00 00 00
+T 14 02 DD 7E E6 3C 20 17 DD 7E E7 3C 20 11 DD 7E
+R 00 00 00 00
+T 22 02 E8 3C 20 0B DD 7E E9 3C 20 05 2E 01 C3
+R 00 00 00 00
+T 2F 02 F5 02
+R 00 00 00 00 00 02 00 00
+T 31 02
+R 00 00 00 00
+T 31 02 DD 6E EA DD 66 EB 11 0C 00 19 56 23 5E 23
+R 00 00 00 00
+T 3F 02 23 7E 2B 66 6F DD 7E E6 92 DD 7E E7 9B DD
+R 00 00 00 00
+T 4D 02 7E E8 9C DD 7E E9 9D 38 26 DD 7E 07 DD B6
+R 00 00 00 00
+T 5B 02 06 20 0B 69 60 AF 77 23 77 23 AF 77 23 77
+R 00 00 00 00
+T 69 02
+R 00 00 00 00
+T 69 02 3E 00 02 03 3E 00 02 03 3E 00 02 03 3E 00
+R 00 00 00 00
+T 77 02 02 2E 04 18 79
+R 00 00 00 00
+T 7C 02
+R 00 00 00 00
+T 7C 02 C5 DD 5E EC DD 56 ED 21 06 00 39 01 04 00
+R 00 00 00 00
+T 8A 02 ED B0 DD 6E E8 DD 66 E9 E5 DD 6E E6 DD 66
+R 00 00 00 00
+T 98 02 E7 E5 DD 6E EA DD 66 EB E5 CD 00 00 F1 F1
+R 00 00 00 00 02 0C 01 00
+T A6 02 F1 DD 72 FD DD 73 FC DD 74 FB DD 75 FA C1
+R 00 00 00 00
+T B4 02 59 50 21 18 00 39 01 04 00 ED B0
+R 00 00 00 00
+T BF 02
+R 00 00 00 00
+T BF 02 DD 5E FE DD 56 FF 21 00 00 39 01 04 00 ED
+R 00 00 00 00
+T CD 02 B0 FD 21 1A 00 DD 5E F8 DD 56 F9 FD 19 DD
+R 00 00 00 00
+T DB 02 7E EA C6 28 6F DD 7E EB CE 00 67 DD 5E F4
+R 00 00 00 00
+T E9 02 DD 56 F5 19 FD 75 00 FD 74 01 2E 00
+R 00 00 00 00
+T F5 02
+R 00 00 00 00
+T F5 02 DD F9 DD E1 C9
+R 00 00 00 00
+</REL>
+<ADB>
+</ADB>
+</FILE>
+
+<FILE>
+ff_dirread
+<REL>
+XL2
+H 9 areas 7 global symbols
+M ff_dirread
+O -mz80
+S _move_window Ref0000
+S _sum_sfn Ref0000
+S .__.ABS. Def0000
+S _pick_lfn Ref0000
+S ___sdcc_enter_ix Ref0000
+S _dir_next Ref0000
+A _CODE size 1F1 flags 0 addr 0
+S _dir_read Def0000
+A _DATA size 0 flags 0 addr 0
+A _INITIALIZED size 0 flags 0 addr 0
+A _DABS size 0 flags 8 addr 0
+A _HOME size 0 flags 0 addr 0
+A _GSINIT size 0 flags 0 addr 0
+A _GSFINAL size 0 flags 0 addr 0
+A _INITIALIZER size 0 flags 0 addr 0
+A _CABS size 0 flags 8 addr 0
+T 00 00
+R 00 00 00 00
+T 00 00 CD 00 00 21 EB FF 39 F9 1E 04 DD 4E 04 DD
+R 00 00 00 00 02 03 04 00
+T 0E 00 46 05 0A DD 77 ED 03 0A DD 77 EE 0B DD 36
+R 00 00 00 00
+T 1C 00 EC FF DD 36 EB FF DD 71 FE DD 70 FF DD 7E
+R 00 00 00 00
+T 2A 00 ED DD 77 EF DD 7E EE DD 77 F0 21 16 00 09
+R 00 00 00 00
+T 38 00 DD 75 F1 DD 74 F2
+R 00 00 00 00
+T 3E 00
+R 00 00 00 00
+T 3E 00 D5 C5 DD 5E F1 DD 56 F2 21 0E 00 39 EB 01
+R 00 00 00 00
+T 4C 00 04 00 ED B0 C1 D1 DD 7E F8 DD B6 F7 DD B6
+R 00 00 00 00
+T 5A 00 F6 DD B6 F5 CA D8 01 C5 DD 6E F7 DD 66 F8
+R 00 00 00 00 00 07 00 00
+T 68 00 E5 DD 6E F5 DD 66 F6 E5 DD 6E ED DD 66 EE
+R 00 00 00 00
+T 76 00 E5 CD 00 00 F1 F1 F1 C1 5D 7B B7 C2 D8 01
+R 00 00 00 00 02 04 00 00 00 0E 00 00
+T 84 00 21 1A 00 09 DD 75 F5 DD 74 F6 DD 6E F5 DD
+R 00 00 00 00
+T 92 00 66 F6 7E 23 66 6F 56 7A B7 20 05 1E 04 C3
+R 00 00 00 00
+T A0 00 D8 01
+R 00 00 00 00 00 02 00 00
+T A2 00
+R 00 00 00 00
+T A2 00 FD 21 04 00 FD 09 C5 01 0B 00 09 C1 7E E6
+R 00 00 00 00
+T B0 00 3F DD 77 F9 FD 77 00 7A FE E5 28 30 D6 2E
+R 00 00 00 00
+T BE 00 28 2C DD 66 F9 2E 00 CB AC 7C D6 08 20 07
+R 00 00 00 00
+T CC 00 B5 20 04 3E 01 18 01
+R 00 00 00 00
+T D3 00
+R 00 00 00 00
+T D3 00 AF
+R 00 00 00 00
+T D4 00
+R 00 00 00 00
+T D4 00 DD 77 F3 17 9F DD 77 F4 DD 7E 06 DD 96 F3
+R 00 00 00 00
+T E2 00 20 08 DD 7E 07 DD 96 F4 28 07
+R 00 00 00 00
+T EC 00
+R 00 00 00 00
+T EC 00
+R 00 00 00 00
+T EC 00 DD 36 EC FF C3 C6 01
+R 00 00 00 00 00 07 00 00
+T F3 00
+R 00 00 00 00
+T F3 00 DD 6E F5 DD 66 F6 7E 23 66 6F 79 C6 28 DD
+R 00 00 00 00
+T 01 01 77 F3 78 CE 00 DD 77 F4 DD 7E F9 D6 0F C2
+R 00 00 00 00
+T 0F 01 9F 01 CB 72 28 40 E5 FD E1 FD 7E 0D DD 77
+R 00 00 00 00 00 02 00 00
+T 1D 01 EB CB B2 DD 72 EC DD 6E FE DD 66 FF C5 01
+R 00 00 00 00
+T 2B 01 0E 00 09 C1 7E DD 77 FA 23 7E DD 77 FB 23
+R 00 00 00 00
+T 39 01 7E DD 77 FC 23 7E DD 77 FD D5 C5 DD 5E F3
+R 00 00 00 00
+T 47 01 DD 56 F4 21 13 00 39 01 04 00 ED B0 C1 D1
+R 00 00 00 00
+T 55 01
+R 00 00 00 00
+T 55 01 DD 7E EC 92 20 3D DD 6E F5 DD 66 F6 5E 23
+R 00 00 00 00
+T 63 01 56 D5 FD E1 FD 7E 0D DD 77 FA DD 7E EB DD
+R 00 00 00 00
+T 71 01 96 FA 20 23 DD 6E EF DD 66 F0 C5 01 0A 00
+R 00 00 00 00
+T 7F 01 09 C1 7E 23 66 6F C5 D5 E5 CD 00 00 F1 F1
+R 00 00 00 00 02 0C 03 00
+T 8D 01 C1 7C B5 28 06 DD 66 EC 25 18 02
+R 00 00 00 00
+T 98 01
+R 00 00 00 00
+T 98 01 26 FF
+R 00 00 00 00
+T 9A 01
+R 00 00 00 00
+T 9A 01 DD 74 EC 18 27
+R 00 00 00 00
+T 9F 01
+R 00 00 00 00
+T 9F 01 DD 7E EC B7 20 0E D5 E5 CD 00 00 F1 45 D1
+R 00 00 00 00 02 0B 01 00
+T AD 01 DD 7E EB 90 28 25
+R 00 00 00 00
+T B3 01
+R 00 00 00 00
+T B3 01 DD 6E F3 DD 66 F4 36 FF 23 36 FF 23 36 FF
+R 00 00 00 00
+T C1 01 23 36 FF 18 12
+R 00 00 00 00
+T C6 01
+R 00 00 00 00
+T C6 01 C5 21 00 00 E5 C5 CD 00 00 F1 F1 C1 5D 7B
+R 00 00 00 00 02 09 05 00
+T D4 01 B7 CA 3E 00
+R 00 00 00 00 00 04 00 00
+T D8 01
+R 00 00 00 00
+T D8 01 7B B7 28 0F DD 6E F1 DD 66 F2 AF 77 23 77
+R 00 00 00 00
+T E6 01 23 AF 77 23 77
+R 00 00 00 00
+T EB 01
+R 00 00 00 00
+T EB 01 6B DD F9 DD E1 C9
+R 00 00 00 00
+</REL>
+<ADB>
+</ADB>
+</FILE>
+
+<FILE>
+ff_dirregister
+<REL>
+XL2
+H 9 areas 1 global symbols
+M ff_dirregister
+O -mz80
+S .__.ABS. Def0000
+A _CODE size 0 flags 0 addr 0
+A _DATA size 0 flags 0 addr 0
+A _INITIALIZED size 0 flags 0 addr 0
+A _DABS size 0 flags 8 addr 0
+A _HOME size 0 flags 0 addr 0
+A _GSINIT size 0 flags 0 addr 0
+A _GSFINAL size 0 flags 0 addr 0
+A _INITIALIZER size 0 flags 0 addr 0
+A _CABS size 0 flags 8 addr 0
+</REL>
+<ADB>
+</ADB>
+</FILE>
+
+<FILE>
+ff_dirsdi
+<REL>
+XL2
+H 9 areas 5 global symbols
+M ff_dirsdi
+O -mz80
+S .__.ABS. Def0000
+S _clst2sect Ref0000
+S ___sdcc_enter_ix Ref0000
+S _get_fat Ref0000
+A _CODE size 330 flags 0 addr 0
+S _dir_sdi Def0000
+A _DATA size 0 flags 0 addr 0
+A _INITIALIZED size 0 flags 0 addr 0
+A _DABS size 0 flags 8 addr 0
+A _HOME size 0 flags 0 addr 0
+A _GSINIT size 0 flags 0 addr 0
+A _GSFINAL size 0 flags 0 addr 0
+A _INITIALIZER size 0 flags 0 addr 0
+A _CABS size 0 flags 8 addr 0
+T 00 00
+R 00 00 00 00
+T 00 00 CD 00 00 21 EA FF 39 F9 DD 7E 04 DD 77 F8
+R 00 00 00 00 02 03 02 00
+T 0E 00 DD 7E 05 DD 77 F9 DD 6E F8 DD 66 F9 7E DD
+R 00 00 00 00
+T 1C 00 77 EE 23 7E DD 77 EF DD 7E 08 D6 20 DD 7E
+R 00 00 00 00
+T 2A 00 09 DE 00 30 07 DD 7E 06 E6 1F 28 05
+R 00 00 00 00
+T 36 00
+R 00 00 00 00
+T 36 00 2E 02 C3 2B 03
+R 00 00 00 00 00 05 00 00
+T 3B 00
+R 00 00 00 00
+T 3B 00 DD 7E F8 C6 0E 5F DD 7E F9 CE 00 57 21
+R 00 00 00 00
+T 48 00 1C 00 39 01 04 00 ED B0 DD 4E F8 DD 46 F9
+R 00 00 00 00
+T 56 00 C5 FD E1 FD 7E 06 DD 77 EA FD 7E 07 DD 77
+R 00 00 00 00
+T 64 00 EB FD 7E 08 DD 77 EC FD 7E 09 DD 77 ED DD
+R 00 00 00 00
+T 72 00 4E EE DD 46 EF C5 FD E1 FD 7E 1C DD 77 F4
+R 00 00 00 00
+T 80 00 FD 7E 1D DD 77 F5 FD 7E 1E DD 77 F6 FD 7E
+R 00 00 00 00
+T 8E 00 1F DD 77 F7 DD 7E ED DD B6 EC DD B6 EB DD
+R 00 00 00 00
+T 9C 00 B6 EA 20 19 DD 6E EE DD 66 EF 7E D6 03 38
+R 00 00 00 00
+T AA 00 0E 21 00 00 39 EB 21 0A 00 39 01 04 00 ED
+R 00 00 00 00
+T B8 00 B0
+R 00 00 00 00
+T B9 00
+R 00 00 00 00
+T B9 00 DD 7E F8 C6 16 DD 77 FE DD 7E F9 CE 00 DD
+R 00 00 00 00
+T C7 00 77 FF DD 7E ED DD B6 EC DD B6 EB DD B6 EA
+R 00 00 00 00
+T D5 00 20 61 F5 DD 5E 06 DD 56 07 DD 4E 08 DD 46
+R 00 00 00 00
+T E3 00 09 F1 3E 05
+R 00 00 00 00
+T E7 00
+R 00 00 00 00
+T E7 00 CB 38 CB 19 CB 1A CB 1B 3D 20 F5 DD 6E EE
+R 00 00 00 00
+T F5 00 DD 66 EF C5 01 06 00 09 C1 7E 23 66 DD 77
+R 00 00 00 00
+T 03 01 FA DD 74 FB DD 36 FC 00 DD 36 FD 00 7B DD
+R 00 00 00 00
+T 11 01 96 FA 7A DD 9E FB 79 DD 9E FC 78 DD 9E FD
+R 00 00 00 00
+T 1F 01 38 05 2E 02 C3 2B 03
+R 00 00 00 00 00 07 00 00
+T 26 01
+R 00 00 00 00
+T 26 01 DD 5E FE DD 56 FF 21 0A 00 39 01 04 00 ED
+R 00 00 00 00
+T 34 01 B0 C3 5F 02
+R 00 00 00 00 00 04 00 00
+T 38 01
+R 00 00 00 00
+T 38 01 DD 6E EE DD 66 EF 11 08 00 19 5E 23 56 21
+R 00 00 00 00
+T 46 01 00 00 F5 DD 73 F0 DD 72 F1 DD 74 F2 DD 75
+R 00 00 00 00
+T 54 01 F3 F1 3E 09
+R 00 00 00 00
+T 58 01
+R 00 00 00 00
+T 58 01 DD CB F0 26 DD CB F1 16 DD CB F2 16 DD CB
+R 00 00 00 00
+T 66 01 F3 16 3D 20 ED DD 46 EE DD 4E EF
+R 00 00 00 00
+T 71 01
+R 00 00 00 00
+T 71 01 DD 7E 06 DD 96 F0 DD 7E 07 DD 9E F1 DD 7E
+R 00 00 00 00
+T 7F 01 08 DD 9E F2 DD 7E 09 DD 9E F3 DA 35 02 C5
+R 00 00 00 00 00 0D 00 00
+T 8D 01 DD 6E EC DD 66 ED E5 DD 6E EA DD 66 EB E5
+R 00 00 00 00
+T 9B 01 DD 6E F8 DD 66 F9 E5 CD 00 00 F1 F1 F1 C1
+R 00 00 00 00 02 0A 03 00
+T A9 01 DD 75 EA DD 74 EB DD 73 EC DD 72 ED DD 7E
+R 00 00 00 00
+T B7 01 EA 3C 20 17 DD 7E EB 3C 20 11 DD 7E EC 3C
+R 00 00 00 00
+T C5 01 20 0B DD 7E ED 3C 20 05 2E 01 C3 2B 03
+R 00 00 00 00 00 0D 00 00
+T D2 01
+R 00 00 00 00
+T D2 01 DD 7E EA D6 02 DD 7E EB DE 00 DD 7E EC DE
+R 00 00 00 00
+T E0 01 00 DD 7E ED DE 00 38 21 68 61 11 0C 00 19
+R 00 00 00 00
+T EE 01 5E 23 56 23 23 7E 2B 66 6F DD 7E EA 93 DD
+R 00 00 00 00
+T FC 01 7E EB 9A DD 7E EC 9C DD 7E ED 9D 38 05
+R 00 00 00 00
+T 09 02
+R 00 00 00 00
+T 09 02 2E 02 C3 2B 03
+R 00 00 00 00 00 05 00 00
+T 0E 02
+R 00 00 00 00
+T 0E 02 DD 7E 06 DD 96 F0 DD 77 06 DD 7E 07 DD 9E
+R 00 00 00 00
+T 1C 02 F1 DD 77 07 DD 7E 08 DD 9E F2 DD 77 08 DD
+R 00 00 00 00
+T 2A 02 7E 09 DD 9E F3 DD 77 09 C3 71 01
+R 00 00 00 00 00 0B 00 00
+T 35 02
+R 00 00 00 00
+T 35 02 DD 6E EC DD 66 ED E5 DD 6E EA DD 66 EB E5
+R 00 00 00 00
+T 43 02 DD 6E EE DD 66 EF E5 CD 00 00 F1 F1 F1 45
+R 00 00 00 00 02 0A 01 00
+T 51 02 4C DD 6E FE DD 66 FF 70 23 71 23 73 23 72
+R 00 00 00 00
+T 5F 02
+R 00 00 00 00
+T 5F 02 DD 7E F8 C6 12 5F DD 7E F9 CE 00 57 21
+R 00 00 00 00
+T 6C 02 00 00 39 01 04 00 ED B0 DD 5E FE DD 56 FF
+R 00 00 00 00
+T 7A 02 21 10 00 39 EB 01 04 00 ED B0 DD 7E FD DD
+R 00 00 00 00
+T 88 02 B6 FC DD B6 FB DD B6 FA 20 05 2E 02 C3
+R 00 00 00 00
+T 95 02 2B 03
+R 00 00 00 00 00 02 00 00
+T 97 02
+R 00 00 00 00
+T 97 02 F5 DD 6E 06 DD 66 07 DD 5E 08 DD 56 09 F1
+R 00 00 00 00
+T A5 02 06 09
+R 00 00 00 00
+T A7 02
+R 00 00 00 00
+T A7 02 CB 3A CB 1B CB 1C CB 1D 10 F6 DD 7E FA 85
+R 00 00 00 00
+T B5 02 4F DD 7E FB 8C 47 DD 7E FC 8B 5F DD 7E FD
+R 00 00 00 00
+T C3 02 8A 57 DD 6E FE DD 66 FF 71 23 70 23 73 23
+R 00 00 00 00
+T D1 02 72 DD 7E F8 C6 1A DD 77 FA DD 7E F9 CE 00
+R 00 00 00 00
+T DF 02 DD 77 FB DD 7E EE C6 28 DD 77 FE DD 7E EF
+R 00 00 00 00
+T ED 02 CE 00 DD 77 FF DD 7E 06 DD 77 F4 DD 7E 07
+R 00 00 00 00
+T FB 02 E6 01 DD 77 F5 DD 36 F6 00 DD 36 F7 00 DD
+R 00 00 00 00
+T 09 03 7E FE DD 86 F4 DD 77 FE DD 7E FF DD 8E F5
+R 00 00 00 00
+T 17 03 DD 77 FF DD 6E FA DD 66 FB DD 7E FE 77 23
+R 00 00 00 00
+T 25 03 DD 7E FF 77 2E 00
+R 00 00 00 00
+T 2B 03
+R 00 00 00 00
+T 2B 03 DD F9 DD E1 C9
+R 00 00 00 00
+</REL>
+<ADB>
+</ADB>
+</FILE>
+
+<FILE>
+ff_fchdir
+<REL>
+XL2
+H 9 areas 1 global symbols
+M ff_fchdir
+O -mz80
+S .__.ABS. Def0000
+A _CODE size 0 flags 0 addr 0
+A _DATA size 0 flags 0 addr 0
+A _INITIALIZED size 0 flags 0 addr 0
+A _DABS size 0 flags 8 addr 0
+A _HOME size 0 flags 0 addr 0
+A _GSINIT size 0 flags 0 addr 0
+A _GSFINAL size 0 flags 0 addr 0
+A _INITIALIZER size 0 flags 0 addr 0
+A _CABS size 0 flags 8 addr 0
+</REL>
+<ADB>
+</ADB>
+</FILE>
+
+<FILE>
+ff_fchdrive
+<REL>
+XL2
+H 9 areas 1 global symbols
+M ff_fchdrive
+O -mz80
+S .__.ABS. Def0000
+A _CODE size 0 flags 0 addr 0
+A _DATA size 0 flags 0 addr 0
+A _INITIALIZED size 0 flags 0 addr 0
+A _DABS size 0 flags 8 addr 0
+A _HOME size 0 flags 0 addr 0
+A _GSINIT size 0 flags 0 addr 0
+A _GSFINAL size 0 flags 0 addr 0
+A _INITIALIZER size 0 flags 0 addr 0
+A _CABS size 0 flags 8 addr 0
+</REL>
+<ADB>
+</ADB>
+</FILE>
+
+<FILE>
+ff_fclose
+<REL>
+XL2
+H 9 areas 3 global symbols
+M ff_fclose
+O -mz80
+S .__.ABS. Def0000
+S _validate Ref0000
+A _CODE size 27 flags 0 addr 0
+S _f_close Def0000
+A _DATA size 0 flags 0 addr 0
+A _INITIALIZED size 0 flags 0 addr 0
+A _DABS size 0 flags 8 addr 0
+A _HOME size 0 flags 0 addr 0
+A _GSINIT size 0 flags 0 addr 0
+A _GSFINAL size 0 flags 0 addr 0
+A _INITIALIZER size 0 flags 0 addr 0
+A _CABS size 0 flags 8 addr 0
+T 00 00
+R 00 00 00 00
+T 00 00 F5 21 00 00 39 FD 21 04 00 FD 39 FD 5E 00
+R 00 00 00 00
+T 0E 00 FD 56 01 D5 E5 D5 CD 00 00 F1 F1 7D D1 47
+R 00 00 00 00 02 09 01 00
+T 1C 00 B7 20 05 12 13 3E 00 12
+R 00 00 00 00
+T 24 00
+R 00 00 00 00
+T 24 00 68 F1 C9
+R 00 00 00 00
+</REL>
+<ADB>
+</ADB>
+</FILE>
+
+<FILE>
+ff_findvolume
+<REL>
+XL2
+H 9 areas C global symbols
+M ff_findvolume
+O -mz80
+S _disk_status Ref0000
+S _check_fs Ref0000
+S _disk_initialize Ref0000
+S _LfnBuf Ref0000
+S .__.ABS. Def0000
+S _Fsid Ref0000
+S __divulong Ref0000
+S _ld_dword Ref0000
+S _FatFs Ref0000
+S ___sdcc_enter_ix Ref0000
+S __mullong Ref0000
+A _CODE size 74D flags 0 addr 0
+S _find_volume Def0000
+A _DATA size 0 flags 0 addr 0
+A _INITIALIZED size 0 flags 0 addr 0
+A _DABS size 0 flags 8 addr 0
+A _HOME size 0 flags 0 addr 0
+A _GSINIT size 0 flags 0 addr 0
+A _GSFINAL size 0 flags 0 addr 0
+A _INITIALIZER size 0 flags 0 addr 0
+A _CABS size 0 flags 8 addr 0
+T 00 00
+R 00 00 00 00
+T 00 00 CD 00 00 21 C1 FF 39 F9 DD 4E 04 DD 46 05
+R 00 00 00 00 02 03 09 00
+T 0E 00 69 60 AF 77 23 77 21 00 00 7E DD 77 C3 23
+R 00 00 00 00 02 09 08 00
+T 1C 00 7E DD 77 C4 DD B6 C3 20 05 2E 0C C3 48 07
+R 00 00 00 00 00 0E 00 00
+T 2A 00
+R 00 00 00 00
+T 2A 00 DD 7E C3 02 03 DD 7E C4 02 DD 6E C3 DD 66
+R 00 00 00 00
+T 38 00 C4 7E B7 28 0C CD 00 00 7D 0F 38 05 2E 00
+R 00 00 00 00 02 08 00 00
+T 46 00 C3 48 07
+R 00 00 00 00 00 03 00 00
+T 49 00
+R 00 00 00 00
+T 49 00 DD 6E C3 DD 66 C4 36 00 CD 00 00 7D 0F 30
+R 00 00 00 00 02 0B 02 00
+T 57 00 05 2E 03 C3 48 07
+R 00 00 00 00 00 06 00 00
+T 5D 00
+R 00 00 00 00
+T 5D 00 AF DD 77 E5 DD 77 E6 DD 77 E7 DD 77 E8 21
+R 00 00 00 00
+T 6B 00 00 00 E5 21 00 00 E5 DD 6E C3 DD 66 C4 E5
+R 00 00 00 00
+T 79 00 CD 00 00 F1 F1 F1 DD 75 F5 7D D6 02 C2
+R 00 00 00 00 02 03 01 00
+T 86 00 93 01 DD 7E C3 C6 28 DD 77 F6 DD 7E C4 CE
+R 00 00 00 00 00 02 00 00
+T 94 00 00 DD 77 F7 21 04 00 39 DD 75 F3 DD 74 F4
+R 00 00 00 00
+T A2 00 21 00 00 E3
+R 00 00 00 00
+T A6 00
+R 00 00 00 00
+T A6 00 E1 E5 29 29 29 29 01 BE 01 09 DD 5E F6 DD
+R 00 00 00 00
+T B4 00 56 F7 19 4D 44 E1 E5 29 29 DD 7E F3 85 DD
+R 00 00 00 00
+T C2 00 77 F1 DD 7E F4 8C DD 77 F2 C5 FD E1 FD 7E
+R 00 00 00 00
+T D0 00 04 B7 28 0D 21 08 00 09 E5 CD 00 00 F1 4D
+R 00 00 00 00 02 0C 07 00
+T DE 00 44 18 06
+R 00 00 00 00
+T E1 00
+R 00 00 00 00
+T E1 00 01 00 00 11 00 00
+R 00 00 00 00
+T E7 00
+R 00 00 00 00
+T E7 00 DD 6E F1 DD 66 F2 71 23 70 23 73 23 72 DD
+R 00 00 00 00
+T F5 00 34 C1 20 03 DD 34 C2
+R 00 00 00 00
+T FC 00
+R 00 00 00 00
+T FC 00 DD 7E C1 D6 04 DD 7E C2 DE 00 38 9E 21
+R 00 00 00 00
+T 09 01 00 00 E3
+R 00 00 00 00
+T 0C 01
+R 00 00 00 00
+T 0C 01 DD 7E C1 DD 77 F1 DD 7E C2 DD 77 F2 3E 03
+R 00 00 00 00
+T 1A 01 18 08
+R 00 00 00 00
+T 1C 01
+R 00 00 00 00
+T 1C 01 DD CB F1 26 DD CB F2 16
+R 00 00 00 00
+T 24 01
+R 00 00 00 00
+T 24 01 3D 20 F5 DD 7E F3 DD 86 F1 DD 77 F1 DD 7E
+R 00 00 00 00
+T 32 01 F4 DD 8E F2 DD 77 F2 DD 5E F1 DD 56 F2 21
+R 00 00 00 00
+T 40 01 24 00 39 EB 01 04 00 ED B0 DD 7E E8 DD B6
+R 00 00 00 00
+T 4E 01 E7 DD B6 E6 DD B6 E5 28 1D DD 6E E7 DD 66
+R 00 00 00 00
+T 5C 01 E8 E5 DD 6E E5 DD 66 E6 E5 DD 6E C3 DD 66
+R 00 00 00 00
+T 6A 01 C4 E5 CD 00 00 F1 F1 F1 18 02
+R 00 00 00 00 02 05 01 00
+T 74 01
+R 00 00 00 00
+T 74 01 2E 03
+R 00 00 00 00
+T 76 01
+R 00 00 00 00
+T 76 01 DD 75 F5 7D D6 02 38 15 DD 34 C1 20 03 DD
+R 00 00 00 00
+T 84 01 34 C2
+R 00 00 00 00
+T 86 01
+R 00 00 00 00
+T 86 01 DD 7E C1 D6 04 DD 7E C2 DE 00 DA 0C 01
+R 00 00 00 00 00 0D 00 00
+T 93 01
+R 00 00 00 00
+T 93 01 DD 7E F5 D6 04 20 05 2E 01 C3 48 07
+R 00 00 00 00 00 0C 00 00
+T 9F 01
+R 00 00 00 00
+T 9F 01 DD 7E F5 D6 02 38 05 2E 0D C3 48 07
+R 00 00 00 00 00 0C 00 00
+T AB 01
+R 00 00 00 00
+T AB 01 DD 7E C3 C6 28 4F DD 7E C4 CE 00 47 C5 FD
+R 00 00 00 00
+T B9 01 E1 69 60 11 0C 00 19 56 1E 00 FD 7E 0B 26
+R 00 00 00 00
+T C7 01 00 B3 6F 7C B2 67 7D B7 20 05 7C D6 02 28
+R 00 00 00 00
+T D5 01 05
+R 00 00 00 00
+T D6 01
+R 00 00 00 00
+T D6 01 2E 0D C3 48 07
+R 00 00 00 00 00 05 00 00
+T DB 01
+R 00 00 00 00
+T DB 01 C5 FD E1 69 60 11 17 00 19 5E 16 00 FD 7E
+R 00 00 00 00
+T E9 01 16 26 00 B2 6F 7C B3 67 DD 75 ED DD 74 EE
+R 00 00 00 00
+T F7 01 7C 17 9F DD 77 EF DD 77 F0 DD B6 EF DD B6
+R 00 00 00 00
+T 05 02 EE DD B6 ED 20 17 21 24 00 09 C5 E5 CD
+R 00 00 00 00
+T 12 02 00 00 F1 C1 DD 75 ED DD 74 EE DD 73 EF DD
+R 00 00 00 00 02 02 07 00
+T 20 02 72 F0
+R 00 00 00 00
+T 22 02
+R 00 00 00 00
+T 22 02 DD 7E C3 C6 10 DD 77 F1 DD 7E C4 CE 00 DD
+R 00 00 00 00
+T 30 02 77 F2 C5 DD 5E F1 DD 56 F2 21 2E 00 39 01
+R 00 00 00 00
+T 3E 02 04 00 ED B0 C1 DD 5E C3 DD 56 C4 13 C5 FD
+R 00 00 00 00
+T 4C 02 E1 FD 7E 10 12 F5 1A 5F F1 3D 28 0A 7B D6
+R 00 00 00 00
+T 5A 02 02 28 05 2E 0D C3 48 07
+R 00 00 00 00 00 08 00 00
+T 62 02
+R 00 00 00 00
+T 62 02 16 00 21 00 00 C5 E5 D5 DD 6E EF DD 66 F0
+R 00 00 00 00
+T 70 02 E5 DD 6E ED DD 66 EE E5 CD 00 00 F1 F1 F1
+R 00 00 00 00 02 0B 0A 00
+T 7E 02 F1 C1 DD 75 D9 DD 74 DA DD 73 DB DD 72 DC
+R 00 00 00 00
+T 8C 02 DD 7E C3 C6 08 DD 77 ED DD 7E C4 CE 00 DD
+R 00 00 00 00
+T 9A 02 77 EE C5 FD E1 FD 56 0D 1E 00 DD 6E ED DD
+R 00 00 00 00
+T A8 02 66 EE 72 23 73 DD 6E ED DD 66 EE 7E 23 6E
+R 00 00 00 00
+T B6 02 67 7B B2 28 0B 5C 55 1B 7C A3 67 7D A2 B4
+R 00 00 00 00
+T C4 02 28 05
+R 00 00 00 00
+T C6 02
+R 00 00 00 00
+T C6 02 2E 0D C3 48 07
+R 00 00 00 00 00 05 00 00
+T CB 02
+R 00 00 00 00
+T CB 02 DD 7E C3 C6 06 DD 77 F3 DD 7E C4 CE 00 DD
+R 00 00 00 00
+T D9 02 77 F4 C5 FD E1 69 60 11 12 00 19 5E 16 00
+R 00 00 00 00
+T E7 02 FD 6E 11 26 00 7A B5 57 7B B4 5F DD 6E F3
+R 00 00 00 00
+T F5 02 DD 66 F4 72 23 73 DD 6E F3 DD 66 F4 56 23
+R 00 00 00 00
+T 03 03 66 7A E6 0F 28 05 2E 0D C3 48 07
+R 00 00 00 00 00 0B 00 00
+T 0E 03
+R 00 00 00 00
+T 0E 03 C5 FD E1 69 60 11 14 00 19 5E 16 00 FD 7E
+R 00 00 00 00
+T 1C 03 13 26 00 B2 6F 7C B3 67 DD 75 E1 DD 74 E2
+R 00 00 00 00
+T 2A 03 7C 17 9F DD 77 E3 DD 77 E4 DD B6 E3 DD B6
+R 00 00 00 00
+T 38 03 E2 DD B6 E1 20 17 21 20 00 09 C5 E5 CD
+R 00 00 00 00
+T 45 03 00 00 F1 C1 DD 75 E1 DD 74 E2 DD 73 E3 DD
+R 00 00 00 00 02 02 07 00
+T 53 03 72 E4
+R 00 00 00 00
+T 55 03
+R 00 00 00 00
+T 55 03 C5 FD E1 69 60 11 0F 00 19 5E 16 00 FD 66
+R 00 00 00 00
+T 63 03 0E 2E 00 7A B4 57 7B B5 5F 62 7B 6F B2 20
+R 00 00 00 00
+T 71 03 05 2E 0D C3 48 07
+R 00 00 00 00 00 06 00 00
+T 77 03
+R 00 00 00 00
+T 77 03 DD 74 F8 DD 75 F9 DD 36 FA 00 DD 36 FB 00
+R 00 00 00 00
+T 85 03 DD 7E F8 DD 86 D9 DD 77 E9 DD 7E F9 DD 8E
+R 00 00 00 00
+T 93 03 DA DD 77 EA DD 7E FA DD 8E DB DD 77 EB DD
+R 00 00 00 00
+T A1 03 7E FB DD 8E DC DD 77 EC DD 6E F3 DD 66 F4
+R 00 00 00 00
+T AF 03 5E 23 56 3E 04
+R 00 00 00 00
+T B4 03
+R 00 00 00 00
+T B4 03 CB 3A CB 1B 3D 20 F9 21 00 00 DD 7E E9 83
+R 00 00 00 00
+T C2 03 5F DD 7E EA 8A 57 DD 7E EB 8C 67 DD 7E EC
+R 00 00 00 00
+T D0 03 8D 6F DD 73 DD DD 72 DE DD 74 DF DD 75 E0
+R 00 00 00 00
+T DE 03 DD 7E E1 DD 96 DD DD 7E E2 DD 9E DE DD 7E
+R 00 00 00 00
+T EC 03 E3 DD 9E DF DD 7E E4 DD 9E E0 30 05 2E 0D
+R 00 00 00 00
+T FA 03 C3 48 07
+R 00 00 00 00 00 03 00 00
+T FD 03
+R 00 00 00 00
+T FD 03 DD 7E E1 DD 96 DD DD 77 E9 DD 7E E2 DD 9E
+R 00 00 00 00
+T 0B 04 DE DD 77 EA DD 7E E3 DD 9E DF DD 77 EB DD
+R 00 00 00 00
+T 19 04 7E E4 DD 9E E0 DD 77 EC DD 6E ED DD 66 EE
+R 00 00 00 00
+T 27 04 5E 23 56 21 00 00 C5 E5 D5 DD 6E EB DD 66
+R 00 00 00 00
+T 35 04 EC E5 DD 6E E9 DD 66 EA E5 CD 00 00 F1 F1
+R 00 00 00 00 02 0C 06 00
+T 43 04 F1 F1 C1 DD 75 D5 DD 74 D6 DD 73 D7 DD 72
+R 00 00 00 00
+T 51 04 D8 7A DD B6 D7 DD B6 D6 DD B6 D5 20 05 2E
+R 00 00 00 00
+T 5F 04 0D C3 48 07
+R 00 00 00 00 00 04 00 00
+T 63 04
+R 00 00 00 00
+T 63 04 1E 00 3E F5 DD BE D5 3E FF DD 9E D6 3E FF
+R 00 00 00 00
+T 71 04 DD 9E D7 3E 0F DD 9E D8 38 02 1E 03
+R 00 00 00 00
+T 7D 04
+R 00 00 00 00
+T 7D 04 3E F5 DD BE D5 3E FF DD 9E D6 3E 00 DD 9E
+R 00 00 00 00
+T 8B 04 D7 3E 00 DD 9E D8 38 02 1E 02
+R 00 00 00 00
+T 95 04
+R 00 00 00 00
+T 95 04 3E F5 DD BE D5 3E 0F DD 9E D6 3E 00 DD 9E
+R 00 00 00 00
+T A3 04 D7 3E 00 DD 9E D8 38 02 1E 00
+R 00 00 00 00
+T AD 04
+R 00 00 00 00
+T AD 04 7B B7 20 05 2E 0D C3 48 07
+R 00 00 00 00 00 09 00 00
+T B6 04
+R 00 00 00 00
+T B6 04 DD 7E C3 C6 0C DD 77 E9 DD 7E C4 CE 00 DD
+R 00 00 00 00
+T C4 04 77 EA DD 7E D5 C6 02 DD 77 ED DD 7E D6 CE
+R 00 00 00 00
+T D2 04 00 DD 77 EE DD 7E D7 CE 00 DD 77 EF DD 7E
+R 00 00 00 00
+T E0 04 D8 CE 00 DD 77 F0 D5 C5 DD 5E E9 DD 56 EA
+R 00 00 00 00
+T EE 04 21 30 00 39 01 04 00 ED B0 C1 D1 DD 7E C3
+R 00 00 00 00
+T FC 04 C6 14 67 DD 7E C4 CE 00 57 D5 C5 5C 21
+R 00 00 00 00
+T 09 05 28 00 39 01 04 00 ED B0 C1 D1 FD 21 18 00
+R 00 00 00 00
+T 17 05 C5 DD 4E C3 DD 46 C4 FD 09 C1 DD 7E E5 DD
+R 00 00 00 00
+T 25 05 86 F8 DD 77 F8 DD 7E E6 DD 8E F9 DD 77 F9
+R 00 00 00 00
+T 33 05 DD 7E E7 DD 8E FA DD 77 FA DD 7E E8 DD 8E
+R 00 00 00 00
+T 41 05 FB DD 77 FB D5 C5 FD E5 D1 21 3B 00 39 01
+R 00 00 00 00
+T 4F 05 04 00 ED B0 C1 D1 DD 7E C3 C6 20 DD 77 F8
+R 00 00 00 00
+T 5D 05 DD 7E C4 CE 00 DD 77 F9 DD 7E E5 DD 86 DD
+R 00 00 00 00
+T 6B 05 DD 77 ED DD 7E E6 DD 8E DE DD 77 EE DD 7E
+R 00 00 00 00
+T 79 05 E7 DD 8E DF DD 77 EF DD 7E E8 DD 8E E0 DD
+R 00 00 00 00
+T 87 05 77 F0 D5 C5 DD 5E F8 DD 56 F9 21 30 00 39
+R 00 00 00 00
+T 95 05 01 04 00 ED B0 C1 D1 DD 6E F3 DD 66 F4 7E
+R 00 00 00 00
+T A3 05 DD 77 F8 23 7E DD 77 F9 DD 7E C3 C6 1C DD
+R 00 00 00 00
+T B1 05 77 ED DD 7E C4 CE 00 DD 77 EE 7B D6 03 C2
+R 00 00 00 00
+T BF 05 50 06 C5 FD E1 69 60 C5 01 2B 00 09 C1 66
+R 00 00 00 00 00 02 00 00
+T CD 05 DD 74 F4 DD 36 F3 00 FD 7E 2A 2E 00 DD B6
+R 00 00 00 00
+T DB 05 F3 67 7D DD B6 F4 B4 28 05 2E 0D C3 48 07
+R 00 00 00 00 00 0E 00 00
+T E9 05
+R 00 00 00 00
+T E9 05 DD 7E F9 DD B6 F8 28 05 2E 0D C3 48 07
+R 00 00 00 00 00 0D 00 00
+T F6 05
+R 00 00 00 00
+T F6 05 21 2C 00 09 D5 E5 CD 00 00 F1 DD 72 FF DD
+R 00 00 00 00 02 09 07 00
+T 04 06 73 FE DD 74 FD DD 75 FC DD 5E ED DD 56 EE
+R 00 00 00 00
+T 12 06 21 3D 00 39 01 04 00 ED B0 D1 DD 6E E9 DD
+R 00 00 00 00
+T 20 06 66 EA 4E 23 46 23 23 7E 2B 6E 67 F5 DD 71
+R 00 00 00 00
+T 2E 06 FC DD 70 FD DD 75 FE DD 74 FF F1 3E 02
+R 00 00 00 00
+T 3B 06
+R 00 00 00 00
+T 3B 06 DD CB FC 26 DD CB FD 16 DD CB FE 16 DD CB
+R 00 00 00 00
+T 49 06 FF 16 3D 20 ED 18 73
+R 00 00 00 00
+T 50 06
+R 00 00 00 00
+T 50 06 DD 7E F9 DD B6 F8 20 05 2E 0D C3 48 07
+R 00 00 00 00 00 0D 00 00
+T 5D 06
+R 00 00 00 00
+T 5D 06 FD 66 00 FD 6E 01 FD 56 02 FD 46 03 7C DD
+R 00 00 00 00
+T 6B 06 86 D9 DD 77 F8 7D DD 8E DA DD 77 F9 7A DD
+R 00 00 00 00
+T 79 06 8E DB DD 77 FA 78 DD 8E DC DD 77 FB D5 DD
+R 00 00 00 00
+T 87 06 5E ED DD 56 EE 21 39 00 39 01 04 00 ED B0
+R 00 00 00 00
+T 95 06 D1 DD 6E E9 DD 66 EA 4E 23 46 23 56 23 66
+R 00 00 00 00
+T A3 06 F5 DD 71 FC DD 70 FD DD 72 FE DD 74 FF F1
+R 00 00 00 00
+T B1 06 3E 01 DD CB FC 26 DD CB FD 16 DD CB FE 16
+R 00 00 00 00
+T BF 06 DD CB FF 16
+R 00 00 00 00
+T C3 06
+R 00 00 00 00
+T C3 06 D5 DD 5E F1 DD 56 F2 21 2A 00 39 EB 01
+R 00 00 00 00
+T D0 06 04 00 ED B0 D1 DD 7E FC C6 FF 6F DD 7E FD
+R 00 00 00 00
+T DE 06 CE 01 67 DD 7E FE CE 00 57 DD 7E FF CE 00
+R 00 00 00 00
+T EC 06 4F 06 09
+R 00 00 00 00
+T EF 06
+R 00 00 00 00
+T EF 06 CB 39 CB 1A CB 1C CB 1D 10 F6 DD 7E E9 95
+R 00 00 00 00
+T FD 06 DD 7E EA 9C DD 7E EB 9A DD 7E EC 99 30 04
+R 00 00 00 00
+T 0B 07 2E 0D 18 39
+R 00 00 00 00
+T 0F 07
+R 00 00 00 00
+T 0F 07 DD 6E C3 DD 66 C4 73 DD 7E C3 C6 04 5F DD
+R 00 00 00 00
+T 1D 07 7E C4 CE 00 57 21 00 00 34 20 04 21 01 00
+R 00 00 00 00 02 08 05 00 02 0E 05 00
+T 2B 07 34
+R 00 00 00 00
+T 2C 07
+R 00 00 00 00
+T 2C 07 3A 00 00 12 13 3A 01 00 12 DD 7E C3 C6 0A
+R 00 00 00 00 02 03 05 00 02 08 05 00
+T 3A 07 6F DD 7E C4 CE 00 67 36 00 00 23 36 00 00
+R 00 00 00 00 0B 0A 03 00 8B 0E 03 00
+T 46 07 2E 00
+R 00 00 00 00
+T 48 07
+R 00 00 00 00
+T 48 07 DD F9 DD E1 C9
+R 00 00 00 00
+</REL>
+<ADB>
+</ADB>
+</FILE>
+
+<FILE>
+ff_fgetfree
+<REL>
+XL2
+H 9 areas 1 global symbols
+M ff_fgetfree
+O -mz80
+S .__.ABS. Def0000
+A _CODE size 0 flags 0 addr 0
+A _DATA size 0 flags 0 addr 0
+A _INITIALIZED size 0 flags 0 addr 0
+A _DABS size 0 flags 8 addr 0
+A _HOME size 0 flags 0 addr 0
+A _GSINIT size 0 flags 0 addr 0
+A _GSFINAL size 0 flags 0 addr 0
+A _INITIALIZER size 0 flags 0 addr 0
+A _CABS size 0 flags 8 addr 0
+</REL>
+<ADB>
+</ADB>
+</FILE>
+
+<FILE>
+ff_fmkdir
+<REL>
+XL2
+H 9 areas 1 global symbols
+M ff_fmkdir
+O -mz80
+S .__.ABS. Def0000
+A _CODE size 0 flags 0 addr 0
+A _DATA size 0 flags 0 addr 0
+A _INITIALIZED size 0 flags 0 addr 0
+A _DABS size 0 flags 8 addr 0
+A _HOME size 0 flags 0 addr 0
+A _GSINIT size 0 flags 0 addr 0
+A _GSFINAL size 0 flags 0 addr 0
+A _INITIALIZER size 0 flags 0 addr 0
+A _CABS size 0 flags 8 addr 0
+</REL>
+<ADB>
+</ADB>
+</FILE>
+
+<FILE>
+ff_fmount
+<REL>
+XL2
+H 9 areas 5 global symbols
+M ff_fmount
+O -mz80
+S .__.ABS. Def0000
+S _FatFs Ref0000
+S ___sdcc_enter_ix Ref0000
+S _find_volume Ref0000
+A _CODE size 44 flags 0 addr 0
+S _f_mount Def0000
+A _DATA size 0 flags 0 addr 0
+A _INITIALIZED size 0 flags 0 addr 0
+A _DABS size 0 flags 8 addr 0
+A _HOME size 0 flags 0 addr 0
+A _GSINIT size 0 flags 0 addr 0
+A _GSFINAL size 0 flags 0 addr 0
+A _INITIALIZER size 0 flags 0 addr 0
+A _CABS size 0 flags 8 addr 0
+T 00 00
+R 00 00 00 00
+T 00 00 CD 00 00 2A 00 00 5D 7C 57 B5 28 02 AF 12
+R 00 00 00 00 02 03 02 00 02 06 01 00
+T 0E 00
+R 00 00 00 00
+T 0E 00 DD 7E 05 DD B6 04 28 08 DD 6E 04 DD 66 05
+R 00 00 00 00
+T 1C 00 36 00
+R 00 00 00 00
+T 1E 00
+R 00 00 00 00
+T 1E 00 21 00 00 DD 7E 04 77 23 DD 7E 05 77 DD 7E
+R 00 00 00 00 02 03 01 00
+T 2C 00 08 B7 20 03 6F 18 0E
+R 00 00 00 00
+T 33 00
+R 00 00 00 00
+T 33 00 21 04 00 39 EB AF F5 33 D5 CD 00 00 F1 33
+R 00 00 00 00 02 0C 03 00
+T 41 00
+R 00 00 00 00
+T 41 00 DD E1 C9
+R 00 00 00 00
+</REL>
+<ADB>
+</ADB>
+</FILE>
+
+<FILE>
+ff_followpath
+<REL>
+XL2
+H 9 areas 7 global symbols
+M ff_followpath
+O -mz80
+S _create_name Ref0000
+S _dir_find Ref0000
+S .__.ABS. Def0000
+S ___sdcc_enter_ix Ref0000
+S _ld_clust Ref0000
+S _dir_sdi Ref0000
+A _CODE size 12C flags 0 addr 0
+S _follow_path Def0000
+A _DATA size 0 flags 0 addr 0
+A _INITIALIZED size 0 flags 0 addr 0
+A _DABS size 0 flags 8 addr 0
+A _HOME size 0 flags 0 addr 0
+A _GSINIT size 0 flags 0 addr 0
+A _GSFINAL size 0 flags 0 addr 0
+A _INITIALIZER size 0 flags 0 addr 0
+A _CABS size 0 flags 8 addr 0
+T 00 00
+R 00 00 00 00
+T 00 00 CD 00 00 21 F6 FF 39 F9 DD 7E 04 DD 77 FE
+R 00 00 00 00 02 03 03 00
+T 0E 00 DD 7E 05 DD 77 FF DD 4E FE DD 46 FF DD 6E
+R 00 00 00 00
+T 1C 00 FE DD 66 FF 7E DD 77 F6 23 7E DD 77 F7 DD
+R 00 00 00 00
+T 2A 00 5E 06 DD 56 07
+R 00 00 00 00
+T 2F 00
+R 00 00 00 00
+T 2F 00 1A D6 2F 20 09 13 DD 73 06 DD 72 07 18 F2
+R 00 00 00 00
+T 3D 00
+R 00 00 00 00
+T 3D 00 DD 73 06 DD 72 07 21 06 00 09 AF 77 23 77
+R 00 00 00 00
+T 4B 00 23 AF 77 23 77 1A 67 17 9F 6F 7C D6 20 7D
+R 00 00 00 00
+T 59 00 DE 00 30 19 21 27 00 09 36 80 21 00 00 E5
+R 00 00 00 00
+T 67 00 21 00 00 E5 C5 CD 00 00 F1 F1 F1 5D C3
+R 00 00 00 00 02 08 05 00
+T 74 00 26 01
+R 00 00 00 00 00 02 00 00
+T 76 00
+R 00 00 00 00
+T 76 00 21 10 00 39 C5 E5 C5 CD 00 00 F1 F1 C1 5D
+R 00 00 00 00 02 0A 00 00
+T 84 00 7B B7 C2 26 01 C5 C5 CD 00 00 F1 C1 5D DD
+R 00 00 00 00 00 05 00 00 02 0A 01 00
+T 92 00 6E FE DD 66 FF C5 01 27 00 09 C1 7E E6 04
+R 00 00 00 00
+T A0 00 67 7B B7 28 0D 7B D6 04 C2 26 01 B4 20 78
+R 00 00 00 00 00 0B 00 00
+T AE 00 1E 05 18 74
+R 00 00 00 00
+T B2 00
+R 00 00 00 00
+T B2 00 7C B7 20 70 DD 6E FE DD 66 FF 11 04 00 19
+R 00 00 00 00
+T C0 00 CB 66 20 04 1E 05 18 5E
+R 00 00 00 00
+T C8 00
+R 00 00 00 00
+T C8 00 DD 7E FE C6 06 DD 77 FC DD 7E FF CE 00 DD
+R 00 00 00 00
+T D6 00 77 FD FD 21 28 00 D1 D5 FD 19 DD 6E FE DD
+R 00 00 00 00
+T E4 00 66 FF 11 0E 00 19 5E 23 56 23 23 7E 2B 66
+R 00 00 00 00
+T F2 00 7A E6 01 57 FD 19 C5 FD E5 DD 6E F6 DD 66
+R 00 00 00 00
+T 00 01 F7 E5 CD 00 00 F1 F1 DD 72 FB DD 73 FA DD
+R 00 00 00 00 02 05 04 00
+T 0E 01 74 F9 DD 75 F8 DD 5E FC DD 56 FD 21 04 00
+R 00 00 00 00
+T 1C 01 39 01 04 00 ED B0 C1 C3 76 00
+R 00 00 00 00 00 0A 00 00
+T 26 01
+R 00 00 00 00
+T 26 01 6B DD F9 DD E1 C9
+R 00 00 00 00
+</REL>
+<ADB>
+</ADB>
+</FILE>
+
+<FILE>
+ff_fopen
+<REL>
+XL2
+H 9 areas 7 global symbols
+M ff_fopen
+O -mz80
+S .__.ABS. Def0000
+S _ld_dword Ref0000
+S ___sdcc_enter_ix Ref0000
+S _find_volume Ref0000
+S _ld_clust Ref0000
+S _follow_path Ref0000
+A _CODE size 166 flags 0 addr 0
+S _f_open Def0000
+A _DATA size 0 flags 0 addr 0
+A _INITIALIZED size 0 flags 0 addr 0
+A _DABS size 0 flags 8 addr 0
+A _HOME size 0 flags 0 addr 0
+A _GSINIT size 0 flags 0 addr 0
+A _GSFINAL size 0 flags 0 addr 0
+A _INITIALIZER size 0 flags 0 addr 0
+A _CABS size 0 flags 8 addr 0
+T 00 00
+R 00 00 00 00
+T 00 00 CD 00 00 21 C7 FF 39 F9 DD 7E 05 DD B6 04
+R 00 00 00 00 02 03 02 00
+T 0E 00 20 05 2E 09 C3 61 01
+R 00 00 00 00 00 07 00 00
+T 15 00
+R 00 00 00 00
+T 15 00 DD 7E 08 E6 01 DD 77 08 21 00 00 39 EB DD
+R 00 00 00 00
+T 23 00 7E 08 F5 33 D5 CD 00 00 F1 33 DD 75 F5 DD
+R 00 00 00 00 02 08 03 00
+T 31 00 5E 04 DD 56 05 DD 7E F5 B7 C2 51 01 21
+R 00 00 00 00 00 0C 00 00
+T 3E 00 02 00 39 DD 7E C7 77 23 DD 7E C8 77 21
+R 00 00 00 00
+T 4B 00 02 00 39 4D 44 C5 FD E1 C5 D5 DD 6E 06 DD
+R 00 00 00 00
+T 59 00 66 07 E5 FD E5 CD 00 00 F1 F1 D1 C1 DD 75
+R 00 00 00 00 02 08 05 00
+T 67 00 F5 7D B7 20 1C C5 FD E1 FD 7E 27 07 30 06
+R 00 00 00 00
+T 75 00 DD 36 F5 06 18 0D
+R 00 00 00 00
+T 7B 00
+R 00 00 00 00
+T 7B 00 C5 FD E1 FD CB 04 66 28 04 DD 36 F5 04
+R 00 00 00 00
+T 88 00
+R 00 00 00 00
+T 88 00 DD 7E F5 B7 C2 51 01 21 06 00 19 DD 75 FE
+R 00 00 00 00 00 07 00 00
+T 96 00 DD 74 FF 21 1A 00 09 4D 44 7E 23 66 6F C5
+R 00 00 00 00
+T A4 00 D5 E5 DD 6E C7 DD 66 C8 E5 CD 00 00 F1 F1
+R 00 00 00 00 02 0C 04 00
+T B2 00 DD 72 F9 DD 73 F8 DD 74 F7 DD 75 F6 D1 C1
+R 00 00 00 00
+T C0 00 D5 C5 DD 5E FE DD 56 FF 21 33 00 39 01
+R 00 00 00 00
+T CD 00 04 00 ED B0 C1 D1 21 0A 00 19 DD 75 F6 DD
+R 00 00 00 00
+T DB 00 74 F7 69 60 4E 23 46 21 1C 00 09 D5 E5 CD
+R 00 00 00 00
+T E9 00 00 00 F1 DD 72 FD DD 73 FC DD 74 FB DD 75
+R 00 00 00 00 02 02 01 00
+T F7 00 FA DD 5E F6 DD 56 F7 21 35 00 39 01 04 00
+R 00 00 00 00
+T 05 01 ED B0 D1 6B 62 DD 7E C7 77 23 DD 7E C8 77
+R 00 00 00 00
+T 13 01 D5 FD E1 FD 23 FD 23 E1 E5 01 04 00 09 46
+R 00 00 00 00
+T 21 01 23 66 FD 70 00 FD 74 01 21 0E 00 19 DD 7E
+R 00 00 00 00
+T 2F 01 08 77 21 0F 00 19 36 00 21 18 00 19 AF 77
+R 00 00 00 00
+T 3D 01 23 77 23 AF 77 23 77 21 10 00 19 AF 77 23
+R 00 00 00 00
+T 4B 01 77 23 AF 77 23 77
+R 00 00 00 00
+T 51 01
+R 00 00 00 00
+T 51 01 DD 7E F5 B7 28 07 3E 00 12 13 3E 00 12
+R 00 00 00 00
+T 5E 01
+R 00 00 00 00
+T 5E 01 DD 6E F5
+R 00 00 00 00
+T 61 01
+R 00 00 00 00
+T 61 01 DD F9 DD E1 C9
+R 00 00 00 00
+</REL>
+<ADB>
+</ADB>
+</FILE>
+
+<FILE>
+ff_fread
+<REL>
+XL2
+H 9 areas 8 global symbols
+M ff_fread
+O -mz80
+S _disk_read Ref0000
+S .__.ABS. Def0000
+S _validate Ref0000
+S _memcpy Ref0000
+S _clst2sect Ref0000
+S ___sdcc_enter_ix Ref0000
+S _get_fat Ref0000
+A _CODE size 45A flags 0 addr 0
+S _f_read Def0000
+A _DATA size 0 flags 0 addr 0
+A _INITIALIZED size 0 flags 0 addr 0
+A _DABS size 0 flags 8 addr 0
+A _HOME size 0 flags 0 addr 0
+A _GSINIT size 0 flags 0 addr 0
+A _GSFINAL size 0 flags 0 addr 0
+A _INITIALIZER size 0 flags 0 addr 0
+A _CABS size 0 flags 8 addr 0
+T 00 00
+R 00 00 00 00
+T 00 00 CD 00 00 21 DB FF 39 F9 DD 7E 06 DD 77 E1
+R 00 00 00 00 02 03 05 00
+T 0E 00 DD 7E 07 DD 77 E2 DD 7E 0A DD 77 EF DD 7E
+R 00 00 00 00
+T 1C 00 0B DD 77 F0 DD 6E EF DD 66 F0 AF 77 23 77
+R 00 00 00 00
+T 2A 00 21 04 00 39 DD 7E 04 DD 77 F9 DD 7E 05 DD
+R 00 00 00 00
+T 38 00 77 FA E5 DD 6E F9 DD 66 FA E5 CD 00 00 F1
+R 00 00 00 00 02 0D 02 00
+T 46 00 F1 4D DD 71 FF 79 B7 20 1D DD 7E F9 C6 0F
+R 00 00 00 00
+T 54 00 DD 77 EB DD 7E FA CE 00 DD 77 EC DD 6E EB
+R 00 00 00 00
+T 62 00 DD 66 EC 7E DD 77 FF B7 28 06
+R 00 00 00 00
+T 6C 00
+R 00 00 00 00
+T 6C 00 DD 6E FF C3 55 04
+R 00 00 00 00 00 06 00 00
+T 72 00
+R 00 00 00 00
+T 72 00 DD 6E F9 DD 66 FA 11 0E 00 19 7E 0F 38 05
+R 00 00 00 00
+T 80 00 2E 07 C3 55 04
+R 00 00 00 00 00 05 00 00
+T 85 00
+R 00 00 00 00
+T 85 00 DD 6E F9 DD 66 FA 11 0A 00 19 4E 23 46 23
+R 00 00 00 00
+T 93 00 5E 23 56 DD 7E F9 C6 10 DD 77 F1 DD 7E FA
+R 00 00 00 00
+T A1 00 CE 00 DD 77 F2 D5 C5 DD 5E F1 DD 56 F2 21
+R 00 00 00 00
+T AF 00 24 00 39 EB 01 04 00 ED B0 C1 D1 79 DD 96
+R 00 00 00 00
+T BD 00 FB 4F 78 DD 9E FC 47 7B DD 9E FD 5F 7A DD
+R 00 00 00 00
+T CB 00 9E FE 67 DD 7E 08 DD 77 FB DD 7E 09 DD 77
+R 00 00 00 00
+T D9 00 FC DD 36 FD 00 DD 36 FE 00 79 DD 96 FB 78
+R 00 00 00 00
+T E7 00 DD 9E FC 7B DD 9E FD 7C DD 9E FE 30 06 DD
+R 00 00 00 00
+T F5 00 71 08 DD 70 09
+R 00 00 00 00
+T FA 00
+R 00 00 00 00
+T FA 00 DD 7E F9 DD 77 FB DD 7E FA DD 77 FC DD 7E
+R 00 00 00 00
+T 08 01 F9 C6 14 DD 77 F7 DD 7E FA CE 00 DD 77 F8
+R 00 00 00 00
+T 16 01 DD 7E F7 DD 77 ED DD 7E F8 DD 77 EE DD 7E
+R 00 00 00 00
+T 24 01 F9 C6 1C DD 77 E9 DD 7E FA CE 00 DD 77 EA
+R 00 00 00 00
+T 32 01
+R 00 00 00 00
+T 32 01 DD 7E 09 DD B6 08 CA 53 04 DD 6E F1 DD 66
+R 00 00 00 00 00 09 00 00
+T 40 01 F2 4E 23 46 23 5E 23 56 79 B7 C2 9F 03 CB
+R 00 00 00 00 00 0D 00 00
+T 4E 01 40 C2 9F 03 F5 DD 71 F3 DD 70 F4 DD 73 F5
+R 00 00 00 00 00 04 00 00
+T 5C 01 DD 72 F6 F1 3E 09
+R 00 00 00 00
+T 62 01
+R 00 00 00 00
+T 62 01 DD CB F6 3E DD CB F5 1E DD CB F4 1E DD CB
+R 00 00 00 00
+T 70 01 F3 1E 3D 20 ED DD 6E DF DD 66 E0 C5 01
+R 00 00 00 00
+T 7D 01 08 00 09 C1 7E 23 66 6F 2B DD 75 E5 DD 74
+R 00 00 00 00
+T 8B 01 E6 DD 36 E7 00 DD 36 E8 00 DD 7E E5 DD A6
+R 00 00 00 00
+T 99 01 F3 DD 77 E5 DD 7E E6 DD A6 F4 DD 77 E6 DD
+R 00 00 00 00
+T A7 01 7E E7 DD A6 F5 DD 77 E7 DD 7E E8 DD A6 F6
+R 00 00 00 00
+T B5 01 DD 77 E8 DD 7E E5 DD 77 E3 DD 7E E6 DD 77
+R 00 00 00 00
+T C3 01 E4 DD B6 E3 C2 55 02 7A B3 B0 B1 20 13 DD
+R 00 00 00 00 00 07 00 00
+T D1 01 6E FB DD 66 FC 11 06 00 19 4E 23 46 23 5E
+R 00 00 00 00
+T DF 01 23 56 18 2D
+R 00 00 00 00
+T E3 01
+R 00 00 00 00
+T E3 01 DD 5E F7 DD 56 F8 21 0A 00 39 EB 01 04 00
+R 00 00 00 00
+T F1 01 ED B0 DD 6E E7 DD 66 E8 E5 DD 6E E5 DD 66
+R 00 00 00 00
+T FF 01 E6 E5 DD 6E F9 DD 66 FA E5 CD 00 00 F1 F1
+R 00 00 00 00 02 0C 06 00
+T 0D 02 F1 4D 44
+R 00 00 00 00
+T 10 02
+R 00 00 00 00
+T 10 02 79 D6 02 78 DE 00 7B DE 00 7A DE 00 30 0D
+R 00 00 00 00
+T 1E 02 DD 6E EB DD 66 EC 36 02 2E 02 C3 55 04
+R 00 00 00 00 00 0D 00 00
+T 2B 02
+R 00 00 00 00
+T 2B 02 79 3C 20 19 78 3C 20 15 7B 3C 20 11 7A 3C
+R 00 00 00 00
+T 39 02 20 0D DD 6E EB DD 66 EC 36 01 2E 01 C3
+R 00 00 00 00
+T 46 02 55 04
+R 00 00 00 00 00 02 00 00
+T 48 02
+R 00 00 00 00
+T 48 02 DD 6E F7 DD 66 F8 71 23 70 23 73 23 72
+R 00 00 00 00
+T 55 02
+R 00 00 00 00
+T 55 02 DD 6E ED DD 66 EE 5E 23 56 23 4E 23 46 C5
+R 00 00 00 00
+T 63 02 D5 DD 6E DF DD 66 E0 E5 CD 00 00 F1 F1 F1
+R 00 00 00 00 02 0B 04 00
+T 71 02 7A B3 B4 B5 20 0D DD 6E EB DD 66 EC 36 02
+R 00 00 00 00
+T 7F 02 2E 02 C3 55 04
+R 00 00 00 00 00 05 00 00
+T 84 02
+R 00 00 00 00
+T 84 02 DD 7E E3 DD 77 E5 DD 7E E4 DD 77 E6 DD 36
+R 00 00 00 00
+T 92 02 E7 00 DD 36 E8 00 7D DD 86 E5 6F 7C DD 8E
+R 00 00 00 00
+T A0 02 E6 67 7B DD 8E E7 5F 7A DD 8E E8 57 DD 75
+R 00 00 00 00
+T AE 02 DB DD 74 DC DD 73 DD DD 72 DE DD 7E 09 CB
+R 00 00 00 00
+T BC 02 3F 5F 16 00 7A B3 28 61 DD 7E E3 83 47 DD
+R 00 00 00 00
+T CA 02 7E E4 8A 4F DD 6E DF DD 66 E0 C5 01 08 00
+R 00 00 00 00
+T D8 02 09 C1 7E 23 6E 67 90 7D 99 30 0A 7C DD 96
+R 00 00 00 00
+T E6 02 E3 5F 7D DD 9E E4 57
+R 00 00 00 00
+T ED 02
+R 00 00 00 00
+T ED 02 D5 D5 DD 6E DD DD 66 DE E5 DD 6E DB DD 66
+R 00 00 00 00
+T FB 02 DC E5 DD 6E E1 DD 66 E2 E5 CD 00 00 F1 F1
+R 00 00 00 00 02 0C 00 00
+T 09 03 F1 F1 7D D1 B7 28 0D DD 6E EB DD 66 EC 36
+R 00 00 00 00
+T 17 03 01 2E 01 C3 55 04
+R 00 00 00 00 00 06 00 00
+T 1D 03
+R 00 00 00 00
+T 1D 03 7B 87 47 0E 00 C3 E8 03
+R 00 00 00 00 00 08 00 00
+T 25 03
+R 00 00 00 00
+T 25 03 DD 7E F9 C6 18 5F DD 7E FA CE 00 57 D5 21
+R 00 00 00 00
+T 33 03 0C 00 39 EB 01 04 00 ED B0 D1 DD 7E DB DD
+R 00 00 00 00
+T 41 03 96 E5 20 18 DD 7E DC DD 96 E6 20 10 DD 7E
+R 00 00 00 00
+T 4F 03 DD DD 96 E7 20 08 DD 7E DE DD 96 E8 28 39
+R 00 00 00 00
+T 5D 03
+R 00 00 00 00
+T 5D 03 DD 7E F9 C6 1C 4F DD 7E FA CE 00 47 D5 21
+R 00 00 00 00
+T 6B 03 01 00 E5 DD 6E DD DD 66 DE E5 DD 6E DB DD
+R 00 00 00 00
+T 79 03 66 DC E5 C5 CD 00 00 F1 F1 F1 F1 7D D1 B7
+R 00 00 00 00 02 07 00 00
+T 87 03 28 0D DD 6E EB DD 66 EC 36 01 2E 01 C3
+R 00 00 00 00
+T 94 03 55 04
+R 00 00 00 00 00 02 00 00
+T 96 03
+R 00 00 00 00
+T 96 03 21 00 00 39 01 04 00 ED B0
+R 00 00 00 00
+T 9F 03
+R 00 00 00 00
+T 9F 03 DD 6E F1 DD 66 F2 5E 23 56 23 23 7E 2B 66
+R 00 00 00 00
+T AD 03 4B 7A E6 01 47 AF 91 4F 3E 02 98 47 DD 7E
+R 00 00 00 00
+T BB 03 08 91 DD 7E 09 98 30 06 DD 4E 08 DD 46 09
+R 00 00 00 00
+T C9 03
+R 00 00 00 00
+T C9 03 7A E6 01 57 DD 7E E9 83 5F DD 7E EA 8A 57
+R 00 00 00 00
+T D7 03 DD 6E E1 DD 66 E2 C5 C5 D5 E5 CD 00 00 F1
+R 00 00 00 00 02 0D 03 00
+T E5 03 F1 F1 C1
+R 00 00 00 00
+T E8 03
+R 00 00 00 00
+T E8 03 DD 7E 08 91 DD 77 08 DD 7E 09 98 DD 77 09
+R 00 00 00 00
+T F6 03 DD 6E EF DD 66 F0 7E 23 66 6F 09 55 5C DD
+R 00 00 00 00
+T 04 04 6E EF DD 66 F0 72 23 73 DD 7E E1 81 DD 77
+R 00 00 00 00
+T 12 04 E1 DD 7E E2 88 DD 77 E2 C5 DD 5E F1 DD 56
+R 00 00 00 00
+T 20 04 F2 21 0C 00 39 EB 01 04 00 ED B0 C1 21
+R 00 00 00 00
+T 2D 04 00 00 DD 7E E5 81 57 DD 7E E6 88 5F DD 7E
+R 00 00 00 00
+T 3B 04 E7 8C 4F DD 7E E8 8D 47 DD 6E F1 DD 66 F2
+R 00 00 00 00
+T 49 04 72 23 73 23 71 23 70 C3 32 01
+R 00 00 00 00 00 0A 00 00
+T 53 04
+R 00 00 00 00
+T 53 04 2E 00
+R 00 00 00 00
+T 55 04
+R 00 00 00 00
+T 55 04 DD F9 DD E1 C9
+R 00 00 00 00
+</REL>
+<ADB>
+</ADB>
+</FILE>
+
+<FILE>
+ff_frename
+<REL>
+XL2
+H 9 areas 1 global symbols
+M ff_frename
+O -mz80
+S .__.ABS. Def0000
+A _CODE size 0 flags 0 addr 0
+A _DATA size 0 flags 0 addr 0
+A _INITIALIZED size 0 flags 0 addr 0
+A _DABS size 0 flags 8 addr 0
+A _HOME size 0 flags 0 addr 0
+A _GSINIT size 0 flags 0 addr 0
+A _GSFINAL size 0 flags 0 addr 0
+A _INITIALIZER size 0 flags 0 addr 0
+A _CABS size 0 flags 8 addr 0
+</REL>
+<ADB>
+</ADB>
+</FILE>
+
+<FILE>
+ff_fsync
+<REL>
+XL2
+H 9 areas 1 global symbols
+M ff_fsync
+O -mz80
+S .__.ABS. Def0000
+A _CODE size 0 flags 0 addr 0
+A _DATA size 0 flags 0 addr 0
+A _INITIALIZED size 0 flags 0 addr 0
+A _DABS size 0 flags 8 addr 0
+A _HOME size 0 flags 0 addr 0
+A _GSINIT size 0 flags 0 addr 0
+A _GSFINAL size 0 flags 0 addr 0
+A _INITIALIZER size 0 flags 0 addr 0
+A _CABS size 0 flags 8 addr 0
+</REL>
+<ADB>
+</ADB>
+</FILE>
+
+<FILE>
+ff_ftruncate
+<REL>
+XL2
+H 9 areas 1 global symbols
+M ff_ftruncate
+O -mz80
+S .__.ABS. Def0000
+A _CODE size 0 flags 0 addr 0
+A _DATA size 0 flags 0 addr 0
+A _INITIALIZED size 0 flags 0 addr 0
+A _DABS size 0 flags 8 addr 0
+A _HOME size 0 flags 0 addr 0
+A _GSINIT size 0 flags 0 addr 0
+A _GSFINAL size 0 flags 0 addr 0
+A _INITIALIZER size 0 flags 0 addr 0
+A _CABS size 0 flags 8 addr 0
+</REL>
+<ADB>
+</ADB>
+</FILE>
+
+<FILE>
+ff_funlink
+<REL>
+XL2
+H 9 areas 1 global symbols
+M ff_funlink
+O -mz80
+S .__.ABS. Def0000
+A _CODE size 0 flags 0 addr 0
+A _DATA size 0 flags 0 addr 0
+A _INITIALIZED size 0 flags 0 addr 0
+A _DABS size 0 flags 8 addr 0
+A _HOME size 0 flags 0 addr 0
+A _GSINIT size 0 flags 0 addr 0
+A _GSFINAL size 0 flags 0 addr 0
+A _INITIALIZER size 0 flags 0 addr 0
+A _CABS size 0 flags 8 addr 0
+</REL>
+<ADB>
+</ADB>
+</FILE>
+
+<FILE>
+ff_fwrite
+<REL>
+XL2
+H 9 areas 1 global symbols
+M ff_fwrite
+O -mz80
+S .__.ABS. Def0000
+A _CODE size 0 flags 0 addr 0
+A _DATA size 0 flags 0 addr 0
+A _INITIALIZED size 0 flags 0 addr 0
+A _DABS size 0 flags 8 addr 0
+A _HOME size 0 flags 0 addr 0
+A _GSINIT size 0 flags 0 addr 0
+A _GSFINAL size 0 flags 0 addr 0
+A _INITIALIZER size 0 flags 0 addr 0
+A _CABS size 0 flags 8 addr 0
+</REL>
+<ADB>
+</ADB>
+</FILE>
+
+<FILE>
+ff_gennumname
+<REL>
+XL2
+H 9 areas 1 global symbols
+M ff_gennumname
+O -mz80
+S .__.ABS. Def0000
+A _CODE size 0 flags 0 addr 0
+A _DATA size 0 flags 0 addr 0
+A _INITIALIZED size 0 flags 0 addr 0
+A _DABS size 0 flags 8 addr 0
+A _HOME size 0 flags 0 addr 0
+A _GSINIT size 0 flags 0 addr 0
+A _GSFINAL size 0 flags 0 addr 0
+A _INITIALIZER size 0 flags 0 addr 0
+A _CABS size 0 flags 8 addr 0
+</REL>
+<ADB>
+</ADB>
+</FILE>
+
+<FILE>
+ff_getfat
+<REL>
+XL2
+H 9 areas 5 global symbols
+M ff_getfat
+O -mz80
+S _move_window Ref0000
+S .__.ABS. Def0000
+S _ld_dword Ref0000
+S ___sdcc_enter_ix Ref0000
+A _CODE size 1AC flags 0 addr 0
+S _get_fat Def0000
+A _DATA size 0 flags 0 addr 0
+A _INITIALIZED size 0 flags 0 addr 0
+A _DABS size 0 flags 8 addr 0
+A _HOME size 0 flags 0 addr 0
+A _GSINIT size 0 flags 0 addr 0
+A _GSFINAL size 0 flags 0 addr 0
+A _INITIALIZER size 0 flags 0 addr 0
+A _CABS size 0 flags 8 addr 0
+T 00 00
+R 00 00 00 00
+T 00 00 CD 00 00 F5 F5 F5 F5 DD 6E 04 DD 66 05 5E
+R 00 00 00 00 02 03 03 00
+T 0E 00 23 56 DD 7E 06 D6 02 DD 7E 07 DE 00 DD 7E
+R 00 00 00 00
+T 1C 00 08 DE 00 DD 7E 09 DE 00 38 21 D5 FD E1 FD
+R 00 00 00 00
+T 2A 00 6E 0C FD 66 0D FD 46 0E FD 4E 0F DD 7E 06
+R 00 00 00 00
+T 38 00 95 DD 7E 07 9C DD 7E 08 98 DD 7E 09 99 38
+R 00 00 00 00
+T 46 00 11
+R 00 00 00 00
+T 47 00
+R 00 00 00 00
+T 47 00 DD 36 F8 01 AF DD 77 F9 DD 77 FA DD 77 FB
+R 00 00 00 00
+T 55 00 C3 9B 01
+R 00 00 00 00 00 03 00 00
+T 58 00
+R 00 00 00 00
+T 58 00 DD 36 F8 FF DD 36 F9 FF DD 36 FA FF DD 36
+R 00 00 00 00
+T 66 00 FB FF 1A 47 D5 FD E1 FD 7E 18 DD 77 FC FD
+R 00 00 00 00
+T 74 00 7E 19 DD 77 FD FD 7E 1A DD 77 FE FD 7E 1B
+R 00 00 00 00
+T 82 00 DD 77 FF 78 D6 02 28 09 78 D6 03 CA 17 01
+R 00 00 00 00 00 0E 00 00
+T 90 00 C3 8D 01
+R 00 00 00 00 00 03 00 00
+T 93 00
+R 00 00 00 00
+T 93 00 F5 DD 4E 06 DD 46 07 DD 6E 08 DD 66 09 F1
+R 00 00 00 00
+T A1 00 3E 08
+R 00 00 00 00
+T A3 00
+R 00 00 00 00
+T A3 00 CB 3C CB 1D CB 18 CB 19 3D 20 F5 DD 7E FC
+R 00 00 00 00
+T B1 00 81 4F DD 7E FD 88 47 DD 7E FE 8D 6F DD 7E
+R 00 00 00 00
+T BF 00 FF 8C 67 D5 E5 C5 D5 CD 00 00 F1 F1 F1 7D
+R 00 00 00 00 02 0A 00 00
+T CD 00 D1 B7 C2 9B 01 21 28 00 19 EB F5 DD 4E 06
+R 00 00 00 00 00 05 00 00
+T DB 00 DD 46 07 DD 6E 08 DD 66 09 F1 CB 21 CB 10
+R 00 00 00 00
+T E9 00 ED 6A 78 E6 01 47 79 83 4F 78 8A 47 69 60
+R 00 00 00 00
+T F7 00 23 5E 16 00 0A 6F 26 00 7D B2 6F 7C B3 67
+R 00 00 00 00
+T 05 01 DD 75 F8 DD 74 F9 7C 17 9F DD 77 FA DD 77
+R 00 00 00 00
+T 13 01 FB C3 9B 01
+R 00 00 00 00 00 04 00 00
+T 17 01
+R 00 00 00 00
+T 17 01 F5 DD 4E 06 DD 46 07 DD 6E 08 DD 66 09 F1
+R 00 00 00 00
+T 25 01 3E 07
+R 00 00 00 00
+T 27 01
+R 00 00 00 00
+T 27 01 CB 3C CB 1D CB 18 CB 19 3D 20 F5 DD 7E FC
+R 00 00 00 00
+T 35 01 81 4F DD 7E FD 88 47 DD 7E FE 8D 6F DD 7E
+R 00 00 00 00
+T 43 01 FF 8C 67 D5 E5 C5 D5 CD 00 00 F1 F1 F1 7D
+R 00 00 00 00 02 0A 00 00
+T 51 01 D1 B7 20 46 21 28 00 19 EB F5 DD 6E 06 DD
+R 00 00 00 00
+T 5F 01 66 07 DD 4E 08 DD 46 09 F1 3E 02
+R 00 00 00 00
+T 6A 01
+R 00 00 00 00
+T 6A 01 29 CB 11 CB 10 3D 20 F8 7C E6 01 67 19 E5
+R 00 00 00 00
+T 78 01 CD 00 00 F1 DD 75 F8 DD 74 F9 DD 73 FA 7A
+R 00 00 00 00 02 03 02 00
+T 86 01 E6 0F DD 77 FB 18 0E
+R 00 00 00 00
+T 8D 01
+R 00 00 00 00
+T 8D 01 DD 36 F8 01 AF DD 77 F9 DD 77 FA DD 77 FB
+R 00 00 00 00
+T 9B 01
+R 00 00 00 00
+T 9B 01 DD 6E F8 DD 66 F9 DD 5E FA DD 56 FB DD F9
+R 00 00 00 00
+T A9 01 DD E1 C9
+R 00 00 00 00
+</REL>
+<ADB>
+</ADB>
+</FILE>
+
+<FILE>
+ff_getfileinfo
+<REL>
+XL2
+H 9 areas 4 global symbols
+M ff_getfileinfo
+O -mz80
+S .__.ABS. Def0000
+S _ld_dword Ref0000
+S ___sdcc_enter_ix Ref0000
+A _CODE size 20E flags 0 addr 0
+S _get_fileinfo Def0000
+A _DATA size 0 flags 0 addr 0
+A _INITIALIZED size 0 flags 0 addr 0
+A _DABS size 0 flags 8 addr 0
+A _HOME size 0 flags 0 addr 0
+A _GSINIT size 0 flags 0 addr 0
+A _GSFINAL size 0 flags 0 addr 0
+A _INITIALIZER size 0 flags 0 addr 0
+A _CABS size 0 flags 8 addr 0
+T 00 00
+R 00 00 00 00
+T 00 00 CD 00 00 21 EF FF 39 F9 DD 7E 04 DD 77 F3
+R 00 00 00 00 02 03 02 00
+T 0E 00 DD 7E 05 DD 77 F4 DD 6E F3 DD 66 F4 7E DD
+R 00 00 00 00
+T 1C 00 77 F0 23 7E DD 77 F1 DD 7E 06 DD 77 FE DD
+R 00 00 00 00
+T 2A 00 7E 07 DD 77 FF DD 7E FE C6 05 DD 77 F6 DD
+R 00 00 00 00
+T 38 00 7E FF CE 00 DD 77 F7 DD 6E F6 DD 66 F7 36
+R 00 00 00 00
+T 46 00 00 DD 6E F3 DD 66 F4 11 16 00 19 4E 23 46
+R 00 00 00 00
+T 54 00 23 5E 23 7E B3 B0 B1 CA 09 02 DD 6E F3 DD
+R 00 00 00 00 00 0A 00 00
+T 62 00 66 F4 11 28 00 19 56 23 5E 23 46 23 66 14
+R 00 00 00 00
+T 70 00 20 0A 1C 20 07 04 20 04 24 CA 1C 01
+R 00 00 00 00 00 0C 00 00
+T 7C 00
+R 00 00 00 00
+T 7C 00 DD 36 EF 00 06 00 DD 7E FE C6 05 5F DD 7E
+R 00 00 00 00
+T 8A 00 FF CE 00 57 DD 7E F0 DD 77 FC DD 7E F1 DD
+R 00 00 00 00
+T 98 00 77 FD DD 36 F2 00 DD 36 F5 00
+R 00 00 00 00
+T A2 00
+R 00 00 00 00
+T A2 00 DD 6E FC DD 66 FD C5 01 0A 00 09 C1 7E DD
+R 00 00 00 00
+T B0 00 77 F8 23 7E DD 77 F9 DD 6E F2 26 00 29 7D
+R 00 00 00 00
+T BE 00 DD 86 F8 6F 7C DD 8E F9 67 7E DD 77 FA 23
+R 00 00 00 00
+T CC 00 7E DD 77 FB DD B6 FA 28 39 DD 7E F5 D6 FE
+R 00 00 00 00
+T DA 00 38 04 06 00 18 2E
+R 00 00 00 00
+T E0 00
+R 00 00 00 00
+T E0 00 DD 6E F2 DD 34 F2 26 00 29 DD 4E F8 DD 46
+R 00 00 00 00
+T EE 00 F9 09 4E 23 66 DD 66 F5 DD 34 F5 DD 46 F5
+R 00 00 00 00
+T FC 00 6C 26 00 19 71 79 B7 20 03 47 18 06
+R 00 00 00 00
+T 08 01
+R 00 00 00 00
+T 08 01 DD 36 EF 00 18 94
+R 00 00 00 00
+T 0E 01
+R 00 00 00 00
+T 0E 01 DD 7E EF B7 28 02 06 00
+R 00 00 00 00
+T 16 01
+R 00 00 00 00
+T 16 01 68 26 00 19 36 00
+R 00 00 00 00
+T 1C 01
+R 00 00 00 00
+T 1C 01 0E 00 DD 6E F6 DD 66 F7 6E DD 7E F3 C6 1A
+R 00 00 00 00
+T 2A 01 DD 77 FA DD 7E F4 CE 00 DD 77 FB 7D B7 20
+R 00 00 00 00
+T 38 01 6E DD 5E FA DD 56 FB DD 36 F2 00
+R 00 00 00 00
+T 43 01
+R 00 00 00 00
+T 43 01 DD 7E F2 D6 0B 30 52 1A DD 77 F8 13 1A DD
+R 00 00 00 00
+T 51 01 77 F9 1B DD 66 F2 DD 34 F2 7C DD 86 F8 6F
+R 00 00 00 00
+T 5F 01 3E 00 DD 8E F9 67 46 78 FE 20 28 D8 D6 05
+R 00 00 00 00
+T 6D 01 20 02 06 E5
+R 00 00 00 00
+T 71 01
+R 00 00 00 00
+T 71 01 DD 7E F2 D6 09 20 14 79 D6 0C 30 0F 61 0C
+R 00 00 00 00
+T 7F 01 DD 7E F6 84 6F DD 7E F7 CE 00 67 36 2E
+R 00 00 00 00
+T 8C 01
+R 00 00 00 00
+T 8C 01 61 0C DD 7E F6 84 6F DD 7E F7 CE 00 67 70
+R 00 00 00 00
+T 9A 01 18 A7
+R 00 00 00 00
+T 9C 01
+R 00 00 00 00
+T 9C 01 DD 6E F6 DD 66 F7 06 00 09 36 00
+R 00 00 00 00
+T A7 01
+R 00 00 00 00
+T A7 01 DD 6E F6 DD 66 F7 7E B7 20 1B B1 20 0D 59
+R 00 00 00 00
+T B5 01 0C DD 6E F6 DD 66 F7 16 00 19 36 3F
+R 00 00 00 00
+T C1 01
+R 00 00 00 00
+T C1 01 DD 6E F6 DD 66 F7 06 00 09 36 00
+R 00 00 00 00
+T CC 01
+R 00 00 00 00
+T CC 01 DD 7E FE C6 04 5F DD 7E FF CE 00 57 DD 6E
+R 00 00 00 00
+T DA 01 FA DD 66 FB 7E 23 66 6F 01 0B 00 09 7E 12
+R 00 00 00 00
+T E8 01 DD 6E FA DD 66 FB 5E 23 56 21 1C 00 19 E5
+R 00 00 00 00
+T F6 01 CD 00 00 F1 45 4C DD 6E FE DD 66 FF 70 23
+R 00 00 00 00 02 03 01 00
+T 04 02 71 23 73 23 72
+R 00 00 00 00
+T 09 02
+R 00 00 00 00
+T 09 02 DD F9 DD E1 C9
+R 00 00 00 00
+</REL>
+<ADB>
+</ADB>
+</FILE>
+
+<FILE>
+ff_getldnumber
+<REL>
+XL2
+H 9 areas 3 global symbols
+M ff_getldnumber
+O -mz80
+S .__.ABS. Def0000
+S ___sdcc_enter_ix Ref0000
+A _CODE size D5 flags 0 addr 0
+S _get_ldnumber_unused Def0000
+A _DATA size 0 flags 0 addr 0
+A _INITIALIZED size 0 flags 0 addr 0
+A _DABS size 0 flags 8 addr 0
+A _HOME size 0 flags 0 addr 0
+A _GSINIT size 0 flags 0 addr 0
+A _GSFINAL size 0 flags 0 addr 0
+A _INITIALIZER size 0 flags 0 addr 0
+A _CABS size 0 flags 8 addr 0
+T 00 00
+R 00 00 00 00
+T 00 00 CD 00 00 21 F5 FF 39 F9 DD 36 F7 FF DD 36
+R 00 00 00 00 02 03 01 00
+T 0E 00 F8 FF DD 7E 04 DD 77 FE DD 7E 05 DD 77 FF
+R 00 00 00 00
+T 1C 00 DD 6E FE DD 66 FF 5E 23 56 33 33 D5 DD 7E
+R 00 00 00 00
+T 2A 00 F6 DD B6 F5 20 06 21 FF FF C3 D0 00
+R 00 00 00 00 00 0C 00 00
+T 36 00
+R 00 00 00 00
+T 36 00
+R 00 00 00 00
+T 36 00 1A 13 6F F5 17 9F 47 F1 D6 3A 20 04 3E 01
+R 00 00 00 00
+T 44 00 18 01
+R 00 00 00 00
+T 46 00
+R 00 00 00 00
+T 46 00 AF
+R 00 00 00 00
+T 47 00
+R 00 00 00 00
+T 47 00 67 7D D6 20 78 DE 00 38 04 7C B7 28 E2
+R 00 00 00 00
+T 54 00
+R 00 00 00 00
+T 54 00 DD 73 FC DD 72 FD 7C B7 28 6F 01 01 00 E1
+R 00 00 00 00
+T 62 00 E5 7E DD 77 FB EE 80 D6 B0 38 3A 3E 39 DD
+R 00 00 00 00
+T 70 00 96 FB E2 77 00 EE 80
+R 00 00 00 00 00 05 00 00
+T 77 00
+R 00 00 00 00
+T 77 00 FA A7 00 DD 7E F5 C6 02 DD 77 F9 DD 7E F6
+R 00 00 00 00 00 03 00 00
+T 85 00 CE 00 DD 77 FA 7B DD 96 F9 20 17 7A DD 96
+R 00 00 00 00
+T 93 00 FA 20 11 DD 66 FB DD 7E FB 17 9F 6F 7C C6
+R 00 00 00 00
+T A1 00 D0 4F 7D CE FF 47
+R 00 00 00 00
+T A7 00
+R 00 00 00 00
+T A7 00 79 D6 01 78 17 3F 1F DE 80 30 15 DD 71 F7
+R 00 00 00 00
+T B5 00 DD 70 F8 DD 6E FE DD 66 FF DD 7E FC 77 23
+R 00 00 00 00
+T C3 00 DD 7E FD 77
+R 00 00 00 00
+T C7 00
+R 00 00 00 00
+T C7 00 C1 E1 E5 C5 18 03
+R 00 00 00 00
+T CD 00
+R 00 00 00 00
+T CD 00 21 00 00
+R 00 00 00 00
+T D0 00
+R 00 00 00 00
+T D0 00 DD F9 DD E1 C9
+R 00 00 00 00
+</REL>
+<ADB>
+</ADB>
+</FILE>
+
+<FILE>
+ff_loadobjxdir
+<REL>
+XL2
+H 9 areas 1 global symbols
+M ff_loadobjxdir
+O -mz80
+S .__.ABS. Def0000
+A _CODE size 0 flags 0 addr 0
+A _DATA size 0 flags 0 addr 0
+A _INITIALIZED size 0 flags 0 addr 0
+A _DABS size 0 flags 8 addr 0
+A _HOME size 0 flags 0 addr 0
+A _GSINIT size 0 flags 0 addr 0
+A _GSFINAL size 0 flags 0 addr 0
+A _INITIALIZER size 0 flags 0 addr 0
+A _CABS size 0 flags 8 addr 0
+</REL>
+<ADB>
+</ADB>
+</FILE>
+
+<FILE>
+ff_ldclust
+<REL>
+XL2
+H 9 areas 3 global symbols
+M ff_ldclust
+O -mz80
+S .__.ABS. Def0000
+S ___sdcc_enter_ix Ref0000
+A _CODE size 91 flags 0 addr 0
+S _ld_clust Def0000
+A _DATA size 0 flags 0 addr 0
+A _INITIALIZED size 0 flags 0 addr 0
+A _DABS size 0 flags 8 addr 0
+A _HOME size 0 flags 0 addr 0
+A _GSINIT size 0 flags 0 addr 0
+A _GSFINAL size 0 flags 0 addr 0
+A _INITIALIZER size 0 flags 0 addr 0
+A _CABS size 0 flags 8 addr 0
+T 00 00
+R 00 00 00 00
+T 00 00 CD 00 00 F5 F5 DD 7E 06 C6 1A 4F DD 7E 07
+R 00 00 00 00 02 03 01 00
+T 0E 00 CE 00 47 69 60 23 56 1E 00 0A 6F 26 00 7D
+R 00 00 00 00
+T 1C 00 B3 6F 7C B2 67 DD 75 FC DD 74 FD 7C 17 9F
+R 00 00 00 00
+T 2A 00 DD 77 FE DD 77 FF DD 6E 04 DD 66 05 7E D6
+R 00 00 00 00
+T 38 00 03 20 45 DD 7E 06 C6 14 4F DD 7E 07 CE 00
+R 00 00 00 00
+T 46 00 47 69 60 23 56 1E 00 0A 6F 26 00 7D B3 6F
+R 00 00 00 00
+T 54 00 7C B2 67 17 9F 5F 57 06 10
+R 00 00 00 00
+T 5D 00
+R 00 00 00 00
+T 5D 00 29 CB 13 CB 12 10 F9 DD 7E FC B5 DD 77 FC
+R 00 00 00 00
+T 6B 00 DD 7E FD B4 DD 77 FD DD 7E FE B3 DD 77 FE
+R 00 00 00 00
+T 79 00 DD 7E FF B2 DD 77 FF
+R 00 00 00 00
+T 80 00
+R 00 00 00 00
+T 80 00 DD 6E FC DD 66 FD DD 5E FE DD 56 FF DD F9
+R 00 00 00 00
+T 8E 00 DD E1 C9
+R 00 00 00 00
+</REL>
+<ADB>
+</ADB>
+</FILE>
+
+<FILE>
+ff_lddword
+<REL>
+XL2
+H 9 areas 3 global symbols
+M ff_lddword
+O -mz80
+S .__.ABS. Def0000
+S ___sdcc_enter_ix Ref0000
+A _CODE size C1 flags 0 addr 0
+S _ld_dword Def0000
+A _DATA size 0 flags 0 addr 0
+A _INITIALIZED size 0 flags 0 addr 0
+A _DABS size 0 flags 8 addr 0
+A _HOME size 0 flags 0 addr 0
+A _GSINIT size 0 flags 0 addr 0
+A _GSFINAL size 0 flags 0 addr 0
+A _INITIALIZER size 0 flags 0 addr 0
+A _CABS size 0 flags 8 addr 0
+T 00 00
+R 00 00 00 00
+T 00 00 CD 00 00 F5 F5 DD 6E 04 DD 66 05 23 23 23
+R 00 00 00 00 02 03 01 00
+T 0E 00 5E 16 00 01 00 00 3E 08
+R 00 00 00 00
+T 16 00
+R 00 00 00 00
+T 16 00 CB 23 CB 12 CB 11 CB 10 3D 20 F5 DD 6E 04
+R 00 00 00 00
+T 24 00 DD 66 05 23 23 7E DD 77 FC DD 36 FD 00 DD
+R 00 00 00 00
+T 32 00 36 FE 00 DD 36 FF 00 7B DD B6 FC 5F 7A DD
+R 00 00 00 00
+T 40 00 B6 FD 57 79 DD B6 FE 4F 78 DD B6 FF 47 3E
+R 00 00 00 00
+T 4E 00 08
+R 00 00 00 00
+T 4F 00
+R 00 00 00 00
+T 4F 00 CB 23 CB 12 CB 11 CB 10 3D 20 F5 DD 6E 04
+R 00 00 00 00
+T 5D 00 DD 66 05 23 7E DD 77 FC DD 36 FD 00 DD 36
+R 00 00 00 00
+T 6B 00 FE 00 DD 36 FF 00 7B DD B6 FC 5F 7A DD B6
+R 00 00 00 00
+T 79 00 FD 57 79 DD B6 FE 4F 78 DD B6 FF 47 3E 08
+R 00 00 00 00
+T 87 00
+R 00 00 00 00
+T 87 00 CB 23 CB 12 CB 11 CB 10 3D 20 F5 DD 6E 04
+R 00 00 00 00
+T 95 00 DD 66 05 7E DD 77 FC DD 36 FD 00 DD 36 FE
+R 00 00 00 00
+T A3 00 00 DD 36 FF 00 7B DD B6 FC 6F 7A DD B6 FD
+R 00 00 00 00
+T B1 00 67 79 DD B6 FE 5F 78 DD B6 FF 57 DD F9 DD
+R 00 00 00 00
+T BF 00 E1 C9
+R 00 00 00 00
+</REL>
+<ADB>
+</ADB>
+</FILE>
+
+<FILE>
+ff_ldword
+<REL>
+XL2
+H 9 areas 3 global symbols
+M ff_ldword
+O -mz80
+S .__.ABS. Def0000
+S ___sdcc_enter_ix Ref0000
+A _CODE size 1F flags 0 addr 0
+S _ld_word_old Def0000
+A _DATA size 0 flags 0 addr 0
+A _INITIALIZED size 0 flags 0 addr 0
+A _DABS size 0 flags 8 addr 0
+A _HOME size 0 flags 0 addr 0
+A _GSINIT size 0 flags 0 addr 0
+A _GSFINAL size 0 flags 0 addr 0
+A _INITIALIZER size 0 flags 0 addr 0
+A _CABS size 0 flags 8 addr 0
+T 00 00
+R 00 00 00 00
+T 00 00 CD 00 00 DD 6E 04 DD 66 05 23 5E 16 00 DD
+R 00 00 00 00 02 03 01 00
+T 0E 00 6E 04 DD 66 05 6E 26 00 7D B2 6F 7C B3 67
+R 00 00 00 00
+T 1C 00 DD E1 C9
+R 00 00 00 00
+</REL>
+<ADB>
+</ADB>
+</FILE>
+
+<FILE>
+ff_lseek
+<REL>
+XL2
+H 9 areas 8 global symbols
+M ff_lseek
+O -mz80
+S _disk_read Ref0000
+S .__.ABS. Def0000
+S __divulong Ref0000
+S _validate Ref0000
+S _clst2sect Ref0000
+S ___sdcc_enter_ix Ref0000
+S _get_fat Ref0000
+A _CODE size 4D1 flags 0 addr 0
+S _f_lseek Def0000
+A _DATA size 0 flags 0 addr 0
+A _INITIALIZED size 0 flags 0 addr 0
+A _DABS size 0 flags 8 addr 0
+A _HOME size 0 flags 0 addr 0
+A _GSINIT size 0 flags 0 addr 0
+A _GSFINAL size 0 flags 0 addr 0
+A _INITIALIZER size 0 flags 0 addr 0
+A _CABS size 0 flags 8 addr 0
+T 00 00
+R 00 00 00 00
+T 00 00 CD 00 00 21 D9 FF 39 F9 21 10 00 39 DD 7E
+R 00 00 00 00 02 03 05 00
+T 0E 00 04 DD 77 EC DD 7E 05 DD 77 ED E5 DD 6E EC
+R 00 00 00 00
+T 1C 00 DD 66 ED E5 CD 00 00 F1 F1 DD 75 EB DD 7E
+R 00 00 00 00 02 07 03 00
+T 2A 00 EC C6 0F DD 77 FE DD 7E ED CE 00 DD 77 FF
+R 00 00 00 00
+T 38 00 DD 7E EB B7 20 0A DD 6E FE DD 66 FF 7E DD
+R 00 00 00 00
+T 46 00 77 EB
+R 00 00 00 00
+T 48 00
+R 00 00 00 00
+T 48 00 DD 7E EB B7 28 06 DD 6E EB C3 CC 04
+R 00 00 00 00 00 0C 00 00
+T 54 00
+R 00 00 00 00
+T 54 00 DD 6E EC DD 66 ED 11 0A 00 19 4E 23 46 23
+R 00 00 00 00
+T 62 00 56 23 66 79 DD 96 06 78 DD 9E 07 7A DD 9E
+R 00 00 00 00
+T 70 00 08 7C DD 9E 09 30 0C DD 71 06 DD 70 07 DD
+R 00 00 00 00
+T 7E 00 72 08 DD 74 09
+R 00 00 00 00
+T 83 00
+R 00 00 00 00
+T 83 00 DD 7E EC C6 10 DD 77 F4 DD 7E ED CE 00 DD
+R 00 00 00 00
+T 91 00 77 F5 DD 5E F4 DD 56 F5 21 00 00 39 EB 01
+R 00 00 00 00
+T 9F 00 04 00 ED B0 AF DD 77 FA DD 77 FB DD 77 FC
+R 00 00 00 00
+T AD 00 DD 77 FD DD 6E F4 DD 66 F5 AF 77 23 77 23
+R 00 00 00 00
+T BB 00 AF 77 23 77 DD 7E 09 DD B6 08 DD B6 07 DD
+R 00 00 00 00
+T C9 00 B6 06 CA 3A 04 DD 6E E9 DD 66 EA 11 08 00
+R 00 00 00 00 00 05 00 00
+T D7 00 19 5E 23 56 21 00 00 F5 DD 73 E1 DD 72 E2
+R 00 00 00 00
+T E5 00 DD 75 E3 DD 74 E4 F1 3E 09
+R 00 00 00 00
+T EE 00
+R 00 00 00 00
+T EE 00 DD CB E1 26 DD CB E2 16 DD CB E3 16 DD CB
+R 00 00 00 00
+T FC 00 E4 16 3D 20 ED DD 7E EC C6 14 DD 77 EE DD
+R 00 00 00 00
+T 0A 01 7E ED CE 00 DD 77 EF DD 7E DC DD B6 DB DD
+R 00 00 00 00
+T 18 01 B6 DA DD B6 D9 CA 23 02 DD 7E 06 C6 FF 5F
+R 00 00 00 00 00 08 00 00
+T 26 01 DD 7E 07 CE FF 57 DD 7E 08 CE FF 4F DD 7E
+R 00 00 00 00
+T 34 01 09 CE FF 47 DD 6E E3 DD 66 E4 E5 DD 6E E1
+R 00 00 00 00
+T 42 01 DD 66 E2 E5 C5 D5 CD 00 00 F1 F1 F1 F1 DD
+R 00 00 00 00 02 09 02 00
+T 50 01 72 F3 DD 73 F2 DD 74 F1 DD 75 F0 DD 7E D9
+R 00 00 00 00
+T 5E 01 C6 FF DD 77 F6 DD 7E DA CE FF DD 77 F7 DD
+R 00 00 00 00
+T 6C 01 7E DB CE FF DD 77 F8 DD 7E DC CE FF DD 77
+R 00 00 00 00
+T 7A 01 F9 DD 6E E3 DD 66 E4 E5 DD 6E E1 DD 66 E2
+R 00 00 00 00
+T 88 01 E5 DD 6E F8 DD 66 F9 E5 DD 6E F6 DD 66 F7
+R 00 00 00 00
+T 96 01 E5 CD 00 00 F1 F1 F1 F1 DD 7E F0 95 DD 7E
+R 00 00 00 00 02 04 02 00
+T A4 01 F1 9C DD 7E F2 9B DD 7E F3 9A 38 73 DD 7E
+R 00 00 00 00
+T B2 01 E1 C6 FF 5F DD 7E E2 CE FF 57 DD 7E E3 CE
+R 00 00 00 00
+T C0 01 FF 4F DD 7E E4 CE FF 47 7B 2F 5F 7A 2F 57
+R 00 00 00 00
+T CE 01 79 2F 4F 78 2F 47 7B DD A6 F6 5F 7A DD A6
+R 00 00 00 00
+T DC 01 F7 57 79 DD A6 F8 4F 78 DD A6 F9 47 DD 6E
+R 00 00 00 00
+T EA 01 F4 DD 66 F5 73 23 72 23 71 23 70 DD 7E 06
+R 00 00 00 00
+T F8 01 93 DD 77 06 DD 7E 07 9A DD 77 07 DD 7E 08
+R 00 00 00 00
+T 06 02 99 DD 77 08 DD 7E 09 98 DD 77 09 DD 5E EE
+R 00 00 00 00
+T 14 02 DD 56 EF 21 0C 00 39 EB 01 04 00 ED B0 18
+R 00 00 00 00
+T 22 02 30
+R 00 00 00 00
+T 23 02
+R 00 00 00 00
+T 23 02 DD 4E EC DD 46 ED C5 FD E1 FD 7E 06 DD 77
+R 00 00 00 00
+T 31 02 E5 FD 7E 07 DD 77 E6 FD 7E 08 DD 77 E7 FD
+R 00 00 00 00
+T 3F 02 7E 09 DD 77 E8 DD 5E EE DD 56 EF 21 0C 00
+R 00 00 00 00
+T 4D 02 39 01 04 00 ED B0
+R 00 00 00 00
+T 53 02
+R 00 00 00 00
+T 53 02 DD 7E E8 DD B6 E7 DD B6 E6 DD B6 E5 CA
+R 00 00 00 00
+T 60 02 3A 04
+R 00 00 00 00 00 02 00 00
+T 62 02
+R 00 00 00 00
+T 62 02 DD 5E F4 DD 56 F5 21 1D 00 39 EB 01 04 00
+R 00 00 00 00
+T 70 02 ED B0 DD 7E E1 DD 96 06 DD 7E E2 DD 9E 07
+R 00 00 00 00
+T 7E 02 DD 7E E3 DD 9E 08 DD 7E E4 DD 9E 09 D2
+R 00 00 00 00
+T 8B 02 7E 03 DD 7E 06 DD 96 E1 DD 77 06 DD 7E 07
+R 00 00 00 00 00 02 00 00
+T 99 02 DD 9E E2 DD 77 07 DD 7E 08 DD 9E E3 DD 77
+R 00 00 00 00
+T A7 02 08 DD 7E 09 DD 9E E4 DD 77 09 DD 7E F6 DD
+R 00 00 00 00
+T B5 02 86 E1 57 DD 7E F7 DD 8E E2 5F DD 7E F8 DD
+R 00 00 00 00
+T C3 02 8E E3 47 DD 7E F9 DD 8E E4 4F DD 6E F4 DD
+R 00 00 00 00
+T D1 02 66 F5 72 23 73 23 70 23 71 DD 6E E7 DD 66
+R 00 00 00 00
+T DF 02 E8 E5 DD 6E E5 DD 66 E6 E5 DD 6E EC DD 66
+R 00 00 00 00
+T ED 02 ED E5 CD 00 00 F1 F1 F1 DD 75 E5 DD 74 E6
+R 00 00 00 00 02 05 06 00
+T FB 02 DD 73 E7 DD 72 E8 DD 7E E5 3C 20 1F DD 7E
+R 00 00 00 00
+T 09 03 E6 3C 20 19 DD 7E E7 3C 20 13 DD 7E E8 3C
+R 00 00 00 00
+T 17 03 20 0D DD 6E FE DD 66 FF 36 01 2E 01 C3
+R 00 00 00 00
+T 24 03 CC 04
+R 00 00 00 00 00 02 00 00
+T 26 03
+R 00 00 00 00
+T 26 03 3E 01 DD BE E5 3E 00 DD 9E E6 3E 00 DD 9E
+R 00 00 00 00
+T 34 03 E7 3E 00 DD 9E E8 30 23 DD 6E E9 DD 66 EA
+R 00 00 00 00
+T 42 03 11 0C 00 19 56 23 5E 23 4E 23 46 DD 7E E5
+R 00 00 00 00
+T 50 03 92 DD 7E E6 9B DD 7E E7 99 DD 7E E8 98 38
+R 00 00 00 00
+T 5E 03 0D
+R 00 00 00 00
+T 5F 03
+R 00 00 00 00
+T 5F 03 DD 6E FE DD 66 FF 36 02 2E 02 C3 CC 04
+R 00 00 00 00 00 0D 00 00
+T 6C 03
+R 00 00 00 00
+T 6C 03 DD 5E EE DD 56 EF 21 0C 00 39 01 04 00 ED
+R 00 00 00 00
+T 7A 03 B0 C3 62 02
+R 00 00 00 00 00 04 00 00
+T 7E 03
+R 00 00 00 00
+T 7E 03 DD 7E F6 DD 86 06 57 DD 7E F7 DD 8E 07 5F
+R 00 00 00 00
+T 8C 03 DD 7E F8 DD 8E 08 47 DD 7E F9 DD 8E 09 4F
+R 00 00 00 00
+T 9A 03 DD 6E F4 DD 66 F5 72 23 73 23 70 23 71 DD
+R 00 00 00 00
+T A8 03 7E 06 B7 20 07 DD CB 07 46 CA 3A 04
+R 00 00 00 00 00 0C 00 00
+T B4 03
+R 00 00 00 00
+T B4 03 DD 6E E7 DD 66 E8 E5 DD 6E E5 DD 66 E6 E5
+R 00 00 00 00
+T C2 03 DD 6E E9 DD 66 EA E5 CD 00 00 F1 F1 F1 DD
+R 00 00 00 00 02 0A 04 00
+T D0 03 72 F9 DD 73 F8 DD 74 F7 DD 75 F6 21 04 00
+R 00 00 00 00
+T DE 03 39 EB 21 1D 00 39 01 04 00 ED B0 DD 7E E0
+R 00 00 00 00
+T EC 03 DD B6 DF DD B6 DE DD B6 DD 20 0D DD 6E FE
+R 00 00 00 00
+T FA 03 DD 66 FF 36 02 2E 02 C3 CC 04
+R 00 00 00 00 00 0A 00 00
+T 04 04
+R 00 00 00 00
+T 04 04 F5 DD 66 06 DD 6E 07 DD 5E 08 DD 56 09 F1
+R 00 00 00 00
+T 12 04 06 09
+R 00 00 00 00
+T 14 04
+R 00 00 00 00
+T 14 04 CB 3A CB 1B CB 1D CB 1C 10 F6 DD 7E DD 84
+R 00 00 00 00
+T 22 04 DD 77 FA DD 7E DE 8D DD 77 FB DD 7E DF 8B
+R 00 00 00 00
+T 30 04 DD 77 FC DD 7E E0 8A DD 77 FD
+R 00 00 00 00
+T 3A 04
+R 00 00 00 00
+T 3A 04 DD 6E F4 DD 66 F5 56 23 5E 23 46 23 66 7A
+R 00 00 00 00
+T 48 04 B7 20 05 CB 43 CA C9 04
+R 00 00 00 00 00 08 00 00
+T 50 04
+R 00 00 00 00
+T 50 04 DD 7E EC C6 18 5F DD 7E ED CE 00 57 D5 21
+R 00 00 00 00
+T 5E 04 1F 00 39 EB 01 04 00 ED B0 D1 DD 7E FA DD
+R 00 00 00 00
+T 6C 04 96 F6 20 18 DD 7E FB DD 96 F7 20 10 DD 7E
+R 00 00 00 00
+T 7A 04 FC DD 96 F8 20 08 DD 7E FD DD 96 F9 28 41
+R 00 00 00 00
+T 88 04
+R 00 00 00 00
+T 88 04 DD 7E EC C6 1C 4F DD 7E ED CE 00 47 D5 21
+R 00 00 00 00
+T 96 04 01 00 E5 DD 6E FC DD 66 FD E5 DD 6E FA DD
+R 00 00 00 00
+T A4 04 66 FB E5 C5 CD 00 00 F1 F1 F1 F1 7D D1 B7
+R 00 00 00 00 02 07 00 00
+T B2 04 28 0C DD 6E FE DD 66 FF 36 01 2E 01 18 0C
+R 00 00 00 00
+T C0 04
+R 00 00 00 00
+T C0 04 21 21 00 39 01 04 00 ED B0
+R 00 00 00 00
+T C9 04
+R 00 00 00 00
+T C9 04 DD 6E EB
+R 00 00 00 00
+T CC 04
+R 00 00 00 00
+T CC 04 DD F9 DD E1 C9
+R 00 00 00 00
+</REL>
+<ADB>
+</ADB>
+</FILE>
+
+<FILE>
+ff_memcmp
+<REL>
+XL2
+H 9 areas 3 global symbols
+M ff_memcmp
+O -mz80
+S .__.ABS. Def0000
+S ___sdcc_enter_ix Ref0000
+A _CODE size 4F flags 0 addr 0
+S _mem_cmp Def0000
+A _DATA size 0 flags 0 addr 0
+A _INITIALIZED size 0 flags 0 addr 0
+A _DABS size 0 flags 8 addr 0
+A _HOME size 0 flags 0 addr 0
+A _GSINIT size 0 flags 0 addr 0
+A _GSFINAL size 0 flags 0 addr 0
+A _INITIALIZER size 0 flags 0 addr 0
+A _CABS size 0 flags 8 addr 0
+T 00 00
+R 00 00 00 00
+T 00 00 CD 00 00 F5 F5 DD 5E 04 DD 56 05 DD 7E 06
+R 00 00 00 00 02 03 01 00
+T 0E 00 DD 77 FE DD 7E 07 DD 77 FF DD 4E 08 DD 46
+R 00 00 00 00
+T 1C 00 09
+R 00 00 00 00
+T 1D 00
+R 00 00 00 00
+T 1D 00 1A 13 DD 77 FC DD 36 FD 00 DD 6E FE DD 66
+R 00 00 00 00
+T 2B 00 FF 6E DD 34 FE 20 03 DD 34 FF
+R 00 00 00 00
+T 35 00
+R 00 00 00 00
+T 35 00 26 00 DD 7E FC 95 6F DD 7E FD 9C 67 0B 78
+R 00 00 00 00
+T 43 00 B1 28 04 7C B5 28 D3
+R 00 00 00 00
+T 4A 00
+R 00 00 00 00
+T 4A 00 DD F9 DD E1 C9
+R 00 00 00 00
+</REL>
+<ADB>
+</ADB>
+</FILE>
+
+<FILE>
+ff_movewindow
+<REL>
+XL2
+H 9 areas 4 global symbols
+M ff_movewindow
+O -mz80
+S _disk_read Ref0000
+S .__.ABS. Def0000
+S ___sdcc_enter_ix Ref0000
+A _CODE size 8E flags 0 addr 0
+S _move_window Def0000
+A _DATA size 0 flags 0 addr 0
+A _INITIALIZED size 0 flags 0 addr 0
+A _DABS size 0 flags 8 addr 0
+A _HOME size 0 flags 0 addr 0
+A _GSINIT size 0 flags 0 addr 0
+A _GSFINAL size 0 flags 0 addr 0
+A _INITIALIZER size 0 flags 0 addr 0
+A _CABS size 0 flags 8 addr 0
+T 00 00
+R 00 00 00 00
+T 00 00 CD 00 00 F5 F5 3B DD 36 FB 00 DD 4E 04 DD
+R 00 00 00 00 02 03 02 00
+T 0E 00 46 05 21 24 00 09 EB D5 C5 21 05 00 39 EB
+R 00 00 00 00
+T 1C 00 01 04 00 ED B0 C1 D1 DD 7E 06 DD 96 FC 20
+R 00 00 00 00
+T 2A 00 18 DD 7E 07 DD 96 FD 20 10 DD 7E 08 DD 96
+R 00 00 00 00
+T 38 00 FE 20 08 DD 7E 09 DD 96 FF 28 43
+R 00 00 00 00
+T 43 00
+R 00 00 00 00
+T 43 00 21 28 00 09 4D 44 D5 21 01 00 E5 DD 6E 08
+R 00 00 00 00
+T 51 00 DD 66 09 E5 DD 6E 06 DD 66 07 E5 C5 CD
+R 00 00 00 00
+T 5E 00 00 00 F1 F1 F1 F1 7D D1 B7 28 14 DD 36 06
+R 00 00 00 00 02 02 00 00
+T 6C 00 FF DD 36 07 FF DD 36 08 FF DD 36 09 FF DD
+R 00 00 00 00
+T 7A 00 36 FB 01
+R 00 00 00 00
+T 7D 00
+R 00 00 00 00
+T 7D 00 21 0B 00 39 01 04 00 ED B0
+R 00 00 00 00
+T 86 00
+R 00 00 00 00
+T 86 00 DD 6E FB DD F9 DD E1 C9
+R 00 00 00 00
+</REL>
+<ADB>
+</ADB>
+</FILE>
+
+<FILE>
+ff_opendir
+<REL>
+XL2
+H 9 areas 7 global symbols
+M ff_opendir
+O -mz80
+S .__.ABS. Def0000
+S ___sdcc_enter_ix Ref0000
+S _find_volume Ref0000
+S _ld_clust Ref0000
+S _dir_sdi Ref0000
+S _follow_path Ref0000
+A _CODE size EB flags 0 addr 0
+S _f_opendir Def0000
+A _DATA size 0 flags 0 addr 0
+A _INITIALIZED size 0 flags 0 addr 0
+A _DABS size 0 flags 8 addr 0
+A _HOME size 0 flags 0 addr 0
+A _GSINIT size 0 flags 0 addr 0
+A _GSFINAL size 0 flags 0 addr 0
+A _INITIALIZER size 0 flags 0 addr 0
+A _CABS size 0 flags 8 addr 0
+T 00 00
+R 00 00 00 00
+T 00 00 CD 00 00 F5 F5 F5 F5 DD 7E 05 DD B6 04 20
+R 00 00 00 00 02 03 01 00
+T 0E 00 05 2E 09 C3 E6 00
+R 00 00 00 00 00 06 00 00
+T 14 00
+R 00 00 00 00
+T 14 00 21 00 00 39 EB AF F5 33 D5 CD 00 00 F1 33
+R 00 00 00 00 02 0C 02 00
+T 22 00 45 DD 5E 04 DD 56 05 78 B7 C2 DA 00 6B 62
+R 00 00 00 00 00 0C 00 00
+T 30 00 DD 7E F8 77 23 DD 7E F9 77 D5 DD 6E 06 DD
+R 00 00 00 00
+T 3E 00 66 07 E5 D5 CD 00 00 F1 F1 D1 45 78 B7 C2
+R 00 00 00 00 02 07 05 00
+T 4C 00 D3 00 D5 FD E1 FD 7E 27 07 38 50 D5 FD E1
+R 00 00 00 00 00 02 00 00
+T 5A 00 FD CB 04 66 28 45 21 06 00 19 DD 75 FE DD
+R 00 00 00 00
+T 68 00 74 FF D5 FD E1 FD 6E 1A FD 66 1B C5 D5 E5
+R 00 00 00 00
+T 76 00 DD 6E F8 DD 66 F9 E5 CD 00 00 F1 F1 DD 72
+R 00 00 00 00 02 0A 03 00
+T 84 00 FD DD 73 FC DD 74 FB DD 75 FA D1 C1 D5 C5
+R 00 00 00 00
+T 92 00 DD 5E FE DD 56 FF 21 06 00 39 01 04 00 ED
+R 00 00 00 00
+T A0 00 B0 C1 D1 18 02
+R 00 00 00 00
+T A5 00
+R 00 00 00 00
+T A5 00 06 05
+R 00 00 00 00
+T A7 00
+R 00 00 00 00
+T A7 00 78 B7 20 28 D5 FD E1 FD 23 FD 23 E1 E5 01
+R 00 00 00 00
+T B5 00 04 00 09 46 23 66 FD 70 00 FD 74 01 D5 21
+R 00 00 00 00
+T C3 00 00 00 E5 21 00 00 E5 D5 CD 00 00 F1 F1 F1
+R 00 00 00 00 02 0B 04 00
+T D1 00 D1 45
+R 00 00 00 00
+T D3 00
+R 00 00 00 00
+T D3 00 78 D6 04 20 02 06 05
+R 00 00 00 00
+T DA 00
+R 00 00 00 00
+T DA 00 78 B7 28 07 3E 00 12 13 3E 00 12
+R 00 00 00 00
+T E5 00
+R 00 00 00 00
+T E5 00 68
+R 00 00 00 00
+T E6 00
+R 00 00 00 00
+T E6 00 DD F9 DD E1 C9
+R 00 00 00 00
+</REL>
+<ADB>
+</ADB>
+</FILE>
+
+<FILE>
+ff_picklfn
+<REL>
+XL2
+H 9 areas 4 global symbols
+M ff_picklfn
+O -mz80
+S .__.ABS. Def0000
+S _LfnOfs Ref0000
+S ___sdcc_enter_ix Ref0000
+A _CODE size 119 flags 0 addr 0
+S _pick_lfn Def0000
+A _DATA size 0 flags 0 addr 0
+A _INITIALIZED size 0 flags 0 addr 0
+A _DABS size 0 flags 8 addr 0
+A _HOME size 0 flags 0 addr 0
+A _GSINIT size 0 flags 0 addr 0
+A _GSFINAL size 0 flags 0 addr 0
+A _INITIALIZER size 0 flags 0 addr 0
+A _CABS size 0 flags 8 addr 0
+T 00 00
+R 00 00 00 00
+T 00 00 CD 00 00 F5 F5 F5 F5 DD 7E 06 C6 1A 4F DD
+R 00 00 00 00 02 03 02 00
+T 0E 00 7E 07 CE 00 47 69 60 23 5E 16 00 0A 6F 26
+R 00 00 00 00
+T 1C 00 00 7D B2 6F 7C B3 B5 28 06 21 00 00 C3
+R 00 00 00 00
+T 29 00 14 01
+R 00 00 00 00 00 02 00 00
+T 2B 00
+R 00 00 00 00
+T 2B 00 DD 4E 06 DD 46 07 0A 6F 26 00 CB B5 2B 5D
+R 00 00 00 00
+T 39 00 54 29 19 29 29 19 DD 75 FA DD 74 FB 21
+R 00 00 00 00
+T 46 00 01 00 E3 DD 7E FA DD 77 FE DD 7E FB DD 77
+R 00 00 00 00
+T 54 00 FF 11 00 00
+R 00 00 00 00
+T 58 00
+R 00 00 00 00
+T 58 00 7B D6 0D 7A DE 00 D2 E8 00 21 00 00 19 66
+R 00 00 00 00 00 09 00 00 02 0C 01 00
+T 66 00 E5 6C 26 00 E5 FD E1 E1 FD 09 FD E5 E1 23
+R 00 00 00 00
+T 74 00 6E DD 75 FD DD 36 FC 00 FD 7E 00 26 00 DD
+R 00 00 00 00
+T 82 00 B6 FC 6F 7C DD B6 FD 67 DD 7E F9 DD B6 F8
+R 00 00 00 00
+T 90 00 28 47 DD 7E FE D6 7F DD 7E FF DE 00 38 05
+R 00 00 00 00
+T 9E 00 21 00 00 18 71
+R 00 00 00 00
+T A3 00
+R 00 00 00 00
+T A3 00 E5 DD 6E FE DD 66 FF E5 FD E1 E1 DD 34 FE
+R 00 00 00 00
+T B1 00 20 03 DD 34 FF
+R 00 00 00 00
+T B6 00
+R 00 00 00 00
+T B6 00 DD 7E FE DD 77 FA DD 7E FF DD 77 FB FD 29
+R 00 00 00 00
+T C4 00 C5 DD 4E 04 DD 46 05 FD 09 C1 33 33 E5 FD
+R 00 00 00 00
+T D2 00 75 00 FD 74 01 18 0B
+R 00 00 00 00
+T D9 00
+R 00 00 00 00
+T D9 00 2C 20 03 24 28 05
+R 00 00 00 00
+T DF 00
+R 00 00 00 00
+T DF 00 21 00 00 18 30
+R 00 00 00 00
+T E4 00
+R 00 00 00 00
+T E4 00 13 C3 58 00
+R 00 00 00 00 00 04 00 00
+T E8 00
+R 00 00 00 00
+T E8 00 0A CB 77 28 24 DD 7E FA D6 7F DD 7E FB DE
+R 00 00 00 00
+T F6 00 00 38 05 21 00 00 18 16
+R 00 00 00 00
+T FE 00
+R 00 00 00 00
+T FE 00 C1 D1 D5 C5 CB 23 CB 12 DD 6E 04 DD 66 05
+R 00 00 00 00
+T 0C 01 19 AF 77 23 77
+R 00 00 00 00
+T 11 01
+R 00 00 00 00
+T 11 01 21 01 00
+R 00 00 00 00
+T 14 01
+R 00 00 00 00
+T 14 01 DD F9 DD E1 C9
+R 00 00 00 00
+</REL>
+<ADB>
+</ADB>
+</FILE>
+
+<FILE>
+ff_putfat
+<REL>
+XL2
+H 9 areas 1 global symbols
+M ff_putfat
+O -mz80
+S .__.ABS. Def0000
+A _CODE size 0 flags 0 addr 0
+A _DATA size 0 flags 0 addr 0
+A _INITIALIZED size 0 flags 0 addr 0
+A _DABS size 0 flags 8 addr 0
+A _HOME size 0 flags 0 addr 0
+A _GSINIT size 0 flags 0 addr 0
+A _GSFINAL size 0 flags 0 addr 0
+A _INITIALIZER size 0 flags 0 addr 0
+A _CABS size 0 flags 8 addr 0
+</REL>
+<ADB>
+</ADB>
+</FILE>
+
+<FILE>
+ff_putlfn
+<REL>
+XL2
+H 9 areas 1 global symbols
+M ff_putlfn
+O -mz80
+S .__.ABS. Def0000
+A _CODE size 0 flags 0 addr 0
+A _DATA size 0 flags 0 addr 0
+A _INITIALIZED size 0 flags 0 addr 0
+A _DABS size 0 flags 8 addr 0
+A _HOME size 0 flags 0 addr 0
+A _GSINIT size 0 flags 0 addr 0
+A _GSFINAL size 0 flags 0 addr 0
+A _INITIALIZER size 0 flags 0 addr 0
+A _CABS size 0 flags 8 addr 0
+</REL>
+<ADB>
+</ADB>
+</FILE>
+
+<FILE>
+ff_pututf
+<REL>
+XL2
+H 9 areas 3 global symbols
+M ff_pututf
+O -mz80
+S .__.ABS. Def0000
+S ___sdcc_enter_ix Ref0000
+A _CODE size 52 flags 0 addr 0
+S _put_utf Def0000
+A _DATA size 0 flags 0 addr 0
+A _INITIALIZED size 0 flags 0 addr 0
+A _DABS size 0 flags 8 addr 0
+A _HOME size 0 flags 0 addr 0
+A _GSINIT size 0 flags 0 addr 0
+A _GSFINAL size 0 flags 0 addr 0
+A _INITIALIZER size 0 flags 0 addr 0
+A _CABS size 0 flags 8 addr 0
+T 00 00
+R 00 00 00 00
+T 00 00 CD 00 00 DD 4E 04 DD 46 05 DD 6E 08 DD 66
+R 00 00 00 00 02 03 01 00
+T 0E 00 09 59 78 D6 01 38 23 DD 7E 0A D6 02 DD 7E
+R 00 00 00 00
+T 1C 00 0B DE 00 30 04 2E 00 18 2A
+R 00 00 00 00
+T 25 00
+R 00 00 00 00
+T 25 00 70 23 DD 75 08 DD 74 09 DD 6E 08 DD 66 09
+R 00 00 00 00
+T 33 00 73 2E 02 18 17
+R 00 00 00 00
+T 38 00
+R 00 00 00 00
+T 38 00 78 B1 28 0C DD 7E 0A D6 01 DD 7E 0B DE 00
+R 00 00 00 00
+T 46 00 30 04
+R 00 00 00 00
+T 48 00
+R 00 00 00 00
+T 48 00 2E 00 18 03
+R 00 00 00 00
+T 4C 00
+R 00 00 00 00
+T 4C 00 73 2E 01
+R 00 00 00 00
+T 4F 00
+R 00 00 00 00
+T 4F 00 DD E1 C9
+R 00 00 00 00
+</REL>
+<ADB>
+</ADB>
+</FILE>
+
+<FILE>
+ff_readdir
+<REL>
+XL2
+H 9 areas 7 global symbols
+M ff_readdir
+O -mz80
+S _get_fileinfo Ref0000
+S _dir_read Ref0000
+S .__.ABS. Def0000
+S _validate Ref0000
+S _dir_next Ref0000
+S _dir_sdi Ref0000
+A _CODE size 74 flags 0 addr 0
+S _f_readdir Def0000
+A _DATA size 0 flags 0 addr 0
+A _INITIALIZED size 0 flags 0 addr 0
+A _DABS size 0 flags 8 addr 0
+A _HOME size 0 flags 0 addr 0
+A _GSINIT size 0 flags 0 addr 0
+A _GSFINAL size 0 flags 0 addr 0
+A _INITIALIZER size 0 flags 0 addr 0
+A _CABS size 0 flags 8 addr 0
+T 00 00
+R 00 00 00 00
+T 00 00 F5 21 00 00 39 FD 21 04 00 FD 39 FD 5E 00
+R 00 00 00 00
+T 0E 00 FD 56 01 D5 E5 D5 CD 00 00 F1 F1 D1 7D B7
+R 00 00 00 00 02 09 03 00
+T 1C 00 20 54 21 07 00 39 7E 2B B6 20 11 21 00 00
+R 00 00 00 00
+T 2A 00 E5 21 00 00 E5 D5 CD 00 00 F1 F1 F1 18 3A
+R 00 00 00 00 02 09 05 00
+T 38 00
+R 00 00 00 00
+T 38 00 D5 21 00 00 E5 D5 CD 00 00 F1 F1 D1 7D D6
+R 00 00 00 00 02 09 01 00
+T 46 00 04 20 01 6F
+R 00 00 00 00
+T 4A 00
+R 00 00 00 00
+T 4A 00 7D B7 20 24 21 06 00 39 4E 23 46 C5 D5 CD
+R 00 00 00 00
+T 58 00 00 00 F1 21 00 00 E3 21 06 00 39 4E 23 46
+R 00 00 00 00 02 02 00 00
+T 66 00 C5 CD 00 00 F1 F1 7D D6 04 20 01 6F
+R 00 00 00 00 02 04 04 00
+T 72 00
+R 00 00 00 00
+T 72 00 F1 C9
+R 00 00 00 00
+</REL>
+<ADB>
+</ADB>
+</FILE>
+
+<FILE>
+ff_removechain
+<REL>
+XL2
+H 9 areas 1 global symbols
+M ff_removechain
+O -mz80
+S .__.ABS. Def0000
+A _CODE size 0 flags 0 addr 0
+A _DATA size 0 flags 0 addr 0
+A _INITIALIZED size 0 flags 0 addr 0
+A _DABS size 0 flags 8 addr 0
+A _HOME size 0 flags 0 addr 0
+A _GSINIT size 0 flags 0 addr 0
+A _GSFINAL size 0 flags 0 addr 0
+A _INITIALIZER size 0 flags 0 addr 0
+A _CABS size 0 flags 8 addr 0
+</REL>
+<ADB>
+</ADB>
+</FILE>
+
+<FILE>
+ff_stclust
+<REL>
+XL2
+H 9 areas 1 global symbols
+M ff_stclust
+O -mz80
+S .__.ABS. Def0000
+A _CODE size 0 flags 0 addr 0
+A _DATA size 0 flags 0 addr 0
+A _INITIALIZED size 0 flags 0 addr 0
+A _DABS size 0 flags 8 addr 0
+A _HOME size 0 flags 0 addr 0
+A _GSINIT size 0 flags 0 addr 0
+A _GSFINAL size 0 flags 0 addr 0
+A _INITIALIZER size 0 flags 0 addr 0
+A _CABS size 0 flags 8 addr 0
+</REL>
+<ADB>
+</ADB>
+</FILE>
+
+<FILE>
+ff_storexdir
+<REL>
+XL2
+H 9 areas 1 global symbols
+M ff_storexdir
+O -mz80
+S .__.ABS. Def0000
+A _CODE size 0 flags 0 addr 0
+A _DATA size 0 flags 0 addr 0
+A _INITIALIZED size 0 flags 0 addr 0
+A _DABS size 0 flags 8 addr 0
+A _HOME size 0 flags 0 addr 0
+A _GSINIT size 0 flags 0 addr 0
+A _GSFINAL size 0 flags 0 addr 0
+A _INITIALIZER size 0 flags 0 addr 0
+A _CABS size 0 flags 8 addr 0
+</REL>
+<ADB>
+</ADB>
+</FILE>
+
+<FILE>
+ff_stdword
+<REL>
+XL2
+H 9 areas 1 global symbols
+M ff_stdword
+O -mz80
+S .__.ABS. Def0000
+A _CODE size 0 flags 0 addr 0
+A _DATA size 0 flags 0 addr 0
+A _INITIALIZED size 0 flags 0 addr 0
+A _DABS size 0 flags 8 addr 0
+A _HOME size 0 flags 0 addr 0
+A _GSINIT size 0 flags 0 addr 0
+A _GSFINAL size 0 flags 0 addr 0
+A _INITIALIZER size 0 flags 0 addr 0
+A _CABS size 0 flags 8 addr 0
+</REL>
+<ADB>
+</ADB>
+</FILE>
+
+<FILE>
+ff_stword
+<REL>
+XL2
+H 9 areas 1 global symbols
+M ff_stword
+O -mz80
+S .__.ABS. Def0000
+A _CODE size 0 flags 0 addr 0
+A _DATA size 0 flags 0 addr 0
+A _INITIALIZED size 0 flags 0 addr 0
+A _DABS size 0 flags 8 addr 0
+A _HOME size 0 flags 0 addr 0
+A _GSINIT size 0 flags 0 addr 0
+A _GSFINAL size 0 flags 0 addr 0
+A _INITIALIZER size 0 flags 0 addr 0
+A _CABS size 0 flags 8 addr 0
+</REL>
+<ADB>
+</ADB>
+</FILE>
+
+<FILE>
+ff_syncfs
+<REL>
+XL2
+H 9 areas 1 global symbols
+M ff_syncfs
+O -mz80
+S .__.ABS. Def0000
+A _CODE size 0 flags 0 addr 0
+A _DATA size 0 flags 0 addr 0
+A _INITIALIZED size 0 flags 0 addr 0
+A _DABS size 0 flags 8 addr 0
+A _HOME size 0 flags 0 addr 0
+A _GSINIT size 0 flags 0 addr 0
+A _GSFINAL size 0 flags 0 addr 0
+A _INITIALIZER size 0 flags 0 addr 0
+A _CABS size 0 flags 8 addr 0
+</REL>
+<ADB>
+</ADB>
+</FILE>
+
+<FILE>
+ff_syncwindow
+<REL>
+XL2
+H 9 areas 1 global symbols
+M ff_syncwindow
+O -mz80
+S .__.ABS. Def0000
+A _CODE size 0 flags 0 addr 0
+A _DATA size 0 flags 0 addr 0
+A _INITIALIZED size 0 flags 0 addr 0
+A _DABS size 0 flags 8 addr 0
+A _HOME size 0 flags 0 addr 0
+A _GSINIT size 0 flags 0 addr 0
+A _GSFINAL size 0 flags 0 addr 0
+A _INITIALIZER size 0 flags 0 addr 0
+A _CABS size 0 flags 8 addr 0
+</REL>
+<ADB>
+</ADB>
+</FILE>
+
+<FILE>
+ff_sumsfn
+<REL>
+XL2
+H 9 areas 3 global symbols
+M ff_sumsfn
+O -mz80
+S .__.ABS. Def0000
+S ___sdcc_enter_ix Ref0000
+A _CODE size 2C flags 0 addr 0
+S _sum_sfn Def0000
+A _DATA size 0 flags 0 addr 0
+A _INITIALIZED size 0 flags 0 addr 0
+A _DABS size 0 flags 8 addr 0
+A _HOME size 0 flags 0 addr 0
+A _GSINIT size 0 flags 0 addr 0
+A _GSFINAL size 0 flags 0 addr 0
+A _INITIALIZER size 0 flags 0 addr 0
+A _CABS size 0 flags 8 addr 0
+T 00 00
+R 00 00 00 00
+T 00 00 CD 00 00 2E 00 11 0B 00 DD 4E 04 DD 46 05
+R 00 00 00 00 02 03 01 00
+T 0E 00 C5 FD E1
+R 00 00 00 00
+T 11 00
+R 00 00 00 00
+T 11 00 4D CB 39 7D 0F E6 80 81 4F FD 6E 00 FD 23
+R 00 00 00 00
+T 1F 00 09 4B 42 0B 59 78 57 B1 20 E8 DD E1 C9
+R 00 00 00 00
+</REL>
+<ADB>
+</ADB>
+</FILE>
+
+<FILE>
+ff_tchar2uni
+<REL>
+XL2
+H 9 areas 3 global symbols
+M ff_tchar2uni
+O -mz80
+S .__.ABS. Def0000
+S ___sdcc_enter_ix Ref0000
+A _CODE size 48 flags 0 addr 0
+S _tchar2uni Def0000
+A _DATA size 0 flags 0 addr 0
+A _INITIALIZED size 0 flags 0 addr 0
+A _DABS size 0 flags 8 addr 0
+A _HOME size 0 flags 0 addr 0
+A _GSINIT size 0 flags 0 addr 0
+A _GSFINAL size 0 flags 0 addr 0
+A _INITIALIZER size 0 flags 0 addr 0
+A _CABS size 0 flags 8 addr 0
+T 00 00
+R 00 00 00 00
+T 00 00 CD 00 00 F5 F5 DD 56 04 DD 5E 05 6A 63 4E
+R 00 00 00 00 02 03 01 00
+T 0E 00 23 46 0A 6F 03 26 00 7C B5 28 0B 7C B5 20
+R 00 00 00 00
+T 1C 00 07 21 FF FF 5D 54 18 1F
+R 00 00 00 00
+T 24 00
+R 00 00 00 00
+T 24 00 DD 75 FC DD 74 FD DD 36 FE 00 DD 36 FF 00
+R 00 00 00 00
+T 32 00 6A 63 71 23 70 DD 6E FC DD 66 FD DD 5E FE
+R 00 00 00 00
+T 40 00 DD 56 FF
+R 00 00 00 00
+T 43 00
+R 00 00 00 00
+T 43 00 DD F9 DD E1 C9
+R 00 00 00 00
+</REL>
+<ADB>
+</ADB>
+</FILE>
+
+<FILE>
+ff_validate
+<REL>
+XL2
+H 9 areas 4 global symbols
+M ff_validate
+O -mz80
+S _disk_status Ref0000
+S .__.ABS. Def0000
+S ___sdcc_enter_ix Ref0000
+A _CODE size 75 flags 0 addr 0
+S _validate Def0000
+A _DATA size 0 flags 0 addr 0
+A _INITIALIZED size 0 flags 0 addr 0
+A _DABS size 0 flags 8 addr 0
+A _HOME size 0 flags 0 addr 0
+A _GSINIT size 0 flags 0 addr 0
+A _GSFINAL size 0 flags 0 addr 0
+A _INITIALIZER size 0 flags 0 addr 0
+A _CABS size 0 flags 8 addr 0
+T 00 00
+R 00 00 00 00
+T 00 00 CD 00 00 F5 3B DD 36 FD 09 DD 46 04 DD 4E
+R 00 00 00 00 02 03 02 00
+T 0E 00 05 DD 7E 05 DD B6 04 28 3B 68 61 5E 23 56
+R 00 00 00 00
+T 1C 00 7A B3 28 32 1A B7 28 2E 68 61 23 23 7E DD
+R 00 00 00 00
+T 2A 00 77 FE 23 7E DD 77 FF EB 11 04 00 19 56 23
+R 00 00 00 00
+T 38 00 5E DD 7E FE 92 20 13 DD 7E FF 93 20 0D C5
+R 00 00 00 00
+T 46 00 CD 00 00 7D C1 0F 38 04 DD 36 FD 00
+R 00 00 00 00 02 03 00 00
+T 52 00
+R 00 00 00 00
+T 52 00 DD 56 06 DD 5E 07 DD 7E FD B7 20 07 68 61
+R 00 00 00 00
+T 60 00 4E 23 46 18 03
+R 00 00 00 00
+T 65 00
+R 00 00 00 00
+T 65 00 01 00 00
+R 00 00 00 00
+T 68 00
+R 00 00 00 00
+T 68 00 6A 63 71 23 70 DD 6E FD DD F9 DD E1 C9
+R 00 00 00 00
+</REL>
+<ADB>
+</ADB>
+</FILE>
+
+<FILE>
+ff_vars
+<REL>
+XL2
+H 9 areas 6 global symbols
+M ff_vars
+O -mz80
+S .__.ABS. Def0000
+A _CODE size 8D flags 0 addr 0
+S _ExCvt Def000D
+S _LfnOfs Def0000
+A _DATA size 104 flags 0 addr 0
+S _LfnBuf Def0004
+S _Fsid Def0002
+S _FatFs Def0000
+A _INITIALIZED size 0 flags 0 addr 0
+A _DABS size 0 flags 8 addr 0
+A _HOME size 0 flags 0 addr 0
+A _GSINIT size 0 flags 0 addr 0
+A _GSFINAL size 0 flags 0 addr 0
+A _INITIALIZER size 0 flags 0 addr 0
+A _CABS size 0 flags 8 addr 0
+T 00 00
+R 00 00 01 00
+T 00 00
+R 00 00 01 00
+T 02 00
+R 00 00 01 00
+T 02 00
+R 00 00 01 00
+T 04 00
+R 00 00 01 00
+T 04 00
+R 00 00 01 00
+T 00 00
+R 00 00 00 00
+T 00 00 01 03 05 07 09 0E 10 12 14 16 18 1C 1E
+R 00 00 00 00
+T 0D 00
+R 00 00 00 00
+T 0D 00 80 9A 45 41 8E 41 8F 80 45 45 45 49 49 49
+R 00 00 00 00
+T 1B 00 8E 8F 90 92 92 4F 99 4F 55 55 59 99 9A 9B
+R 00 00 00 00
+T 29 00 9C 9D 9E 9F 41 49 4F 55 A5 A5 A6 A7 A8 A9
+R 00 00 00 00
+T 37 00 AA AB AC AD AE AF B0 B1 B2 B3 B4 B5 B6 B7
+R 00 00 00 00
+T 45 00 B8 B9 BA BB BC BD BE BF C0 C1 C2 C3 C4 C5
+R 00 00 00 00
+T 53 00 C6 C7 C8 C9 CA CB CC CD CE CF D0 D1 D2 D3
+R 00 00 00 00
+T 61 00 D4 D5 D6 D7 D8 D9 DA DB DC DD DE DF E0 E1
+R 00 00 00 00
+T 6F 00 E2 E3 E4 E5 E6 E7 E8 E9 EA EB EC ED EE EF
+R 00 00 00 00
+T 7D 00 F0 F1 F2 F3 F4 F5 F6 F7 F8 F9 FA FB FC FD
+R 00 00 00 00
+T 8B 00 FE FF
+R 00 00 00 00
+</REL>
+<ADB>
+</ADB>
+</FILE>
+
+<FILE>
+ff_xsum32
+<REL>
+XL2
+H 9 areas 1 global symbols
+M ff_xsum32
+O -mz80
+S .__.ABS. Def0000
+A _CODE size 0 flags 0 addr 0
+A _DATA size 0 flags 0 addr 0
+A _INITIALIZED size 0 flags 0 addr 0
+A _DABS size 0 flags 8 addr 0
+A _HOME size 0 flags 0 addr 0
+A _GSINIT size 0 flags 0 addr 0
+A _GSFINAL size 0 flags 0 addr 0
+A _INITIALIZER size 0 flags 0 addr 0
+A _CABS size 0 flags 8 addr 0
+</REL>
+<ADB>
+</ADB>
+</FILE>
+
+<FILE>
+ffunicode_cp
+<REL>
+XL2
+H 9 areas 1 global symbols
+M ffunicode_cp
+O -mz80
+S .__.ABS. Def0000
+A _CODE size 0 flags 0 addr 0
+A _DATA size 0 flags 0 addr 0
+A _INITIALIZED size 0 flags 0 addr 0
+A _DABS size 0 flags 8 addr 0
+A _HOME size 0 flags 0 addr 0
+A _GSINIT size 0 flags 0 addr 0
+A _GSFINAL size 0 flags 0 addr 0
+A _INITIALIZER size 0 flags 0 addr 0
+A _CABS size 0 flags 8 addr 0
+</REL>
+<ADB>
+</ADB>
+</FILE>
+
+<FILE>
+ffunicode_ffoem2uni
+<REL>
+XL2
+H 9 areas 4 global symbols
+M ffunicode_ffoem2uni
+O -mz80
+S _uc437 Ref0000
+S .__.ABS. Def0000
+S ___sdcc_enter_ix Ref0000
+A _CODE size 47 flags 0 addr 0
+S _ff_oem2uni_unused Def0000
+A _DATA size 0 flags 0 addr 0
+A _INITIALIZED size 0 flags 0 addr 0
+A _DABS size 0 flags 8 addr 0
+A _HOME size 0 flags 0 addr 0
+A _GSINIT size 0 flags 0 addr 0
+A _GSFINAL size 0 flags 0 addr 0
+A _INITIALIZER size 0 flags 0 addr 0
+A _CABS size 0 flags 8 addr 0
+T 00 00
+R 00 00 00 00
+T 00 00 CD 00 00 01 00 00 DD 7E 04 D6 80 DD 7E 05
+R 00 00 00 00 02 03 02 00
+T 0E 00 DE 00 30 08 DD 4E 04 DD 46 05 18 28
+R 00 00 00 00
+T 1A 00
+R 00 00 00 00
+T 1A 00 DD 7E 06 D6 B5 20 21 DD 7E 07 3D 20 1B DD
+R 00 00 00 00
+T 28 00 7E 05 D6 01 30 14 DD 7E 04 C6 80 6F DD 7E
+R 00 00 00 00
+T 36 00 05 CE FF 67 29 11 00 00 19 4E 23 46
+R 00 00 00 00 02 08 00 00
+T 42 00
+R 00 00 00 00
+T 42 00 69 60 DD E1 C9
+R 00 00 00 00
+</REL>
+<ADB>
+</ADB>
+</FILE>
+
+<FILE>
+ffunicode_ffuni2oem
+<REL>
+XL2
+H 9 areas 4 global symbols
+M ffunicode_ffuni2oem
+O -mz80
+S _uc437 Ref0000
+S .__.ABS. Def0000
+S ___sdcc_enter_ix Ref0000
+A _CODE size 93 flags 0 addr 0
+S _ff_uni2oem_unused Def0000
+A _DATA size 0 flags 0 addr 0
+A _INITIALIZED size 0 flags 0 addr 0
+A _DABS size 0 flags 8 addr 0
+A _HOME size 0 flags 0 addr 0
+A _GSINIT size 0 flags 0 addr 0
+A _GSFINAL size 0 flags 0 addr 0
+A _INITIALIZER size 0 flags 0 addr 0
+A _CABS size 0 flags 8 addr 0
+T 00 00
+R 00 00 00 00
+T 00 00 CD 00 00 F5 F5 01 00 00 DD 7E 04 D6 80 DD
+R 00 00 00 00 02 03 02 00
+T 0E 00 7E 05 DE 00 DD 7E 06 DE 00 DD 7E 07 DE 00
+R 00 00 00 00
+T 1C 00 30 08 DD 4E 04 DD 46 05 18 66
+R 00 00 00 00
+T 26 00
+R 00 00 00 00
+T 26 00 DD 7E 06 D6 01 DD 7E 07 DE 00 30 5A DD 7E
+R 00 00 00 00
+T 34 00 08 D6 B5 20 53 DD 7E 09 3D 20 4D 11 00 00
+R 00 00 00 00
+T 42 00
+R 00 00 00 00
+T 42 00 7B D6 80 7A DE 00 30 3B 6B 62 29 01 00 00
+R 00 00 00 00 02 0E 00 00
+T 50 00 09 46 23 66 DD 70 FC DD 74 FD DD 36 FE 00
+R 00 00 00 00
+T 5E 00 DD 36 FF 00 DD 7E 04 DD 96 FC 20 18 DD 7E
+R 00 00 00 00
+T 6C 00 05 DD 96 FD 20 10 DD 7E 06 DD 96 FE 20 08
+R 00 00 00 00
+T 7A 00 DD 7E 07 DD 96 FF 28 03
+R 00 00 00 00
+T 82 00
+R 00 00 00 00
+T 82 00 13 18 BD
+R 00 00 00 00
+T 85 00
+R 00 00 00 00
+T 85 00 21 80 00 19 4D 06 00
+R 00 00 00 00
+T 8C 00
+R 00 00 00 00
+T 8C 00 69 60 DD F9 DD E1 C9
+R 00 00 00 00
+</REL>
+<ADB>
+</ADB>
+</FILE>
+
+<FILE>
+ffunicode_ffwtoupper
+<REL>
+XL2
+H 9 areas 2 global symbols
+M ffunicode_ffwtoupper
+O -mz80
+S .__.ABS. Def0000
+A _CODE size 13 flags 0 addr 0
+S _ff_wtoupper_unused Def0000
+A _DATA size 0 flags 0 addr 0
+A _INITIALIZED size 0 flags 0 addr 0
+A _DABS size 0 flags 8 addr 0
+A _HOME size 0 flags 0 addr 0
+A _GSINIT size 0 flags 0 addr 0
+A _GSFINAL size 0 flags 0 addr 0
+A _INITIALIZER size 0 flags 0 addr 0
+A _CABS size 0 flags 8 addr 0
+T 00 00
+R 00 00 00 00
+T 00 00 FD 21 02 00 FD 39 FD 6E 00 FD 66 01 FD 5E
+R 00 00 00 00
+T 0E 00 02 FD 56 03 C9
+R 00 00 00 00
+</REL>
+<ADB>
+</ADB>
+</FILE>
+
+</FILES>
+
+</SDCCLIB>

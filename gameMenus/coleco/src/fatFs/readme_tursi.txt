@@ -1,0 +1,1 @@
+Broke up into separate functions to aid with space optimizations - SDCC can filter the library for unused functions. This brought the code from 0x6C01 to 0x5E86 with no extra work (saved 3451 bytes). 
