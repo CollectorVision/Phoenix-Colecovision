@@ -43,28 +43,37 @@ FRESULT find_volume (	    /* FR_OK(0): successful, !=0: an error occurred */
 #if FF_FS_ONEDRIVE != 1
 	const TCHAR** path,		/* Pointer to pointer to the path name (drive number) */
 #endif
-	FATFS** rfs,			/* Pointer to pointer to the found filesystem object */
-	BYTE mode				/* !=0: Check write protection for write access */
+	FATFS** rfs 			/* Pointer to pointer to the found filesystem object */
+#if FF_FS_READONLY != 1
+	, BYTE mode				/* !=0: Check write protection for write access */
+#endif
 )
 {
+    // making these variables static global uses MORE code, rather than less!
 	BYTE fmt, *pt;
+#if FF_FS_ONEDRIVE == 1
+#define vol 0
+#else
 	int vol;
+#endif
 	DSTATUS stat;
 	DWORD bsect, fasize, tsect, sysect, nclst, szbfat, br[4];
 	WORD nrsv;
 	FATFS *fs;
+#if FF_FS_EXFAT
 	UINT i;
+#else
+    BYTE i;
+#endif
 
 
 	/* Get logical drive number */
 	*rfs = 0;
+
 #if FF_FS_ONEDRIVE != 1
 	vol = get_ldnumber(path);
-#else
-    vol = get_ldnumber(0);
-#endif
-
 	if (vol < 0) return FR_INVALID_DRIVE;
+#endif
 
 	/* Check if the filesystem object is valid or not */
 	fs = FatFs[vol];					/* Get pointer to the filesystem object */
@@ -74,7 +83,9 @@ FRESULT find_volume (	    /* FR_OK(0): successful, !=0: an error occurred */
 #endif
 	*rfs = fs;							/* Return pointer to the filesystem object */
 
-	mode &= (BYTE)~FA_READ;				/* Desired access mode, write access or not */
+#if FF_FS_READONLY != 1
+    mode &= (BYTE)~FA_READ;				/* Desired access mode, write access or not */
+#endif
 	if (fs->fs_type != 0) {				/* If the volume has been mounted */
 #if FF_FS_ONEDRIVE != 1
         stat = disk_status(fs->pdrv);
@@ -82,9 +93,11 @@ FRESULT find_volume (	    /* FR_OK(0): successful, !=0: an error occurred */
         stat = disk_status();
 #endif
 		if (!(stat & STA_NOINIT)) {		/* and the physical drive is kept initialized */
-			if (!FF_FS_READONLY && mode && (stat & STA_PROTECT)) {	/* Check write protection if needed */
+#if FF_FS_READONLY != 1
+            if (mode && (stat & STA_PROTECT)) {	/* Check write protection if needed */
 				return FR_WRITE_PROTECTED;
 			}
+#endif
 			return FR_OK;				/* The filesystem object is valid */
 		}
 	}
@@ -102,9 +115,11 @@ FRESULT find_volume (	    /* FR_OK(0): successful, !=0: an error occurred */
 	if (stat & STA_NOINIT) { 			/* Check if the initialization succeeded */
 		return FR_NOT_READY;			/* Failed to initialize due to no medium or hard error */
 	}
-	if (!FF_FS_READONLY && mode && (stat & STA_PROTECT)) { /* Check disk write protection if needed */
+#if FF_FS_READONLY != 1
+    if (mode && (stat & STA_PROTECT)) { /* Check disk write protection if needed */
 		return FR_WRITE_PROTECTED;
 	}
+#endif
 #if FF_MAX_SS != FF_MIN_SS				/* Get sector size (multiple sector size cfg only) */
 #if FF_FS_ONEDRIVE != 1
 	if (disk_ioctl(fs->pdrv, GET_SECTOR_SIZE, &SS(fs)) != RES_OK) return FR_DISK_ERR;

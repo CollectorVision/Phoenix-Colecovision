@@ -46,14 +46,19 @@ FRESULT f_mount (
 )
 {
 	FATFS *cfs;
-	int vol;
 	FRESULT res;
 	const TCHAR *rp = path;
 
+#if FF_FS_ONEDRIVE == 1
+#define vol 0
+#else
+	int vol;
 
 	/* Get logical drive number */
 	vol = get_ldnumber(&rp);
 	if (vol < 0) return FR_INVALID_DRIVE;
+#endif
+
 	cfs = FatFs[vol];					/* Pointer to fs object */
 
 	if (cfs) {
@@ -76,10 +81,15 @@ FRESULT f_mount (
 
 	if (opt == 0) return FR_OK;			/* Do not mount now, it will be mounted later */
 
+    res = find_volume(
 #if FF_FS_ONEDRIVE != 1
-	res = find_volume(&path, &fs, 0);	/* Force mounted the volume */
-#else
-	res = find_volume(&fs, 0);	/* Force mounted the volume */
+                        &path,      // path, only if not ONEDRIVE
 #endif
+                        &fs         // fs, always
+#if FF_FS_READONLY != 1
+                        ,0          // access mode read, if not read-only
+#endif
+    );
+
 	LEAVE_FF(fs, res);
 }

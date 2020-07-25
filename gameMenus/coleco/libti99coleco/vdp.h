@@ -112,16 +112,15 @@ extern volatile unsigned char VDP_STATUS_MIRROR;
 
 // These values are flags for the interrupt control 
 	// disable all processing (screen timeout and user interrupt are still processed)
-	#define VDP_INT_CTRL_DISABLE_ALL		0x80
+	#define VDP_INT_CTRL_DISABLE_ALL		(unsigned char)0x80
 	// disable sprite motion
-	#define VDP_INT_CTRL_DISABLE_SPRITES	0x40
+	#define VDP_INT_CTRL_DISABLE_SPRITES	(unsigned char)0x40
 	// disable sound list processing
-	#define VDP_INT_CTRL_DISABLE_SOUND		0x20
+	#define VDP_INT_CTRL_DISABLE_SOUND		(unsigned char)0x20
 	// disable QUIT key testing
-	#define VDP_INT_CTRL_DISABLE_QUIT		0x10
+	#define VDP_INT_CTRL_DISABLE_QUIT		(unsigned char)0x10
 
-// wait for a vblank (limi interrupts disabled - will work unreliably if enabled)
-// VDP hardware interrupt must be enabled!!
+// wait for a vblank (interrupts disabled - will work unreliably if enabled)
 // there's no CRU on the Coleco, of course... but for compatibility..
 extern volatile unsigned char vdpLimi;
 #define VDP_WAIT_VBLANK_CRU	  while ((vdpLimi&0x80) == 0) { }
@@ -142,57 +141,57 @@ extern volatile unsigned char vdpLimi;
 //*********************
 
 // Bitmasks for the status register
-#define VDP_ST_INT				0x80		// interrupt ready
-#define VDP_ST_5SP				0x40		// 5 sprites-on-a-line
-#define VDP_ST_COINC			0x20		// sprite coincidence
-#define VDP_ST_MASK				0x1f		// mask for the 5 bits that indicate the fifth sprite on a line
+#define VDP_ST_INT				(unsigned char)0x80		// interrupt ready
+#define VDP_ST_5SP				(unsigned char)0x40		// 5 sprites-on-a-line
+#define VDP_ST_COINC			(unsigned char)0x20		// sprite coincidence
+#define VDP_ST_MASK				(unsigned char)0x1f		// mask for the 5 bits that indicate the fifth sprite on a line
 
 // these are the actual write-only register indexes
-#define VDP_REG_MODE0			0x00		// mode register 0
-#define VDP_REG_MODE1			0x01		// mode register 1
-#define VDP_REG_SIT				0x02		// screen image table address (this value times 0x0400)
-#define VDP_REG_CT				0x03		// color table address (this value times 0x0040)
-#define VDP_REG_PDT				0x04		// pattern descriptor table address (this value times 0x0800)
-#define VDP_REG_SAL				0x05		// sprite attribute list address (this value times 0x0080)
-#define VDP_REG_SDT				0x06		// sprite descriptor table address (this value times 0x0800)
-#define VDP_REG_COL				0x07		// screen color (most significant nibble - foreground in text, least significant nibble - background in all modes)
+#define VDP_REG_MODE0			(unsigned char)0x00		// mode register 0
+#define VDP_REG_MODE1			(unsigned char)0x01		// mode register 1
+#define VDP_REG_SIT				(unsigned char)0x02		// screen image table address (this value times 0x0400)
+#define VDP_REG_CT				(unsigned char)0x03		// color table address (this value times 0x0040)
+#define VDP_REG_PDT				(unsigned char)0x04		// pattern descriptor table address (this value times 0x0800)
+#define VDP_REG_SAL				(unsigned char)0x05		// sprite attribute list address (this value times 0x0080)
+#define VDP_REG_SDT				(unsigned char)0x06		// sprite descriptor table address (this value times 0x0800)
+#define VDP_REG_COL				(unsigned char)0x07		// screen color (most significant nibble - foreground in text, least significant nibble - background in all modes)
 
 // settings for mode register 0
-#define VDP_MODE0_BITMAP		0x02		// set bitmap mode
-#define VDP_MODE0_EXTVID		0x01		// enable external video (not connected on TI-99/4A)
+#define VDP_MODE0_BITMAP		(unsigned char)0x02		// set bitmap mode
+#define VDP_MODE0_EXTVID		(unsigned char)0x01		// enable external video (not connected on TI-99/4A)
 
 // settings for mode register 1
-#define VDP_MODE1_16K			0x80		// set 16k mode (4k mode if cleared)
-#define VDP_MODE1_UNBLANK		0x40		// set to enable display, clear to blank it
-#define VDP_MODE1_INT			0x20		// enable VDP interrupts
-#define VDP_MODE1_TEXT			0x10		// set text mode
-#define VDP_MODE1_MULTI			0x08		// set multicolor mode
-#define VDP_MODE1_SPRMODE16x16	0x02		// set 16x16 sprites
-#define VDP_MODE1_SPRMAG		0x01		// set magnified sprites (2x2 pixels) 
+#define VDP_MODE1_16K			(unsigned char)0x80		// set 16k mode (4k mode if cleared)
+#define VDP_MODE1_UNBLANK		(unsigned char)0x40		// set to enable display, clear to blank it
+#define VDP_MODE1_INT			(unsigned char)0x20		// enable VDP interrupts
+#define VDP_MODE1_TEXT			(unsigned char)0x10		// set text mode
+#define VDP_MODE1_MULTI			(unsigned char)0x08		// set multicolor mode
+#define VDP_MODE1_SPRMODE16x16	(unsigned char)0x02		// set 16x16 sprites
+#define VDP_MODE1_SPRMAG		(unsigned char)0x01		// set magnified sprites (2x2 pixels) 
 
 // sprite modes for the mode set functions
-#define VDP_SPR_8x8				0x00
+#define VDP_SPR_8x8				(unsigned char)0x00
 #define	VDP_SPR_8x8MAG			(VDP_MODE1_SPRMAG)
 #define VDP_SPR_16x16			(VDP_MODE1_SPRMODE16x16)
 #define VDP_SPR_16x16MAG		(VDP_MODE1_SPRMODE16x16 | VDP_MODE1_SPRMAG)
 
 // VDP colors
-#define COLOR_TRANS				0x00
-#define COLOR_BLACK				0x01
-#define COLOR_MEDGREEN			0x02
-#define COLOR_LTGREEN			0x03
-#define COLOR_DKBLUE			0x04
-#define COLOR_LTBLUE			0x05
-#define COLOR_DKRED				0x06
-#define COLOR_CYAN				0x07
-#define COLOR_MEDRED			0x08
-#define COLOR_LTRED				0x09
-#define COLOR_DKYELLOW			0x0A
-#define COLOR_LTYELLOW			0x0B
-#define COLOR_DKGREEN			0x0C
-#define COLOR_MAGENTA			0x0D
-#define COLOR_GRAY				0x0E
-#define COLOR_WHITE				0x0F
+#define COLOR_TRANS				(unsigned char)0x00
+#define COLOR_BLACK				(unsigned char)0x01
+#define COLOR_MEDGREEN			(unsigned char)0x02
+#define COLOR_LTGREEN			(unsigned char)0x03
+#define COLOR_DKBLUE			(unsigned char)0x04
+#define COLOR_LTBLUE			(unsigned char)0x05
+#define COLOR_DKRED				(unsigned char)0x06
+#define COLOR_CYAN				(unsigned char)0x07
+#define COLOR_MEDRED			(unsigned char)0x08
+#define COLOR_LTRED				(unsigned char)0x09
+#define COLOR_DKYELLOW			(unsigned char)0x0A
+#define COLOR_LTYELLOW			(unsigned char)0x0B
+#define COLOR_DKGREEN			(unsigned char)0x0C
+#define COLOR_MAGENTA			(unsigned char)0x0D
+#define COLOR_GRAY				(unsigned char)0x0E
+#define COLOR_WHITE				(unsigned char)0x0F
 
 //*********************
 // VDP related functions
@@ -274,14 +273,6 @@ unsigned char vdpwaitvint();
 // It works in both 32x24 and 40x24 modes. Tracking of the cursor is thus 
 // automatic in this function, and it pulls in scrn_scroll.
 int vdpputchar(int x);
-
-// putstring - writes a string with limited formatting to the bottom of the screen
-// Inputs: NUL-terminated string to write
-// This function only emits printable ASCII characters (32-127). It works in both
-// 32x24 and 40x24 modes. It recognizes \r to go to the beginning of the line, and
-// \n to go to a new line and scroll the screen. Tracking of the cursor is thus 
-// automatic in this function, and it pulls in scrn_scroll.
-void putstring(char *s);
 
 // vdpprintf - writes a string with limited formatting. Only supports a very small subset
 // of formatting at the moment. Supports width (for most fields), s, u, i, d, c and X

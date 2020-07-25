@@ -517,8 +517,10 @@ FRESULT find_volume (	/* FR_OK(0): successful, !=0: an error occurred - in 1-dri
 #if FF_FS_ONEDRIVE != 1
 	const TCHAR** path,			/* Pointer to pointer to the path name (drive number) */
 #endif
-	FATFS** rfs,				/* Pointer to pointer to the found filesystem object */
-	BYTE mode					/* !=0: Check write protection for write access */
+	FATFS** rfs 				/* Pointer to pointer to the found filesystem object */
+#if FF_FS_READONLY != 1
+    , BYTE mode					/* !=0: Check write protection for write access */
+#endif
 );
 FRESULT validate (	/* Returns FR_OK or FR_INVALID_OBJECT */
 	FFOBJID* obj,			/* Pointer to the FFOBJID, the 1st member in the FIL/DIR object, to check validity */

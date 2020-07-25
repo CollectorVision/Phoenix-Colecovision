@@ -54,11 +54,16 @@ FRESULT f_getfree (
 
 
 	/* Get logical drive */
+    res = find_volume(
 #if FF_FS_ONEDRIVE != 1
-	res = find_volume(&path, &fs, 0);
-#else
-	res = find_volume(&fs, 0);
+                        &path,      // path, only if not ONEDRIVE
 #endif
+                        &fs         // fs, always
+#if FF_FS_READONLY != 1
+                        ,0          // access mode read, if not read-only
+#endif
+    );
+
 	if (res == FR_OK) {
 		*fatfs = fs;				/* Return ptr to the fs object */
 		/* If free_clst is valid, return it without full FAT scan */

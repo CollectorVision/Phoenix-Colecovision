@@ -1,5 +1,4 @@
 //*****************************
-//*****************************
 // Phoenix Menu
 // Relies on FatFS
 // Called from PhoenixBoot
@@ -12,6 +11,7 @@
 // - Maximum of 254 files in a folder (including subfolders)
 // - Maximum path length of 512 characters
 // - 7-bit ASCII clean filenames only (ie: no accents or unicode characters)
+//*****************************
 
 #include "memset.h"
 #include "vdp.h"
@@ -24,7 +24,7 @@
 // --- externs ---
 
 // fast memcpy, since we don't need delays on the F18A
-extern void vdpmemcpyfast(int pAddr, const unsigned char *pSrc, int cnt);
+extern void vdpmemcpyfast(unsigned int pAddr, const unsigned char *pSrc, unsigned int cnt);
 #define vdpmemcpy vdpmemcpyfast
 
 // kscan wrapper
@@ -410,7 +410,12 @@ repeatDir:
             if (finfo.fattrib & AM_DIR) {
                 *(lastFilename+127) = 0;            // 0 size for directory
             } else {
-                *(lastFilename+127) = (finfo.fsize + 16383) >> 14;  // number of 16384 pages, rounded up
+                // calculate the number of 16384 pages, rounded up
+                // SDCC4.0 can't handle this 32-bit add-then-shift properly...
+//              *(lastFilename+127) = (finfo.fsize + 16383) >> 14;
+				unsigned char x = finfo.fsize >> 14;
+				if (finfo.fsize&0x3fff) ++x;
+                *(lastFilename+127) = x;
             }
             lastFilename += 128;
             // we can go up to 0xffff, but if we wrap around we're done
@@ -580,7 +585,7 @@ void sortDir() {
 
 // wait for an SD card to be inserted (with screen blank)
 void waitSDCard() {
-    int cntDown;    // used to count down to screen blank timeout
+    unsigned int cntDown;   // used to count down to screen blank timeout
     unsigned char debounce; // make sure card detect is stable if we see insertion
 
     // - If card can't be accessed:
@@ -842,7 +847,7 @@ void undrawSelect() {
 //   1 = user made a selection
 //  -1/-2  = user paged the directory (redraw needed, indicates which stick)
 char getUserSelection() {
-    int cntDown = BLANK_TIME;
+    unsigned int cntDown = BLANK_TIME;
 
     // draw the selection bar
     drawSelect();
@@ -950,7 +955,7 @@ char getUserSelection() {
 
         // check if it's time to blank the screen
         --cntDown;
-        if (cntDown <= 0) {
+        if (cntDown == 0) {
             // yes, it is
             handleBlanking(0xf2);
             cntDown = BLANK_TIME;
@@ -1068,6 +1073,9 @@ dirLoop:
     }
 
 drawLoop:
+	// used in case of error after starting to load
+    phRAMBankSelect = DIRECTORY_PAGE;
+
     // - Display list of titles
     drawTitles();
 
@@ -1162,7 +1170,7 @@ drawLoop:
         FRESULT res;
         UINT br;
         char *s1, *s2;
-        char fsize = *(p+127);  // save off the size (16k chunks)
+        unsigned char fsize = *(p+127);  // save off the size (16k chunks)
 
         // create the filename
         s1 = path2;
@@ -1195,22 +1203,20 @@ drawLoop:
         clrscrbottom();
         centerString(0, "checking...");
 
-        res = f_open(&fil, path2, FA_READ);
+        // FATFS is compiled in read-only mode, to not require the FA_READ argument
+        res = f_open(&fil, path2  /*, FA_READ*/);
         if (FR_OK != res) {
             displayErrorString("Failed to open file.", res);
             goto drawLoop;
         }
 
         // -    read first block into cartridge space
-        // Remember after this point to restore the bank select before
-        // looping back to drawLoop.
         phRAMBankSelect = CART_FIRST_PAGE;
 
         res = f_read(&fil, (unsigned char*)0x8000, 512, &br);
         if ((res != FR_OK) || (br != 512)) {
             f_close(&fil);
             displayErrorString("Unrecognized file type.", res);
-            phRAMBankSelect = DIRECTORY_PAGE;
             goto drawLoop;
         }
 
@@ -1220,7 +1226,6 @@ drawLoop:
             loadCartridgeRom();
             // if we return, then the cartridge load failed
             // 32k carts can't overwrite our directory, so just resume!
-            phRAMBankSelect = DIRECTORY_PAGE;
             goto drawLoop;
         }
 
@@ -1235,7 +1240,6 @@ drawLoop:
             if (FR_OK != f_lseek(&fil, ofs)) {
                 f_close(&fil);
                 displayErrorString("Failed to identify file.", res);
-                phRAMBankSelect = DIRECTORY_PAGE;
                 goto drawLoop;
             }
 
@@ -1245,7 +1249,6 @@ drawLoop:
                 // the br != 512 MIGHT be legal, but I'm going to say it should be padded to 16384!
                 f_close(&fil);
                 displayErrorString("Failed to read block.", res);
-                phRAMBankSelect = DIRECTORY_PAGE;
                 goto drawLoop;
             }
 
@@ -1259,7 +1262,6 @@ drawLoop:
                     goto dirLoop;
                 } else {
                     // the directory should be safe!
-                    phRAMBankSelect = DIRECTORY_PAGE;
                     goto drawLoop;
                 }
             }
@@ -1268,7 +1270,6 @@ drawLoop:
         // we don't know what we found!
         f_close(&fil);
         displayErrorString("Unrecognized file type.", 0);
-        phRAMBankSelect = DIRECTORY_PAGE;
         goto drawLoop;
     }
 

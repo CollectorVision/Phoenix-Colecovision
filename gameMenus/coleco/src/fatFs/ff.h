@@ -289,7 +289,11 @@ typedef enum {
 /*--------------------------------------------------------------*/
 /* FatFs module application interface                           */
 
+#if FF_FS_READONLY == 1
+FRESULT f_open (FIL* fp, const TCHAR* path);        				/* Open a file for read only */
+#else
 FRESULT f_open (FIL* fp, const TCHAR* path, BYTE mode);				/* Open or create a file */
+#endif
 FRESULT f_close (FIL* fp);											/* Close an open file object */
 FRESULT f_read (FIL* fp, void* buff, UINT btr, UINT* br);			/* Read data from the file */
 FRESULT f_write (FIL* fp, const void* buff, UINT btw, UINT* bw);	/* Write data to the file */
@@ -391,6 +395,7 @@ int ff_del_syncobj (FF_SYNC_t sobj);	/* Delete a sync object */
 
 
 /* File access mode and open method flags (3rd argument of f_open) */
+/* Not used if FF_FS_READONLY is 1 */
 #define	FA_READ				0x01
 #define	FA_WRITE			0x02
 #define	FA_OPEN_EXISTING	0x00

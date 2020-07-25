@@ -44,13 +44,17 @@ FRESULT f_chdrive (
 	const TCHAR* path		/* Drive number to set */
 )
 {
+#if FF_FS_ONEDRIVE == 1
+#define vol 0
+#else
 	int vol;
 
 
 	/* Get logical drive number */
 	vol = get_ldnumber(&path);
 	if (vol < 0) return FR_INVALID_DRIVE;
-	CurrVol = (BYTE)vol;	/* Set it as current volume */
+#endif
+    CurrVol = (BYTE)vol;	/* Set it as current volume */
 
 	return FR_OK;
 }

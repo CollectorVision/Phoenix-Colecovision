@@ -1,23 +1,23 @@
-# install SDCC 3.5.0 64-bit for Windows, and then in C:\program files\sdcc\bin,
-# replace sdldz80.exe with Tursi's version. use gnuwin32 or cygwin for Make, and
-# provide Tursi's "makeMegaCart.exe" for the linking. Alternately you can use your
-# own means of linking a 24k binary, no banking. None of the special features of
-# makemegacart are used. You can also skip over parseMap, that just sorts the map file.
-CFLAGS = -mz80 -c "-I../libti99coleco" --allow-unsafe-read --opt-code-size --max-allocs-per-node 18000 --std-sdcc99 --vc
+# Build the Phoenix CV Core SD-Card Menu / Loader.
+#
+# MUST be run from a 64-bit Windows Command Prompt.  This Makefile will not work
+# with MinGW.
+#
+# SDCC and GNU make.exe have been included, so just type: make
+#
+# Built with SDCC 4.0.0 64-bit for Windows
+# GNU Make.exe from http://ftp.gnu.org/gnu/make/
+CFLAGS = -mz80 -c "-I../libti99coleco" "-I../sdcc/include" --opt-code-size --max-allocs-per-node 18000 --std-sdcc99 --vc --fsigned-char
 
-CC = "c:/program files/sdcc/bin/sdcc"
-AS = "c:/program files/sdcc/bin/sdasz80"
-AR = "c:/program files/sdcc/bin/sdcclib"
+CC = "..\sdcc\bin\sdcc"
+AS = "..\sdcc\bin\sdasz80"
+AR = "..\sdcc\bin\sdar"
+MB = "..\sdcc\bin\makebin"
 AFLAGS = -plosgff
-RM = del /F 
-# might need to use o for older SDCC, rel for newer
+RM = del /F
 EXT=rel
 
 # make sure the crt0 is first!
-# thinfont removed for now as we can't patch the original bios
-# we need it when we can as we want to allow the user to select
-# fat or thin when they start, and it will remember the last
-# one after reset.
 MAIN_OBJS =\
     crt0_bios.$(EXT)  \
     phoenixBoot.$(EXT)  \
@@ -108,16 +108,26 @@ FAT_OBJS =\
     fatFs\ffunicode_ffwtoupper.$(EXT)
 
 # Recipe to compile the app
-all: bios fatfs
-	"../tursi_tools/makemegacart.exe" -bios phoenixBoot.ihx phoenixBoot.rom
-	"../tursi_tools/parseMap.exe" phoenixBoot.map
+.phony all: link
+
+link: bios fatfs
+	$(MB) -s 24576 phoenixBoot.ihx >phoenixBoot.rom
+
+# tursi's special link step - requires makemegacart and parsemap tools
+# makemegacart does the normal link step in this case but emits debug information
+# parsemap just sorts the map file
+# these tools are not included as they are not useful to the average person, but
+# are available on github
+tursi: bios fatfs
+	"../makemegacart.exe" -bios phoenixBoot.ihx phoenixBoot.rom
+	"../parseMap.exe" phoenixBoot.map
 
 bios: $(MAIN_OBJS) fatfs f18a.h memset.h phoenix.h
 	$(RM) phoenixBoot.ihx
 	$(CC) -mz80 --no-std-crt0 --code-loc 0x0090 --data-loc 0x6400 -l../libti99coleco/libti99.a -lfatfs.a $(MAIN_OBJS) -o phoenixBoot.ihx
 
 fatfs: $(FAT_OBJS) fatFs/ff.h fatFs/ffconf.h fatFs/diskio.h
-	$(AR) -r fatfs.a $(FAT_OBJS)
+	$(AR) -rc fatfs.a $(FAT_OBJS)
 
 # Recipe to clean all compiled objects
 .phony clean:

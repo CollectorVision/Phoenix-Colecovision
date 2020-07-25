@@ -42,8 +42,10 @@
 
 FRESULT f_open (
 	FIL* fp,			/* Pointer to the blank file object */
-	const TCHAR* path,	/* Pointer to the file name */
-	BYTE mode			/* Access mode and file open mode flags */
+	const TCHAR* path	/* Pointer to the file name */
+#if FF_FS_READONLY != 1
+	, BYTE mode			/* Access mode and file open mode flags */
+#endif
 )
 {
 	FRESULT res;
@@ -59,12 +61,20 @@ FRESULT f_open (
 	if (!fp) return FR_INVALID_OBJECT;
 
 	/* Get logical drive number */
-	mode &= FF_FS_READONLY ? FA_READ : FA_READ | FA_WRITE | FA_CREATE_ALWAYS | FA_CREATE_NEW | FA_OPEN_ALWAYS | FA_OPEN_APPEND;
-#if FF_FS_ONEDRIVE != 1
-	res = find_volume(&path, &fs, mode);
-#else
-    res = find_volume(&fs, mode);
+#if FF_FS_READONLY != 1
+	mode &= FA_READ | FA_WRITE | FA_CREATE_ALWAYS | FA_CREATE_NEW | FA_OPEN_ALWAYS | FA_OPEN_APPEND;
 #endif
+
+    res = find_volume(
+#if FF_FS_ONEDRIVE != 1
+                        &path,      // path, only if not ONEDRIVE
+#endif
+                        &fs         // fs, always
+#if FF_FS_READONLY != 1
+                        ,mode       // access mode read, if not read-only
+#endif
+    );
+
 	if (res == FR_OK) {
 		dj.obj.fs = fs;
 		INIT_NAMBUF(fs);
@@ -187,7 +197,11 @@ FRESULT f_open (
 #endif
 			fp->obj.fs = fs;	 	/* Validate the file object */
 			fp->obj.id = fs->id;
+#if FF_FS_READONLY
+			fp->flag = FA_READ;		/* Set file access mode */
+#else
 			fp->flag = mode;		/* Set file access mode */
+#endif
 			fp->err = 0;			/* Clear error flag */
 			fp->sect = 0;			/* Invalidate current data sector */
 			fp->fptr = 0;			/* Set file pointer top of the file */

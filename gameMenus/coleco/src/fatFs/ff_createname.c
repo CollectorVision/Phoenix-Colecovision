@@ -48,7 +48,8 @@ FRESULT create_name (	    /* FR_OK: successful, FR_INVALID_NAME: could not creat
 	BYTE b, cf;
 	WCHAR wc, *lfn;
 	DWORD uc;
-	UINT i, ni, si, di;
+//	UINT i, ni, si, di;
+	BYTE i, ni, si, di;     // warning: did not verify if this is okay for non-LFN
 	const TCHAR *p;
 
 	/* Create LFN into LFN working buffer */

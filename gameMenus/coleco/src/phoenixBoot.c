@@ -25,7 +25,7 @@ extern void inc_palette();
 // --- externs ---
 
 // fast memcpy, since we don't need delays on the F18A
-extern void vdpmemcpyfast(int pAddr, const unsigned char *pSrc, int cnt);
+extern void vdpmemcpyfast(unsigned int pAddr, const unsigned char *pSrc, unsigned int cnt);
 #define vdpmemcpy vdpmemcpyfast
 // menu function
 extern void menu();
@@ -178,8 +178,8 @@ void waitVblanks(unsigned char cnt) {
 // even before a cartridge boots - called ONLY from readkeypad()
 void cfgMenu() {
     unsigned char lastkey = 0xff;
-    unsigned int block = 8*40;
     unsigned int pos = GIMAGE+8*40;
+    unsigned int onoff;
     unsigned char de1 = 0, de2 = 0;
 
     // if we're in gfx mode, then the logo is up, which means we don't
@@ -187,32 +187,33 @@ void cfgMenu() {
     // overlay right now, we'll just fake it and load the chars we need.
     // With a little luck, they'll be under the window... ;)
     // FATFONT starts at char 29, and I want starting at char 48...
-    if (text_width == 32) {
-        vdpmemcpy(GPATTERN+' '*8, &FATFONT[(' '-29)*8], ('X'-' '+1)*8);
-        // the firebird is okay as long as we stick to uppercase letters,
-        // but the phoenix logo needs to be cleared. By luck, color is also okay.
-        block = 16*32;
-        pos = GIMAGE + 8*32;
-    }
+	if (text_width == 32) {
+		vdpmemread(GIMAGE+8*32, lineBuffer, 16*32);		// backup screen
+		vdpmemset(GIMAGE+8*32, 0x18, 16*32);			// clear it
+        vdpmemcpy(GPATTERN+' '*8, &FATFONT[(' '-29)*8], ('X'-' '+1)*8);		// fix char set
+        pos = GIMAGE+8*32;
+    } else {
+		vdpmemread(GIMAGE+8*40, lineBuffer, 8*40);		// backup screen
+		vdpmemset(GIMAGE+8*40, ' ', 8*40);				// clear it
+	}
 
     // We might be in gfx or text mode, so we'll just left-align, sort of
-    vdpmemread(pos, lineBuffer, block);
-    vdpmemset(pos, ' ', block);
     pos += text_width+3;
     vdpmemcpy(pos, "PRESS:", 6);
     pos += text_width+2;
     vdpmemcpy(pos, "1 TOGGLE SCANLINES", 18);
     pos += text_width;
     vdpmemcpy(pos, "2 TOGGLE FLICKER (   )", 22);
+    onoff = pos+18;
     pos += text_width + text_width;
     vdpmemcpy(pos, "9 EXIT MENU", 11);
 
     for (;;) {
 		waitVblanks(1);
 		if (useFlicker) {
-			vdpmemcpy(GIMAGE+11*text_width+23, "ON ", 3);
+			vdpmemcpy(onoff, "ON ", 3);
 		} else {
-			vdpmemcpy(GIMAGE+11*text_width+23, "OFF", 3);
+			vdpmemcpy(onoff, "OFF", 3);
 		}
 		if (de1) --de1;
 		if (de2) --de2;
@@ -239,14 +240,17 @@ void cfgMenu() {
             }
         }
     }
-
+ 
     // restore the display
-    vdpmemcpy(GIMAGE+8*text_width, lineBuffer, block);
 
     // in graphics mode, restore the font - we have to do it all since
     // we can't (trivally) unrle only part of it.
     if (text_width == 32) {
-        unrle(GPATTERN+16*8, PAT0, SIZE_OF_PAT0RLE-103);    // final settings
+		vdpmemset(GIMAGE+8*32, 0x18, 16*32);		// clear it
+        unrle(GPATTERN, PAT0, SIZE_OF_PAT0RLE);		// reload character set
+		vdpmemcpy(GIMAGE+8*32, lineBuffer, 16*32);	// restore display
+    } else {
+		vdpmemcpy(GIMAGE+8*40, lineBuffer, 8*40);	// restore display
     }
 }
 
@@ -289,6 +293,7 @@ void textout(unsigned int vdp, const char *p) {
 }
 
 // same as textout, but shifts the text half a character to the right
+// this would have been much easier with the bitmap layer...
 void textouthalf(unsigned int vdp, const char *p) {
     unsigned char first = 1;
 	while (*p) {
@@ -356,7 +361,7 @@ void fadeInTextF18A() {
 
 // animate the Phoenix logo up
 void displayLogo() {
-    int idx;
+    unsigned char idx;
 	unsigned int off;
     unsigned char const *p;
 	
@@ -413,7 +418,7 @@ void centerString(unsigned char line, char *p) {
 // then to switch that BIOS in and start the title (without running
 // THROUGH the BIOS).
 void startTitle() {
-    int idx;
+    unsigned int idx;
 
     // - execute title
     // -    disable screen and interrupts
@@ -430,8 +435,7 @@ void startTitle() {
     // Clear ram with an alternating pattern to simulate dram init
     // A real Coleco is far more random, but this should do for now
     for (idx=0x6000; idx<0x6400; idx+=2) {
-        pRom(idx)=0;
-        pRom(idx+1) = 0xff;
+		*((volatile unsigned int*)(idx)) = 0x00ff;
     }
 
     // -    prepare system as per original BIOS:
@@ -470,7 +474,7 @@ void startTitle() {
         // -                DEC B
         // -                JR NZ,CINIT1
         {
-            unsigned char *pDst = (unsigned char*)(*((unsigned int*)0x8008)) + 2;
+            unsigned char *pDst = (unsigned char*)(*((volatile unsigned int*)0x8008)) + 2;
             memset(pDst, 0, 10);
             memset((void*)0x7307, 0, 20);
         }
@@ -724,7 +728,7 @@ void runCartHeader() {
     unsigned char *o = copyright;
     const unsigned char *sk = "PRESENTS";
     unsigned char *pYr;
-    int cntdown;
+    unsigned char cntdown;
 
     // We keep finding exception cases that break this display, so to provide a workaround
     // for other carts, just check for held fire button here. If found, we'll skip the formatting
@@ -859,8 +863,8 @@ void runCartHeader() {
         centerString(1, copyright);
     }
 
-    // - wait 5 seconds, allow abort
-    cntdown = 300;
+    // - wait 4 seconds, allow abort
+    cntdown = 255;
     while (cntdown-- > 0) {
         readkeypad();   // read joystick fire buttons
         if (MY_KEY == JOY_FIRE) break;
@@ -872,9 +876,9 @@ void runCartHeader() {
 }
 
 // This is where we start!
-int main() {
+void main() {
 	unsigned char x,idx;
-
+    
     // disable interrupt processing
     VDP_INT_DISABLE;
 
@@ -907,7 +911,7 @@ int main() {
     VDP_SET_ADDRESS_WRITE(GSPRITE);
     for (idx=0; idx<16; ++idx) {
         // F18A doesn't need delays between writes
-        VDPWD = 22*8-2; // Y
+        VDPWD = (unsigned char)(22*8-1); // Y
         VDPWD = idx*16; // X
         VDPWD = idx*4;  // char
         VDPWD = 15;     // color
@@ -920,8 +924,7 @@ int main() {
 	vdpmemset(GCOLOR, 0xF0, 32);
 
 	// load the character patterns
-	//vdpmemcpy(GPATTERN, PAT0, 8*256);                 // raw data
-    unrle(GPATTERN+16*8, PAT0, SIZE_OF_PAT0RLE-103);    // final settings
+    unrle(GPATTERN, PAT0, SIZE_OF_PAT0RLE);
 
 	// turn the screen on
 	VDP_SET_REGISTER(VDP_REG_MODE1, x);
@@ -953,6 +956,5 @@ int main() {
     // If no cartridge
     // call the menu - never returns
     menu();
-
-	return 0;
 }
+

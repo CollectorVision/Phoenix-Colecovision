@@ -53,8 +53,8 @@ FRESULT f_rename (
 	DEF_NAMBUF
 
 
-	get_ldnumber(&path_new);						/* Snip the drive number of new name off */
 #if FF_FS_ONEDRIVE != 1
+	get_ldnumber(&path_new);						/* Snip the drive number of new name off */
     res = find_volume(&path_old, &fs, FA_WRITE);	/* Get logical drive of the old object */
 #else
     res = find_volume(&fs, FA_WRITE);	/* Get logical drive of the old object */

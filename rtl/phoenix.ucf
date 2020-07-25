@@ -1,0 +1,215 @@
+# Phoenix PCB Rev6
+#
+
+
+# Clocks
+#
+NET "clock_50m0_i_net"    LOC="V10" | IOSTANDARD = LVCMOS33;
+NET "clock_50m0_i_net" TNM_NET = clock_50m0_i_net;
+TIMESPEC TS_clock_50m0_i_net   = PERIOD "clock_50m0_i_net"   20 ns HIGH 50%;
+
+# ####
+# TODO: These are only needed if the clocking is asynchronous, and right now
+#       the systems is clocked from a single PLL.
+
+#NET "clk_21m48_s"  TNM_NET = FFS "GRP_21";
+#NET "clk_25m0_s"   TNM_NET = FFS "GRP_25";
+#NET "clk_100m0_s"  TNM_NET = FFS "GRP_100";
+
+# Prevent the CV core from trying to close timing with the F18A, and
+# vice-versa.  The F18A is designed to work asynchronously.
+#TIMESPEC "TS_21to25_ignore"   = FROM  "GRP_21" TO  "GRP_25" TIG;
+#TIMESPEC "TS_21to100_ignore"  = FROM  "GRP_21" TO "GRP_100" TIG;
+#TIMESPEC "TS_100to21_ignore"  = FROM "GRP_100" TO  "GRP_21" TIG;
+#
+# ####
+
+# Buttons
+#
+NET "btn_reset_n_i"		LOC="B2"  | IOSTANDARD = LVCMOS33; # Ext pullup, 10ms reset
+
+
+# External expansion port
+#
+# 1 = 3.3V
+#NET "exp_io1_net<2>"     LOC="V11" | IOSTANDARD = LVCMOS33;
+#NET "exp_io1_net<3>"     LOC="V9"  | IOSTANDARD = LVCMOS33;
+#NET "exp_io1_net<4>"     LOC="T7"  | IOSTANDARD = LVCMOS33;
+#NET "exp_io1_net<5>"     LOC="T5"  | IOSTANDARD = LVCMOS33;
+#NET "exp_io1_net<6>"     LOC="U2"  | IOSTANDARD = LVCMOS33;
+#NET "exp_io1_net<7>"     LOC="U1"  | IOSTANDARD = LVCMOS33;
+#NET "exp_io1_net<8>"     LOC="T2"  | IOSTANDARD = LVCMOS33;
+#NET "exp_io1_net<9>"     LOC="T1"  | IOSTANDARD = LVCMOS33;
+#NET "exp_io1_net<10>"    LOC="P2"  | IOSTANDARD = LVCMOS33;
+#NET "exp_io1_net<11>"    LOC="P1"  | IOSTANDARD = LVCMOS33;
+#NET "exp_io1_net<12>"    LOC="N4"  | IOSTANDARD = LVCMOS33;
+# 13 = 5.0V
+# 14 = GND
+#NET "exp_io2_net<15>"    LOC="U10" | IOSTANDARD = LVCMOS33;
+#NET "exp_io2_net<16>"    LOC="T8"  | IOSTANDARD = LVCMOS33;
+#NET "exp_io2_net<17>"    LOC="V4"  | IOSTANDARD = LVCMOS33;
+#NET "exp_io2_net<18>"    LOC="R3"  | IOSTANDARD = LVCMOS33;
+#NET "exp_io2_net<19>"    LOC="T4"  | IOSTANDARD = LVCMOS33;
+#NET "exp_io2_net<20>"    LOC="T3"  | IOSTANDARD = LVCMOS33;
+#NET "exp_io2_net<21>"    LOC="R5"  | IOSTANDARD = LVCMOS33;
+#NET "exp_io2_net<22>"    LOC="P4"  | IOSTANDARD = LVCMOS33;
+#NET "exp_io2_net<23>"    LOC="P3"  | IOSTANDARD = LVCMOS33;
+#NET "exp_io2_net<24>"    LOC="N5"  | IOSTANDARD = LVCMOS33;
+# 25 = GND
+
+
+# LVDS
+#
+NET "lvds_n_o<0>"       LOC="V6"  | IOSTANDARD = LVDS_33;
+NET "lvds_p_o<0>"       LOC="T6"  | IOSTANDARD = LVDS_33;
+NET "lvds_n_o<1>"       LOC="V7"  | IOSTANDARD = LVDS_33;
+NET "lvds_p_o<1>"       LOC="U7"  | IOSTANDARD = LVDS_33;
+NET "lvds_n_o<2>"       LOC="V8"  | IOSTANDARD = LVDS_33;
+NET "lvds_p_o<2>"       LOC="U8"  | IOSTANDARD = LVDS_33;
+NET "lvds_n_o<3>"       LOC="V5"  | IOSTANDARD = LVDS_33;
+NET "lvds_p_o<3>"       LOC="U5"  | IOSTANDARD = LVDS_33;
+
+
+# SRAM, 512Kx8, 10ns
+#
+NET "sram_addr_o<0>"    LOC="U18" | IOSTANDARD = LVCMOS33;
+NET "sram_addr_o<1>"    LOC="U17" | IOSTANDARD = LVCMOS33;
+NET "sram_addr_o<2>"    LOC="T18" | IOSTANDARD = LVCMOS33;
+NET "sram_addr_o<3>"    LOC="T17" | IOSTANDARD = LVCMOS33;
+NET "sram_addr_o<4>"    LOC="P16" | IOSTANDARD = LVCMOS33;
+NET "sram_addr_o<5>"    LOC="M16" | IOSTANDARD = LVCMOS33;
+NET "sram_addr_o<6>"    LOC="K16" | IOSTANDARD = LVCMOS33;
+NET "sram_addr_o<7>"    LOC="K17" | IOSTANDARD = LVCMOS33;
+NET "sram_addr_o<8>"    LOC="L17" | IOSTANDARD = LVCMOS33;
+NET "sram_addr_o<9>"    LOC="L18" | IOSTANDARD = LVCMOS33;
+NET "sram_addr_o<10>"   LOC="J16" | IOSTANDARD = LVCMOS33;
+NET "sram_addr_o<11>"   LOC="J18" | IOSTANDARD = LVCMOS33;
+NET "sram_addr_o<12>"   LOC="H17" | IOSTANDARD = LVCMOS33;
+NET "sram_addr_o<13>"   LOC="H18" | IOSTANDARD = LVCMOS33;
+NET "sram_addr_o<14>"   LOC="G16" | IOSTANDARD = LVCMOS33;
+NET "sram_addr_o<15>"   LOC="E18" | IOSTANDARD = LVCMOS33;
+NET "sram_addr_o<16>"   LOC="D17" | IOSTANDARD = LVCMOS33;
+NET "sram_addr_o<17>"   LOC="D18" | IOSTANDARD = LVCMOS33;
+NET "sram_addr_o<18>"   LOC="C17" | IOSTANDARD = LVCMOS33;
+
+NET "sram_data_io<0>"   LOC="P18" | IOSTANDARD = LVCMOS33;
+NET "sram_data_io<1>"   LOC="P17" | IOSTANDARD = LVCMOS33;
+NET "sram_data_io<2>"   LOC="N18" | IOSTANDARD = LVCMOS33;
+NET "sram_data_io<3>"   LOC="N17" | IOSTANDARD = LVCMOS33;
+NET "sram_data_io<4>"   LOC="G18" | IOSTANDARD = LVCMOS33;
+NET "sram_data_io<5>"   LOC="F17" | IOSTANDARD = LVCMOS33;
+NET "sram_data_io<6>"   LOC="F18" | IOSTANDARD = LVCMOS33;
+NET "sram_data_io<7>"   LOC="E16" | IOSTANDARD = LVCMOS33;
+
+NET "sram_ce_n_o"       LOC="P15" | IOSTANDARD = LVCMOS33;
+NET "sram_oe_n_o"       LOC="F16" | IOSTANDARD = LVCMOS33;
+NET "sram_we_n_o"       LOC="M18" | IOSTANDARD = LVCMOS33;
+
+
+# SD/MMC
+#
+# The SD *outputs* are always driven by the design and should *NOT* have the
+# PULLUP constraint.
+NET "sd_cs_n_o"         LOC="C5"  | IOSTANDARD = LVCMOS33;
+NET "sd_sclk_o"         LOC="B6"  | IOSTANDARD = LVCMOS33;
+NET "sd_mosi_o"         LOC="A5"  | IOSTANDARD = LVCMOS33;
+NET "sd_miso_i"         LOC="A6"  | IOSTANDARD = LVCMOS33; # Ext pullup
+#Missing on board require jumper to D14 LED
+NET "sd_cd_n_i"			LOC="C6"  | IOSTANDARD = LVCMOS33; # Ext pullup
+
+
+# SPI Flash
+#
+# Currently unused in this design.  Could be connected to the F18A.
+#NET "flash_cs_n_o"      LOC="V3"  | IOSTANDARD = LVCMOS33 | DRIVE = 8; # Ext pullup
+#NET "flash_sclk_o"      LOC="R15" | IOSTANDARD = LVCMOS33 | DRIVE = 8; # Ext pullup
+#NET "flash_mosi_o"      LOC="T13" | IOSTANDARD = LVCMOS33 | DRIVE = 8;
+#NET "flash_miso_i"      LOC="R13" | IOSTANDARD = LVCMOS33 | DRIVE = 8;
+#NET "flash_wp_o"        LOC="T14" | IOSTANDARD = LVCMOS33 | DRIVE = 8; # Ext pullup
+#NET "flash_hold_o"      LOC="V14" | IOSTANDARD = LVCMOS33 | DRIVE = 8; # Ext pullup
+
+
+# PS2 Keyboard
+#
+NET "ps2_clk_io"        LOC="A4"  | IOSTANDARD = LVCMOS33 | DRIVE = 8; # Ext pullup
+NET "ps2_data_io"       LOC="B4"  | IOSTANDARD = LVCMOS33 | DRIVE = 8; # Ext pullup
+
+
+# SNES controller
+#
+NET "snesjoy_clock_o"   LOC="A2"  | IOSTANDARD = LVCMOS33; # Ext pullup
+NET "snesjoy_latch_o"   LOC="B3"  | IOSTANDARD = LVCMOS33; # Ext pullup
+NET "snesjoy_data_i"    LOC="A3"  | IOSTANDARD = LVCMOS33; # Ext pullup
+
+
+# Joystick controllers
+#
+NET "joy_p5_o"          LOC="A7"  | IOSTANDARD = LVCMOS33;
+NET "joy_p8_o"          LOC="C8"  | IOSTANDARD = LVCMOS33;
+
+NET "joy1_p1_i"         LOC="A15" | IOSTANDARD = LVCMOS33 | PULLUP;
+NET "joy1_p2_i"         LOC="A14" | IOSTANDARD = LVCMOS33 | PULLUP;
+NET "joy1_p3_i"         LOC="B12" | IOSTANDARD = LVCMOS33 | PULLUP;
+NET "joy1_p4_i"         LOC="A12" | IOSTANDARD = LVCMOS33 | PULLUP;
+NET "joy1_p6_i"         LOC="B14" | IOSTANDARD = LVCMOS33 | PULLUP;
+NET "joy1_p7_i"         LOC="C14" | IOSTANDARD = LVCMOS33 | PULLUP;
+NET "joy1_p9_i"         LOC="B11" | IOSTANDARD = LVCMOS33; # No pullup!
+
+NET "joy2_p1_i"         LOC="A11" | IOSTANDARD = LVCMOS33 | PULLUP;
+NET "joy2_p2_i"         LOC="A10" | IOSTANDARD = LVCMOS33 | PULLUP;
+NET "joy2_p3_i"         LOC="A9"  | IOSTANDARD = LVCMOS33 | PULLUP;
+NET "joy2_p4_i"         LOC="B8"  | IOSTANDARD = LVCMOS33 | PULLUP;
+NET "joy2_p6_i"         LOC="C11" | IOSTANDARD = LVCMOS33 | PULLUP;
+NET "joy2_p7_i"         LOC="B9"  | IOSTANDARD = LVCMOS33 | PULLUP;
+NET "joy2_p9_i"         LOC="A8"  | IOSTANDARD = LVCMOS33; # No pullup!
+
+
+# Cartridge connector
+#
+NET "cart_addr_o<0>"    LOC="E3"  | IOSTANDARD = LVCMOS33;
+NET "cart_addr_o<1>"    LOC="F3"  | IOSTANDARD = LVCMOS33;
+NET "cart_addr_o<2>"    LOC="F1"  | IOSTANDARD = LVCMOS33;
+NET "cart_addr_o<3>"    LOC="H3"  | IOSTANDARD = LVCMOS33;
+NET "cart_addr_o<4>"    LOC="H1"  | IOSTANDARD = LVCMOS33;
+NET "cart_addr_o<5>"    LOC="K2"  | IOSTANDARD = LVCMOS33;
+NET "cart_addr_o<6>"    LOC="L3"  | IOSTANDARD = LVCMOS33;
+NET "cart_addr_o<7>"    LOC="L1"  | IOSTANDARD = LVCMOS33;
+NET "cart_addr_o<8>"    LOC="N3"  | IOSTANDARD = LVCMOS33;
+NET "cart_addr_o<9>"    LOC="M3"  | IOSTANDARD = LVCMOS33;
+NET "cart_addr_o<10>"   LOC="H2"  | IOSTANDARD = LVCMOS33;
+NET "cart_addr_o<11>"   LOC="G1"  | IOSTANDARD = LVCMOS33;
+NET "cart_addr_o<12>"   LOC="L2"  | IOSTANDARD = LVCMOS33;
+NET "cart_addr_o<13>"   LOC="J1"  | IOSTANDARD = LVCMOS33;
+NET "cart_addr_o<14>"   LOC="K3"  | IOSTANDARD = LVCMOS33;
+
+NET "cart_data_io<0>"   LOC="D2"  | IOSTANDARD = LVCMOS33;
+NET "cart_data_io<1>"   LOC="C2"  | IOSTANDARD = LVCMOS33;
+NET "cart_data_io<2>"   LOC="E4"  | IOSTANDARD = LVCMOS33;
+NET "cart_data_io<3>"   LOC="C1"  | IOSTANDARD = LVCMOS33;
+NET "cart_data_io<4>"   LOC="D1"  | IOSTANDARD = LVCMOS33;
+NET "cart_data_io<5>"   LOC="E1"  | IOSTANDARD = LVCMOS33;
+NET "cart_data_io<6>"   LOC="F2"  | IOSTANDARD = LVCMOS33;
+NET "cart_data_io<7>"   LOC="G3"  | IOSTANDARD = LVCMOS33;
+
+//NET "cart_dir_o"        LOC="N1"  | IOSTANDARD = LVCMOS33 | PULLUP; #rev4 PCB
+NET "cart_dir_o"        LOC="N1"  | IOSTANDARD = LVCMOS33; #Rev6 PCB
+
+# The cartridge *outputs* are always driven by the design and should *NOT* have
+# the PULLUP constraint.
+NET "cart_oe_n_o"       LOC="N2"  | IOSTANDARD = LVCMOS33; # Ext pullup
+NET "cart_en_80_n_o"    LOC="J3"  | IOSTANDARD = LVCMOS33;
+NET "cart_en_A0_n_o"    LOC="K1"  | IOSTANDARD = LVCMOS33;
+NET "cart_en_C0_n_o"    LOC="D3"  | IOSTANDARD = LVCMOS33;
+NET "cart_en_E0_n_o"    LOC="M1"  | IOSTANDARD = LVCMOS33;
+
+
+# User LED
+#
+NET "led_o"             LOC="D14" | IOSTANDARD = LVCMOS33 | DRIVE = 8; # Drive require to limit current!
+
+
+# RGB LED
+#
+NET "rgb_led_o<2>"      LOC="B16" | IOSTANDARD = LVCMOS33;  # red
+NET "rgb_led_o<1>"      LOC="A16" | IOSTANDARD = LVCMOS33;  # green
+NET "rgb_led_o<0>"      LOC="C15" | IOSTANDARD = LVCMOS33;  # blue

@@ -1,6 +1,6 @@
 #include "vdp.h"
 
-extern void vdpmemcpyfast(int pAddr, const unsigned char *pSrc, int cnt);
+extern void vdpmemcpyfast(unsigned int pAddr, const unsigned char *pSrc, unsigned int cnt);
 void dummyfunc() {
 __asm
 ; stack has ret, pAddr, source, count

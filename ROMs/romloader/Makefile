@@ -6,8 +6,12 @@
 # These commands are assumed to be in the path:
 #
 #   sdcc, sdasz80, makebin  : part of SDCC
-#   romgen                  : a MikeJ tool
 #   data2mem, impact        : part of the Xilinx ISE suite
+#
+# These utilities are included:
+#
+#   romgen                  : a MikeJ tool
+#   makemem					: replacement for romgen
 #
 
 CP		:= cp
@@ -15,9 +19,9 @@ RM		:= rm -f
 CC		:= sdcc
 AS		:= sdasz80
 LD		:= sdcc
-#H2B		:= makebin
-#ROMGEN	:= romgen
-ROMGEN	:= makemem
+H2B		:= makebin
+#ROMGEN	:= ../../Utils/romgen
+ROMGEN	:= ../../Utils/makemem
 
 # 24K Loader from 0000h to 5FFFh
 MEMSIZE	:= 24576
@@ -80,8 +84,8 @@ romloader.mem: romloader.rom
 romloader.rom: romloader.ihx
 
 # Make a binary file from the IHX output, padded to MEMSIZE
-#%.rom: %.ihx
-#	$(H2B) -s $(MEMSIZE) $< $@
+%.rom: %.ihx
+	$(H2B) -s $(MEMSIZE) $< $@
 
 # Link object files to fixed location binary
 romloader.ihx: $(OBJS)
