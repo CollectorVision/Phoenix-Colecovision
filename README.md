@@ -11,6 +11,7 @@ Currently the build is a little lacking, and multiple steps are required.  Event
   - Create an ISE 14.7 project in a directory parallel-to the Phoenix source called: `collectorvision-ise`
   - Choose the Spartan-6 SLX16, CSG-324, speed grade 2.
   - Add all the HDL files in the `rtl` directory to the project.
+  - Remove f18a_top.vhd, f18a_brd_v13.ucf, altddio_out1.vhd, and serializer_generic.vhd from project
   - Right-click the `Generate Programming File` process, choose `Process Properties -> Configuration Options`, and set the `Configuration Rate` to `26`, and `Unused IOB Pins` to `Float`. Click OK.
   - Double-click `Generate Programming File` to make a bit-stream.
 
